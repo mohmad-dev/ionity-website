@@ -742,13 +742,41 @@
       beam2.style.strokeDashoffset = totalLength;
     }
 
-    /* Precise path distance checkpoints for each card (01 Web, 02 Systems, 03 SaaS, 04 UI/UX) */
+    /* Precise path distance checkpoints & active passing zones for each card */
     var checkpoints = [
-      { card: cards[0], targetLen: totalLength * 0.19, triggered: false },
-      { card: cards[1], targetLen: totalLength * 0.39, triggered: false },
-      { card: cards[2], targetLen: totalLength * 0.65, triggered: false },
-      { card: cards[3], targetLen: totalLength * 0.86, triggered: false }
+      { card: cards[0], targetLen: totalLength * 0.19, minP: 0.11, maxP: 0.27, triggered: false },
+      { card: cards[1], targetLen: totalLength * 0.39, minP: 0.32, maxP: 0.48, triggered: false },
+      { card: cards[2], targetLen: totalLength * 0.65, minP: 0.56, maxP: 0.72, triggered: false },
+      { card: cards[3], targetLen: totalLength * 0.86, minP: 0.78, maxP: 0.94, triggered: false }
     ];
+
+    function updatePassingBorders(p1) {
+      checkpoints.forEach(function (cp) {
+        if (!cp.card) return;
+        var isPassing = (p1 >= cp.minP && p1 <= cp.maxP);
+        if (isPassing) {
+          cp.card.classList.add('is-beam-passing');
+        } else {
+          cp.card.classList.remove('is-beam-passing');
+        }
+      });
+    }
+
+    function startAmbientBorderSync() {
+      var ambientStart = performance.now();
+      var period1 = 14000; /* matches srvLaserFlow1 14s */
+
+      function syncLoop(now) {
+        if (!servicesSec.classList.contains('is-offscreen')) {
+          var elapsed = now - ambientStart;
+          var p1 = (elapsed % period1) / period1;
+          updatePassingBorders(p1);
+        }
+        requestAnimationFrame(syncLoop);
+      }
+
+      requestAnimationFrame(syncLoop);
+    }
 
     function startLaserSurge() {
       if (hasTriggered) return;
@@ -787,9 +815,9 @@
             } catch (e) {}
           }
 
-          /* Materialize each card calmly as the laser spark reaches it */
+          /* Materialize each card calmly as the laser spark enters its zone */
           checkpoints.forEach(function (cp) {
-            if (!cp.triggered && currentLen >= cp.targetLen) {
+            if (!cp.triggered && ease >= cp.minP) {
               cp.triggered = true;
               if (cp.card) {
                 cp.card.classList.add('is-revealed');
@@ -797,20 +825,24 @@
             }
           });
 
+          /* Illuminate card border blue ONLY while the beam is actively passing through it */
+          updatePassingBorders(ease);
+
           if (progress < 1) {
             requestAnimationFrame(step);
           } else {
-            /* Surge complete: fade out traveling spark */
+            /* Surge complete: fade out traveling spark & clear initial passing state */
             if (spark) {
               spark.classList.remove('is-active');
             }
+            updatePassingBorders(-1);
 
             /* Ensure all cards are revealed */
             cards.forEach(function (card) {
               card.classList.add('is-revealed');
             });
 
-            /* Hand off seamlessly to continuous ambient wave flow */
+            /* Hand off seamlessly to continuous ambient wave flow & synced border illumination */
             setTimeout(function () {
               beam1.style.strokeDasharray = '450 1100';
               beam1.style.animation = 'srvLaserFlow1 14s linear infinite';
@@ -818,6 +850,7 @@
                 beam2.style.strokeDasharray = '450 1100';
                 beam2.style.animation = 'srvLaserFlow2 18s linear infinite';
               }
+              startAmbientBorderSync();
             }, 400);
           }
         }

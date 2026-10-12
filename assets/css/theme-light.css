@@ -168,9 +168,9 @@
 }
 
 [data-theme="light"] .card-icon {
-  background: #EFF1EB;
-  border-color: var(--color-border);
-  color: var(--color-accent);
+  background: transparent !important;
+  border-color: transparent !important;
+  color: var(--color-text);
 }
 
 [data-theme="light"] .tech-item {
@@ -234,89 +234,65 @@
 }
 
 [data-theme="light"] .laser-track {
-  stroke: rgba(0, 119, 204, 0.25);
-  filter: drop-shadow(0 0 6px rgba(0, 119, 204, 0.25));
+  stroke: rgba(0, 119, 204, 0.2);
+  filter: drop-shadow(0 0 4px rgba(0, 119, 204, 0.18));
 }
 
 [data-theme="light"] .laser-beam-1 {
   stroke: #007CE8 !important;
-  filter: drop-shadow(0 0 8px rgba(0, 124, 232, 0.45));
+  filter: drop-shadow(0 0 6px rgba(0, 124, 232, 0.35));
 }
 
 [data-theme="light"] .laser-beam-2 {
   stroke: #005BB5 !important;
-  filter: drop-shadow(0 0 6px rgba(0, 91, 181, 0.35));
+  filter: drop-shadow(0 0 5px rgba(0, 91, 181, 0.28));
 }
 
 /* ── Services Laser Spine & Cards in Light Mode ────────────── */
 [data-theme="light"] .services-laser-bg {
-  opacity: 0.65;
+  opacity: 0.55;
 }
 
 [data-theme="light"] .srv-laser-track {
-  stroke: rgba(0, 119, 204, 0.18);
-  filter: drop-shadow(0 0 4px rgba(0, 119, 204, 0.15));
+  stroke: rgba(0, 119, 204, 0.14);
+  filter: none;
 }
 
 [data-theme="light"] .srv-laser-beam-1 {
   stroke: #007CE8 !important;
-  filter: drop-shadow(0 0 10px rgba(0, 124, 232, 0.45));
+  filter: drop-shadow(0 0 6px rgba(0, 124, 232, 0.35));
 }
 
 [data-theme="light"] .srv-laser-beam-2 {
   stroke: #005BB5 !important;
-  filter: drop-shadow(0 0 8px rgba(0, 91, 181, 0.35));
+  filter: drop-shadow(0 0 5px rgba(0, 91, 181, 0.28));
 }
 
 [data-theme="light"] .srv-photon-spark {
   fill: #007CE8;
-  filter: drop-shadow(0 0 8px #007CE8) drop-shadow(0 0 16px rgba(0, 124, 232, 0.6));
+  filter: drop-shadow(0 0 5px #007CE8) drop-shadow(0 0 10px rgba(0, 124, 232, 0.45));
 }
 
 [data-theme="light"] .service-card {
-  background: rgba(255, 255, 255, 0.88);
+  background: rgba(255, 255, 255, 0.9);
   border-color: rgba(0, 0, 0, 0.08);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
 }
 
 [data-theme="light"] .services-section .service-card.is-revealed {
-  animation: cardLaserBurstLight 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.94);
 }
 
-@keyframes cardLaserBurstLight {
-  0% {
-    opacity: 0;
-    transform: translateY(32px) scale(0.92);
-    filter: blur(10px);
-    border-color: rgba(0, 124, 232, 0.1);
-    box-shadow: 0 0 0 rgba(0, 124, 232, 0);
-  }
-  35% {
-    opacity: 1;
-    filter: blur(0);
-    border-color: #007CE8;
-    box-shadow: 0 0 35px rgba(0, 124, 232, 0.45);
-    transform: translateY(-4px) scale(1.02);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-    filter: blur(0);
-    border-color: rgba(0, 124, 232, 0.45);
-    box-shadow: 0 0 24px rgba(0, 124, 232, 0.14), 0 8px 24px rgba(0, 0, 0, 0.06);
-  }
-}
-
-[data-theme="light"] .service-card.is-active,
-[data-theme="light"] .service-card.is-revealed {
-  border-color: rgba(0, 124, 232, 0.45);
-  box-shadow: 0 0 24px rgba(0, 124, 232, 0.14), 0 8px 24px rgba(0, 0, 0, 0.06);
-  background: rgba(248, 252, 255, 0.95);
+[data-theme="light"] .services-section .service-card.is-beam-passing {
+  border-color: rgba(0, 124, 232, 0.65) !important;
+  box-shadow: 0 0 20px rgba(0, 124, 232, 0.16), 0 8px 24px rgba(0, 0, 0, 0.06) !important;
 }
 
 [data-theme="light"] .service-card:hover {
-  border-color: rgba(0, 124, 232, 0.7);
-  box-shadow: 0 0 32px rgba(0, 124, 232, 0.2), 0 12px 28px rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 124, 232, 0.55) !important;
+  box-shadow: 0 0 22px rgba(0, 124, 232, 0.14), 0 10px 26px rgba(0, 0, 0, 0.07) !important;
   background: #FFFFFF;
 }
 
@@ -328,19 +304,13 @@
 
 [data-theme="light"] .service-pulse-dot {
   background: #10B981;
-  box-shadow: 0 0 6px #10B981;
+  box-shadow: 0 0 4px rgba(16, 185, 129, 0.5);
 }
 
 [data-theme="light"] .service-card:hover .card-icon,
-[data-theme="light"] .service-card.is-active .card-icon {
-  border-color: #007CE8;
+[data-theme="light"] .service-card.is-beam-passing .card-icon {
   color: #007CE8;
-  background: #E8F4FD;
-}
-
-[data-theme="light"] .service-card:hover .card-link,
-[data-theme="light"] .service-card.is-active .card-link {
-  color: #007CE8;
+  background: transparent !important;
 }
 
 /* ── Team Showcase in Light Mode ───────────────────────────── */

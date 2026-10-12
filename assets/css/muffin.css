@@ -458,13 +458,13 @@ body.lang-ar .hero-actions {
 
 /* Base persistent glowing track */
 .laser-track {
-  stroke: rgba(0, 163, 255, 0.35);
-  stroke-width: 2px;
-  opacity: 0.5;
-  filter: drop-shadow(0 0 10px rgba(0, 163, 255, 0.6));
+  stroke: rgba(0, 163, 255, 0.24);
+  stroke-width: 1.8px;
+  opacity: 0.42;
+  filter: drop-shadow(0 0 6px rgba(0, 163, 255, 0.35));
 }
 
-/* High-energy pulsing laser surges (slow and majestic) */
+/* High-energy pulsing laser surges (slow and majestic, softer glow) */
 .laser-beam {
   stroke-dasharray: 600 1400;
   animation: drawBeamSlow 18s linear infinite;
@@ -472,19 +472,19 @@ body.lang-ar .hero-actions {
 
 .laser-beam-1 {
   stroke: #00E5FF !important;
-  stroke-width: 4.5px;
+  stroke-width: 3.5px;
   animation-delay: 0s;
   animation-duration: 18s;
-  filter: drop-shadow(0 0 12px #00B4D8) drop-shadow(0 0 30px rgba(0, 163, 255, 0.85));
+  filter: drop-shadow(0 0 8px rgba(0, 180, 216, 0.6)) drop-shadow(0 0 18px rgba(0, 163, 255, 0.45));
 }
 
 .laser-beam-2 {
   stroke: #00A3FF !important;
-  stroke-width: 3.5px;
+  stroke-width: 2.8px;
   animation-delay: -9s;
   animation-duration: 24s;
   stroke-dasharray: 500 1300;
-  filter: drop-shadow(0 0 10px #0077B6) drop-shadow(0 0 24px rgba(0, 102, 255, 0.75));
+  filter: drop-shadow(0 0 6px rgba(0, 119, 182, 0.5)) drop-shadow(0 0 14px rgba(0, 102, 255, 0.4));
 }
 
 @keyframes drawBeamSlow {
@@ -523,7 +523,7 @@ body.lang-ar .laser-background {
   line-height: 1;
   margin-bottom: 8px;
   letter-spacing: -0.03em;
-  text-shadow: 0 0 35px rgba(53, 237, 202, 0.4), 0 4px 15px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 0 20px rgba(53, 237, 202, 0.22), 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 .stat-vertical-label {
@@ -531,7 +531,7 @@ body.lang-ar .laser-background {
   font-weight: var(--weight-medium);
   color: #35EDCA;
   letter-spacing: 0.04em;
-  text-shadow: 0 0 15px rgba(53, 237, 202, 0.3);
+  text-shadow: 0 0 10px rgba(53, 237, 202, 0.18);
 }
 
 @media (max-width: 768px) {
@@ -551,7 +551,6 @@ body.lang-ar .laser-background {
   .laser-stats-container {
     min-height: 440px;
   }
-}
   .trust-bar-inner {
     gap: var(--space-6);
   }
@@ -635,9 +634,42 @@ body.lang-ar .section-body {
   gap: var(--space-6);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
+  .services-section.section {
+    padding-block: 1.15rem !important;
+    min-height: calc(100svh - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .services-section .section-header {
+    margin-bottom: 0.65rem;
+  }
+
+  .services-section .section-label {
+    font-size: 0.65rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .services-section .section-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.25rem;
+    line-height: 1.25;
+  }
+
+  .services-section .section-body {
+    font-size: 0.78rem;
+    line-height: 1.45;
+  }
+
+  .services-section .section-header-svg-bg {
+    display: none;
+  }
+
   .services-grid {
     grid-template-columns: 1fr;
+    gap: 0.5rem;
   }
 }
 

@@ -450,14 +450,14 @@
         <svg class="services-laser-svg" viewBox="0 0 1400 900" preserveAspectRatio="none">
           <defs>
             <filter id="services-laser-glow-cyan" x="-15%" y="-15%" width="130%" height="130%">
-              <feGaussianBlur stdDeviation="6" result="blur" />
+              <feGaussianBlur stdDeviation="4" result="blur" />
               <feMerge>
                 <feMergeNode in="blur" />
                 <feMergeNode in="SourceGraphic" />
               </feMerge>
             </filter>
             <filter id="services-laser-glow-blue" x="-15%" y="-15%" width="130%" height="130%">
-              <feGaussianBlur stdDeviation="5" result="blur" />
+              <feGaussianBlur stdDeviation="3.5" result="blur" />
               <feMerge>
                 <feMergeNode in="blur" />
                 <feMergeNode in="SourceGraphic" />
@@ -465,32 +465,32 @@
             </filter>
             <linearGradient id="srv-beam-cyan" x1="100%" y1="0%" x2="0%" y2="100%">
               <stop offset="0%" stop-color="#00E5FF" stop-opacity="0" />
-              <stop offset="20%" stop-color="#00E5FF" stop-opacity="0.9" />
-              <stop offset="50%" stop-color="#80FFEA" stop-opacity="1" />
-              <stop offset="80%" stop-color="#00A3FF" stop-opacity="0.9" />
+              <stop offset="20%" stop-color="#00E5FF" stop-opacity="0.75" />
+              <stop offset="50%" stop-color="#80FFEA" stop-opacity="0.9" />
+              <stop offset="80%" stop-color="#00A3FF" stop-opacity="0.75" />
               <stop offset="100%" stop-color="#00E5FF" stop-opacity="0" />
             </linearGradient>
             <linearGradient id="srv-beam-blue" x1="100%" y1="0%" x2="0%" y2="100%">
               <stop offset="0%" stop-color="#0088FF" stop-opacity="0" />
-              <stop offset="30%" stop-color="#00A3FF" stop-opacity="0.8" />
-              <stop offset="70%" stop-color="#00E5FF" stop-opacity="1" />
+              <stop offset="30%" stop-color="#00A3FF" stop-opacity="0.65" />
+              <stop offset="70%" stop-color="#00E5FF" stop-opacity="0.8" />
               <stop offset="100%" stop-color="#0088FF" stop-opacity="0" />
             </linearGradient>
           </defs>
           <!-- Base laser track -->
           <path class="srv-laser-track"
                 d="M 1450,-40 C 1220,100 1080,240 920,260 C 700,280 580,180 380,240 C 180,300 220,520 620,560 C 1040,600 920,720 480,700 C 260,680 120,780 -100,920"
-                fill="none" stroke-width="2" stroke-linecap="round" />
+                fill="none" stroke-width="1.5" stroke-linecap="round" />
           <!-- Primary glowing cyan beam -->
           <path class="srv-laser-beam srv-laser-beam-1" filter="url(#services-laser-glow-cyan)"
                 d="M 1450,-40 C 1220,100 1080,240 920,260 C 700,280 580,180 380,240 C 180,300 220,520 620,560 C 1040,600 920,720 480,700 C 260,680 120,780 -100,920"
-                fill="none" stroke="url(#srv-beam-cyan)" stroke-width="4" stroke-linecap="round" />
+                fill="none" stroke="url(#srv-beam-cyan)" stroke-width="3.2" stroke-linecap="round" />
           <!-- Secondary electric blue wave -->
           <path class="srv-laser-beam srv-laser-beam-2" filter="url(#services-laser-glow-blue)"
                 d="M 1470,-10 C 1200,120 1060,260 900,280 C 680,300 600,200 400,260 C 200,320 240,540 640,580 C 1060,620 900,740 460,720 C 240,700 100,800 -80,940"
-                fill="none" stroke="url(#srv-beam-blue)" stroke-width="2.5" stroke-linecap="round" />
+                fill="none" stroke="url(#srv-beam-blue)" stroke-width="2" stroke-linecap="round" />
           <!-- Traveling photon spark head that ignites each card on contact -->
-          <circle id="srv-photon-spark" class="srv-photon-spark" r="8" cx="1450" cy="-40" fill="#FFFFFF" filter="url(#services-laser-glow-cyan)" />
+          <circle id="srv-photon-spark" class="srv-photon-spark" r="6" cx="1450" cy="-40" fill="#E0FFFF" filter="url(#services-laser-glow-cyan)" />
         </svg>
       </div>
 
@@ -506,7 +506,7 @@
         <div class="section-header" data-reveal>
           <div class="section-header-svg-bg" aria-hidden="true">
             <svg viewBox="0 0 700 120" class="section-watermark-svg">
-              <text x="50%" y="75%" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="900" font-size="105" fill="none" stroke="#35EDCA" stroke-width="1.8" letter-spacing="12" opacity="0.16">SERVICES</text>
+              <text x="50%" y="75%" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="900" font-size="105" fill="none" stroke="#35EDCA" stroke-width="1.8" letter-spacing="12" opacity="0.12">SERVICES</text>
             </svg>
           </div>
           <p class="section-label"><span data-key="servicesLabel">خدماتنا</span></p>
@@ -522,8 +522,14 @@
           <article class="card service-card hover-lift" data-service-index="1">
             <div class="service-card-top">
               <div class="card-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M3 12h18M3 6h18M3 18h18" stroke-linecap="round"/>
+                <svg viewBox="0 0 32 32" fill="none" class="ion-custom-icon">
+                  <rect x="3" y="5" width="26" height="22" rx="4" stroke="currentColor" stroke-width="1.6"/>
+                  <line x1="3" y1="11" x2="29" y2="11" stroke="currentColor" stroke-width="1.4" stroke-opacity="0.4"/>
+                  <circle cx="7.5" cy="8" r="1.1" fill="#A8FF00"/>
+                  <circle cx="11" cy="8" r="1.1" fill="#00E5FF"/>
+                  <path d="M12.5 16.5L9.5 19L12.5 21.5" stroke="#00E5FF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M19.5 16.5L22.5 19L19.5 21.5" stroke="#00E5FF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  <line x1="17" y1="15.5" x2="15" y2="22.5" stroke="#A8FF00" stroke-width="1.6" stroke-linecap="round"/>
                 </svg>
               </div>
               <span class="service-tech-chip"><span class="service-pulse-dot"></span>01 // WEB</span>
@@ -538,9 +544,13 @@
           <article class="card service-card hover-lift" data-service-index="2">
             <div class="service-card-top">
               <div class="card-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <rect x="2" y="3" width="20" height="14" rx="2"/>
-                  <path d="M8 21h8M12 17v4" stroke-linecap="round"/>
+                <svg viewBox="0 0 32 32" fill="none" class="ion-custom-icon">
+                  <path d="M16 3L27 9.5V22.5L16 29L5 22.5V9.5L16 3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                  <line x1="16" y1="3" x2="16" y2="11" stroke="#00E5FF" stroke-width="1.4" stroke-opacity="0.55"/>
+                  <line x1="27" y1="22.5" x2="20.3" y2="18.5" stroke="#00E5FF" stroke-width="1.4" stroke-opacity="0.55"/>
+                  <line x1="5" y1="22.5" x2="11.7" y2="18.5" stroke="#00E5FF" stroke-width="1.4" stroke-opacity="0.55"/>
+                  <circle cx="16" cy="16" r="5" stroke="#A8FF00" stroke-width="1.6"/>
+                  <circle cx="16" cy="16" r="2" fill="#00E5FF"/>
                 </svg>
               </div>
               <span class="service-tech-chip"><span class="service-pulse-dot"></span>02 // SYSTEMS</span>
@@ -555,8 +565,11 @@
           <article class="card service-card hover-lift" data-service-index="3">
             <div class="service-card-top">
               <div class="card-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                <svg viewBox="0 0 32 32" fill="none" class="ion-custom-icon">
+                  <path d="M16 4L28 10L16 16L4 10L16 4Z" stroke="#A8FF00" stroke-width="1.6" stroke-linejoin="round"/>
+                  <path d="M4 16L16 22L28 16" stroke="#00E5FF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M4 22L16 28L28 22" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="16" cy="10" r="2" fill="#00E5FF"/>
                 </svg>
               </div>
               <span class="service-tech-chip"><span class="service-pulse-dot"></span>03 // SAAS</span>
@@ -571,9 +584,14 @@
           <article class="card service-card hover-lift" data-service-index="4">
             <div class="service-card-top">
               <div class="card-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <circle cx="12" cy="12" r="3"/>
-                  <path d="M12 1v3M12 20v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M1 12h3M20 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/>
+                <svg viewBox="0 0 32 32" fill="none" class="ion-custom-icon">
+                  <line x1="7" y1="24" x2="16" y2="8" stroke="currentColor" stroke-width="1.3" stroke-dasharray="2.5 2.5" stroke-opacity="0.45"/>
+                  <line x1="25" y1="24" x2="16" y2="8" stroke="currentColor" stroke-width="1.3" stroke-dasharray="2.5 2.5" stroke-opacity="0.45"/>
+                  <path d="M5 24C5 14 11 9 16 9C21 9 27 14 27 24" stroke="#00E5FF" stroke-width="1.7" stroke-linecap="round"/>
+                  <rect x="13.5" y="6.5" width="5" height="5" rx="1.5" fill="#0A0E0A" stroke="#A8FF00" stroke-width="1.6"/>
+                  <circle cx="5" cy="24" r="2" fill="#A8FF00"/>
+                  <circle cx="27" cy="24" r="2" fill="#A8FF00"/>
+                  <circle cx="16" cy="19" r="2.3" stroke="currentColor" stroke-width="1.5"/>
                 </svg>
               </div>
               <span class="service-tech-chip"><span class="service-pulse-dot"></span>04 // UI/UX</span>
