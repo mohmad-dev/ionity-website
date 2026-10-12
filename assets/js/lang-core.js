@@ -51,14 +51,17 @@
       qsa(sel).forEach(function (el) { el.textContent = navMap[sel]; });
     });
 
-    /* 3. Language toggle buttons */
+    /* 3. Language toggle buttons & sidebar elements */
     qsa('[data-key="toggleBtn"]').forEach(function (el) {
       el.textContent = s.toggleBtn;
     });
+    setText('[data-key="sidebarSub"]', s.sidebarSub);
+    setText('[data-key="statusAvailable"]', s.statusAvailable);
 
     /* 4. Hero section */
     setText('[data-key="heroEyebrow"]', s.heroEyebrow);
-    setText('[data-key="heroHeadline"]', s.heroHeadline);
+    setText('[data-key="heroHeadlineBase"]', s.heroHeadlineBase);
+    setText('[data-key="heroHeadlineAccent"]', s.heroHeadlineAccent);
     setText('[data-key="heroBody"]', s.heroBody);
     setText('[data-key="heroCtaPrimary"]', s.heroCtaPrimary);
     setText('[data-key="heroCtaSecondary"]', s.heroCtaSecondary);

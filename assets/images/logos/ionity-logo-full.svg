@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 46" fill="none" class="ionity-logo-svg">
+  <defs>
+    <filter id="ion-glow-full" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.2" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Letter 1: 'i' -->
+  <g class="logo-letter-i1">
+    <!-- Green neon dot -->
+    <circle cx="12" cy="8" r="4.8" fill="#A8FF00" filter="url(#ion-glow-full)" />
+    <!-- White stem -->
+    <rect x="7.5" y="17" width="9" height="25" rx="4.5" fill="#FFFFFF" />
+  </g>
+
+  <!-- Letter 2: 'o' with negative (-) charge -->
+  <g class="logo-letter-o">
+    <rect x="27" y="17" width="28" height="25" rx="12.5" stroke="#FFFFFF" stroke-width="7" fill="none" />
+    <line x1="36" y1="29.5" x2="46" y2="29.5" stroke="#A8FF00" stroke-width="2.8" stroke-linecap="round" filter="url(#ion-glow-full)" />
+  </g>
+
+  <!-- Letter 3: 'n' with positive (+) charge -->
+  <g class="logo-letter-n">
+    <path d="M66 42 V28 C66 21.5 70.5 17 77 17 C83.5 17 88 21.5 88 28 V42" 
+          stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <g filter="url(#ion-glow-full)">
+      <line x1="72" y1="30" x2="82" y2="30" stroke="#A8FF00" stroke-width="2.6" stroke-linecap="round" />
+      <line x1="77" y1="25" x2="77" y2="35" stroke="#A8FF00" stroke-width="2.6" stroke-linecap="round" />
+    </g>
+  </g>
+
+  <!-- Letter 4: 'i' -->
+  <g class="logo-letter-i2">
+    <!-- Green neon dot -->
+    <circle cx="103" cy="8" r="4.8" fill="#A8FF00" filter="url(#ion-glow-full)" />
+    <!-- White stem -->
+    <rect x="98.5" y="17" width="9" height="25" rx="4.5" fill="#FFFFFF" />
+  </g>
+
+  <!-- Letter 5: 't' -->
+  <g class="logo-letter-t">
+    <!-- Vertical stem with slight bottom curve -->
+    <path d="M121 9 V35 C121 39 124 42 129 42 H133" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" fill="none" />
+    <!-- Crossbar -->
+    <line x1="113" y1="18" x2="131" y2="18" stroke="#FFFFFF" stroke-width="6.5" stroke-linecap="round" />
+  </g>
+
+  <!-- Letter 6: 'y' -->
+  <g class="logo-letter-y">
+    <!-- Left diagonal/curve -->
+    <path d="M142 18 L152 35" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" fill="none" />
+    <!-- Right diagonal extending down with subtle curve -->
+    <path d="M164 18 L150 42 C147 47 143 49 138 49" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" fill="none" />
+  </g>
+</svg>

@@ -12,19 +12,21 @@ window.IONITY_STRINGS = {
     /* Navigation */
     navHome:     'الرئيسية',
     navServices: 'خدماتنا',
-    navSolutions: 'حلولنا',
+    navSolutions: 'أنظمتنا',
     navWork:     'أعمالنا',
-    navAbout:    'من نحن',
-    navContact:  'تواصل معنا',
+    navAbout:    'استوديو',
+    navContact:  'تواصل',
     navCta:      'ناقش مشروعك',
+    sidebarSub:  'مختبر الأنظمة والحلول',
+    statusAvailable: 'متاح لمشاريع Q1/Q2',
 
     /* Lang toggle labels */
     toggleBtn: 'EN',
 
     /* Hero */
     heroEyebrow: 'حلول برمجية متخصصة',
-    heroHeadline: 'نبني حلولًا رقمية تحوّل\nأفكارك إلى واقع.',
-    heroHeadlineAccent: 'تحوّل أفكارك إلى واقع.',
+    heroHeadlineBase: 'نبني حلولًا رقمية تحوّل',
+    heroHeadlineAccent: 'أفكارك إلى واقع.',
     heroBody: 'نطوّر مواقع ويب، وأنظمة برمجية، ومنتجات SaaS تساعد الشركات على تبسيط عملياتها وبناء تجارب رقمية أكثر كفاءة.',
     heroCtaPrimary: 'ناقش مشروعك',
     heroCtaSecondary: 'استكشف خدماتنا',
@@ -147,21 +149,23 @@ window.IONITY_STRINGS = {
   en: {
 
     /* Navigation */
-    navHome:     'Home',
+    navHome:     'Index',
     navServices: 'Services',
     navSolutions: 'Solutions',
     navWork:     'Work',
-    navAbout:    'About',
+    navAbout:    'Studio',
     navContact:  'Contact',
-    navCta:      'Start a project',
+    navCta:      'Start Project',
+    sidebarSub:  'SOFTWARE & SYSTEMS LAB',
+    statusAvailable: 'Available for Q1/Q2 Projects',
 
     /* Lang toggle */
     toggleBtn: 'عربي',
 
     /* Hero */
     heroEyebrow: 'Specialized Software Solutions',
-    heroHeadline: 'We build digital solutions that\nturn your ideas into reality.',
-    heroHeadlineAccent: 'turn your ideas into reality.',
+    heroHeadlineBase: 'We architect digital systems that',
+    heroHeadlineAccent: 'turn your vision into reality.',
     heroBody: 'We develop websites, software systems, and SaaS products that help businesses streamline operations and build more efficient digital experiences.',
     heroCtaPrimary: 'Discuss your project',
     heroCtaSecondary: 'Explore our services',

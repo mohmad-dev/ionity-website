@@ -66,6 +66,12 @@
 
 <body class="lang-ar">
 
+  <!-- ── Custom Green Cursor (Desktop) ─────────────── -->
+  <div class="custom-cursor" id="custom-cursor" aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+  </div>
+
   <!-- ── GTM noscript ──────────────────────────────── -->
   <noscript>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVHBN39"
@@ -79,7 +85,7 @@
   <div class="preloader" role="status" aria-label="جارٍ التحميل">
     <div class="preloader-content">
       <div class="preloader-logo" aria-hidden="true">
-        IONITY<span class="cursor"></span>
+        <img src="assets/images/logos/ionity-logo-full.svg" alt="IONITY" width="160" height="34">
       </div>
       <div class="preloader-bar" aria-hidden="true">
         <div class="preloader-bar-fill"></div>
@@ -89,32 +95,92 @@
 
 
   <!-- ══════════════════════════════════════════════════
-       NAVIGATION
+       DESKTOP SIDEBAR NAVIGATION (Minimalist Banner)
   ══════════════════════════════════════════════════ -->
-  <header class="site-nav" role="banner">
-    <div class="nav-inner">
+  <aside class="desktop-sidebar" role="navigation" aria-label="شريط التنقل الجانبي">
+    <div class="sidebar-inner">
 
-      <!-- Logo (order=3 in RTL, order=1 in LTR via CSS) -->
-      <a href="#home" class="nav-logo" aria-label="IONITY — الصفحة الرئيسية">
-        <span class="nav-logo-text">IONITY</span><span class="nav-logo-cursor" aria-hidden="true"></span>
-      </a>
+      <!-- Brand Logo Top (Full wordmark for Desktop) -->
+      <div class="sidebar-header">
+        <a href="#home" class="sidebar-brand" aria-label="IONITY — الصفحة الرئيسية">
+          <img src="assets/images/logos/ionity-logo-full.svg" alt="IONITY" class="sidebar-logo-img" width="142" height="30">
+        </a>
+        <div class="sidebar-tagline">
+          <span class="tagline-dot" aria-hidden="true"></span>
+          <span class="tagline-text" data-key="sidebarSub">مختبر الأنظمة والحلول</span>
+        </div>
+      </div>
 
-      <!-- Desktop nav links (order=2) -->
-      <nav class="nav-links" aria-label="التنقل الرئيسي">
-        <a href="#home"      class="nav-link active" data-target="home"      data-key="navHome">الرئيسية</a>
-        <a href="#services"  class="nav-link"         data-target="services"  data-key="navServices">خدماتنا</a>
-        <a href="#solutions" class="nav-link"         data-target="solutions" data-key="navSolutions">حلولنا</a>
-        <a href="#about"     class="nav-link"         data-target="about"     data-key="navAbout">من نحن</a>
-        <a href="#contact"   class="nav-link"         data-target="contact"   data-key="navContact">تواصل معنا</a>
+      <!-- Navigation Menu -->
+      <nav class="sidebar-menu" aria-label="التنقل الرئيسي">
+        <a href="#home" class="sidebar-nav-item active" data-target="home">
+          <span class="nav-idx">01</span>
+          <span class="nav-lbl" data-key="navHome">الرئيسية</span>
+          <span class="nav-indicator" aria-hidden="true"></span>
+        </a>
+        <a href="#services" class="sidebar-nav-item" data-target="services">
+          <span class="nav-idx">02</span>
+          <span class="nav-lbl" data-key="navServices">خدماتنا</span>
+          <span class="nav-indicator" aria-hidden="true"></span>
+        </a>
+        <a href="#solutions" class="sidebar-nav-item" data-target="solutions">
+          <span class="nav-idx">03</span>
+          <span class="nav-lbl" data-key="navSolutions">أنظمتنا</span>
+          <span class="nav-indicator" aria-hidden="true"></span>
+        </a>
+        <a href="#about" class="sidebar-nav-item" data-target="about">
+          <span class="nav-idx">04</span>
+          <span class="nav-lbl" data-key="navAbout">استوديو</span>
+          <span class="nav-indicator" aria-hidden="true"></span>
+        </a>
+        <a href="#contact" class="sidebar-nav-item" data-target="contact">
+          <span class="nav-idx">05</span>
+          <span class="nav-lbl" data-key="navContact">تواصل</span>
+          <span class="nav-indicator" aria-hidden="true"></span>
+        </a>
       </nav>
 
-      <!-- Actions: CTA + lang toggle (order=1 in RTL, order=3 in LTR via CSS) -->
-      <div class="nav-actions">
-        <button class="lang-toggle-btn"
+      <!-- Sidebar Footer -->
+      <div class="sidebar-footer">
+        <div class="sidebar-status-badge">
+          <span class="status-pulse-dot" aria-hidden="true"></span>
+          <span class="status-text" data-key="statusAvailable">متاح لمشاريع Q1/Q2</span>
+        </div>
+
+        <div class="sidebar-controls">
+          <a href="#contact" class="btn btn-primary btn-sm sidebar-cta-btn" data-key="navCta">
+            ناقش مشروعك
+          </a>
+          <button class="lang-toggle-btn sidebar-lang-toggle"
+                  data-action="toggle-lang"
+                  data-key="toggleBtn"
+                  aria-label="تغيير اللغة">EN</button>
+        </div>
+
+        <div class="sidebar-meta">
+          <span>RIYADH / DUBAI</span>
+          <span>© 2026 IONITY</span>
+        </div>
+      </div>
+
+    </div>
+  </aside>
+
+
+  <!-- ══════════════════════════════════════════════════
+       MOBILE HEADER (Compact Logo for Mobile < 992px)
+  ══════════════════════════════════════════════════ -->
+  <header class="mobile-header" role="banner">
+    <div class="mobile-header-inner">
+      <a href="#home" class="mobile-brand" aria-label="IONITY">
+        <img src="assets/images/logos/ion-logo-compact.svg" alt="ion" class="mobile-logo-img" width="78" height="28">
+      </a>
+
+      <div class="mobile-header-actions">
+        <button class="lang-toggle-btn mobile-lang-toggle"
                 data-action="toggle-lang"
                 data-key="toggleBtn"
                 aria-label="تغيير اللغة">EN</button>
-        <a href="#contact" class="btn btn-primary btn-sm" data-key="navCta">ناقش مشروعك</a>
         <button class="nav-hamburger"
                 aria-label="فتح القائمة"
                 aria-expanded="false"
@@ -124,20 +190,19 @@
           <span aria-hidden="true"></span>
         </button>
       </div>
-
     </div>
   </header>
 
-  <!-- Mobile Nav -->
+  <!-- Mobile Nav Drawer -->
   <div id="mobile-nav" class="mobile-nav" role="dialog" aria-modal="true" aria-label="القائمة">
     <div class="mobile-nav-overlay" tabindex="-1"></div>
     <div class="mobile-nav-drawer">
       <nav class="mobile-nav-links" aria-label="قائمة الجوال">
-        <a href="#home"      class="mobile-nav-link" data-key="navHome">الرئيسية</a>
-        <a href="#services"  class="mobile-nav-link" data-key="navServices">خدماتنا</a>
-        <a href="#solutions" class="mobile-nav-link" data-key="navSolutions">حلولنا</a>
-        <a href="#about"     class="mobile-nav-link" data-key="navAbout">من نحن</a>
-        <a href="#contact"   class="mobile-nav-link" data-key="navContact">تواصل معنا</a>
+        <a href="#home"      class="mobile-nav-link" data-target="home"><span class="nav-idx">01</span><span data-key="navHome">الرئيسية</span></a>
+        <a href="#services"  class="mobile-nav-link" data-target="services"><span class="nav-idx">02</span><span data-key="navServices">خدماتنا</span></a>
+        <a href="#solutions" class="mobile-nav-link" data-target="solutions"><span class="nav-idx">03</span><span data-key="navSolutions">أنظمتنا</span></a>
+        <a href="#about"     class="mobile-nav-link" data-target="about"><span class="nav-idx">04</span><span data-key="navAbout">استوديو</span></a>
+        <a href="#contact"   class="mobile-nav-link" data-target="contact"><span class="nav-idx">05</span><span data-key="navContact">تواصل</span></a>
       </nav>
       <div class="mobile-nav-footer">
         <a href="#contact" class="btn btn-primary" data-key="navCta">ناقش مشروعك</a>
@@ -169,7 +234,7 @@
             </p>
 
             <h1 class="hero-headline" data-reveal data-reveal-delay="1">
-              نبني حلولًا رقمية تحوّل<br>
+              <span data-key="heroHeadlineBase">نبني حلولًا رقمية تحوّل</span><br>
               <span class="accent-line" data-key="heroHeadlineAccent">أفكارك إلى واقع.</span>
             </h1>
 
@@ -191,72 +256,41 @@
 
           </div><!-- /hero-content -->
 
-          <!-- Visual column -->
+          <!-- Visual column: Futuristic Ionic Core -->
           <div class="hero-visual" data-reveal="scale" data-reveal-delay="2" aria-hidden="true">
-            <div class="hero-mockup-wrapper">
+            <div class="hero-ionic-visual">
 
-              <!-- Browser chrome -->
-              <div class="hero-mockup-chrome">
-                <span class="hero-mockup-dot"></span>
-                <span class="hero-mockup-dot"></span>
-                <span class="hero-mockup-dot"></span>
-                <div class="hero-mockup-bar"></div>
+              <!-- Top Telemetry HUD Card -->
+              <div class="hud-card hud-card-top">
+                <span class="hud-indicator-dot"></span>
+                <span>SYSTEM STATUS // 100% OPERATIONAL</span>
               </div>
 
-              <!-- Dashboard mockup body -->
-              <div class="hero-mockup-body">
-
-                <!-- Stats row -->
-                <div class="mockup-stat-row">
-                  <div class="mockup-stat-card">
-                    <span class="mockup-stat-label">Revenue</span>
-                    <span class="mockup-stat-value accent">+42%</span>
-                  </div>
-                  <div class="mockup-stat-card">
-                    <span class="mockup-stat-label">Users</span>
-                    <span class="mockup-stat-value">12.4K</span>
-                  </div>
-                  <div class="mockup-stat-card">
-                    <span class="mockup-stat-label">Uptime</span>
-                    <span class="mockup-stat-value">99.9%</span>
-                  </div>
+              <!-- Concentric animated atomic rings -->
+              <div class="ionic-orbital-system">
+                <div class="ionic-field-ring ionic-ring-1">
+                  <div class="orbital-node node-pos">+</div>
+                </div>
+                <div class="ionic-field-ring ionic-ring-2">
+                  <div class="orbital-node node-neg">-</div>
+                </div>
+                <div class="ionic-field-ring ionic-ring-3">
+                  <div class="orbital-node node-pos">+</div>
                 </div>
 
-                <!-- Chart -->
-                <div class="mockup-chart" role="img" aria-label="Decorative performance chart">
-                  <div class="mockup-bar"></div>
-                  <div class="mockup-bar"></div>
-                  <div class="mockup-bar"></div>
-                  <div class="mockup-bar"></div>
-                  <div class="mockup-bar"></div>
-                  <div class="mockup-bar"></div>
+                <!-- Center glowing plasma core with brand mark -->
+                <div class="ionic-plasma-core">
+                  <span class="plasma-inner-symbol">ION</span>
                 </div>
+              </div>
 
-                <!-- Second stat row -->
-                <div class="mockup-stat-row">
-                  <div class="mockup-stat-card">
-                    <span class="mockup-stat-label">Projects</span>
-                    <span class="mockup-stat-value">50+</span>
-                  </div>
-                  <div class="mockup-stat-card">
-                    <span class="mockup-stat-label">Response</span>
-                    <span class="mockup-stat-value accent">24h</span>
-                  </div>
-                  <div class="mockup-stat-card">
-                    <span class="mockup-stat-label">Score</span>
-                    <span class="mockup-stat-value">A+</span>
-                  </div>
-                </div>
+              <!-- Bottom Telemetry HUD Card -->
+              <div class="hud-card hud-card-bottom">
+                <span class="hud-indicator-dot"></span>
+                <span>LATENCY // 3.2ms HIGH PERFORMANCE</span>
+              </div>
 
-              </div><!-- /hero-mockup-body -->
-            </div><!-- /hero-mockup-wrapper -->
-
-            <!-- Floating label -->
-            <div class="hero-float-tag" aria-hidden="true">
-              <span class="hero-float-dot"></span>
-              <span class="hero-float-label" data-key="heroFloatTag">منتجات تعمل بكفاءة</span>
             </div>
-
           </div><!-- /hero-visual -->
         </div><!-- /hero-inner -->
       </div><!-- /container -->
@@ -1001,7 +1035,7 @@
         <!-- Brand column -->
         <div class="footer-brand">
           <a href="#home" class="footer-logo-link" aria-label="IONITY">
-            <span class="ionity-wordmark">IONITY<span class="wordmark-cursor" aria-hidden="true"></span></span>
+            <img src="assets/images/logos/ionity-logo-full.svg" alt="IONITY" class="footer-logo-img" width="136" height="28">
           </a>
           <p class="footer-brand-desc" data-key="footerDesc">
             شركة برمجيات متخصصة في بناء المواقع والتطبيقات والحلول الرقمية.

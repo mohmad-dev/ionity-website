@@ -18,6 +18,9 @@ body:not(.lang-ar) {
 /* ── 2. Logo always LTR ─────────────────────────────────── */
 .ionity-wordmark,
 .nav-logo,
+.sidebar-brand,
+.mobile-brand,
+.sidebar-header,
 .footer-logo-link,
 .preloader-logo {
   direction: ltr !important;

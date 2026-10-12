@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 46" fill="none" class="ion-logo-svg">
+  <defs>
+    <filter id="ion-glow-compact" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Letter 'i' -->
+  <g class="logo-letter-i">
+    <!-- Green neon dot -->
+    <circle cx="12" cy="8" r="5" fill="#A8FF00" filter="url(#ion-glow-compact)" />
+    <!-- White stem -->
+    <rect x="7" y="17" width="10" height="25" rx="5" fill="#FFFFFF" />
+  </g>
+
+  <!-- Letter 'o' with negative (-) charge -->
+  <g class="logo-letter-o">
+    <!-- Outer ring -->
+    <rect x="29" y="17" width="28" height="25" rx="12.5" stroke="#FFFFFF" stroke-width="7" fill="none" />
+    <!-- Negative charge (-) in neon green -->
+    <line x1="38" y1="29.5" x2="48" y2="29.5" stroke="#A8FF00" stroke-width="3" stroke-linecap="round" filter="url(#ion-glow-compact)" />
+  </g>
+
+  <!-- Letter 'n' with positive (+) charge -->
+  <g class="logo-letter-n">
+    <!-- Main 'n' shape: left stem + arch + right leg -->
+    <path d="M69 42 V28 C69 21.5 73.5 17 80 17 C86.5 17 91 21.5 91 28 V42" 
+          stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <!-- Positive charge (+) in neon green -->
+    <g filter="url(#ion-glow-compact)">
+      <line x1="75" y1="30" x2="85" y2="30" stroke="#A8FF00" stroke-width="2.8" stroke-linecap="round" />
+      <line x1="80" y1="25" x2="80" y2="35" stroke="#A8FF00" stroke-width="2.8" stroke-linecap="round" />
+    </g>
+  </g>
+</svg>
