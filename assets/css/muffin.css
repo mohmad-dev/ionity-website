@@ -338,8 +338,6 @@ body.lang-ar .hero-actions {
   position: relative;
   background: var(--color-bg);
   padding-block: clamp(4rem, 8vw, 6.5rem);
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
   overflow: hidden;
 }
 
@@ -569,6 +567,8 @@ body.lang-ar .laser-background {
 
 .services-section {
   background: var(--color-bg);
+  position: relative;
+  overflow: hidden;
 }
 
 .section-header {
@@ -648,8 +648,6 @@ body.lang-ar .section-body {
 
 .about-section {
   background: var(--color-surface);
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
 }
 
 .about-inner {
@@ -1029,8 +1027,6 @@ body.lang-ar .process-grid::before {
 
 .solutions-section {
   background: var(--color-surface);
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
 }
 
 .solutions-grid {
@@ -1186,8 +1182,6 @@ body.lang-ar .solutions-note {
 
 .cta-section {
   background: var(--color-surface);
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
 }
 
 .cta-inner {
@@ -1442,7 +1436,6 @@ body.lang-ar .btn-pill-glow:hover .arrow {
 
 .site-footer {
   background: var(--color-bg);
-  border-top: 1px solid var(--color-border);
   padding-block: var(--space-16);
 }
 

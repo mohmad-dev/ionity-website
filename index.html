@@ -437,6 +437,57 @@
     <!-- ── SERVICES ─────────────────────────────────── -->
     <section id="services" class="services-section site-section" data-nav-id="services" aria-labelledby="services-heading">
 
+      <!-- Glowing Continuous Ionic Laser Spine weaving between cards -->
+      <div class="services-laser-bg" aria-hidden="true">
+        <svg class="services-laser-svg" viewBox="0 0 1400 900" preserveAspectRatio="none">
+          <defs>
+            <filter id="services-laser-glow-cyan" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="6" result="blur1" />
+              <feGaussianBlur stdDeviation="16" result="blur2" />
+              <feMerge>
+                <feMergeNode in="blur2" />
+                <feMergeNode in="blur1" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+            <filter id="services-laser-glow-blue" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="5" result="blur1" />
+              <feGaussianBlur stdDeviation="12" result="blur2" />
+              <feMerge>
+                <feMergeNode in="blur2" />
+                <feMergeNode in="blur1" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+            <linearGradient id="srv-beam-cyan" x1="100%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#00E5FF" stop-opacity="0" />
+              <stop offset="20%" stop-color="#00E5FF" stop-opacity="0.9" />
+              <stop offset="50%" stop-color="#80FFEA" stop-opacity="1" />
+              <stop offset="80%" stop-color="#00A3FF" stop-opacity="0.9" />
+              <stop offset="100%" stop-color="#00E5FF" stop-opacity="0" />
+            </linearGradient>
+            <linearGradient id="srv-beam-blue" x1="100%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#0088FF" stop-opacity="0" />
+              <stop offset="30%" stop-color="#00A3FF" stop-opacity="0.8" />
+              <stop offset="70%" stop-color="#00E5FF" stop-opacity="1" />
+              <stop offset="100%" stop-color="#0088FF" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+          <!-- Base laser track -->
+          <path class="srv-laser-track"
+                d="M 1450,-40 C 1220,100 1080,240 920,260 C 700,280 580,180 380,240 C 180,300 220,520 620,560 C 1040,600 920,720 480,700 C 260,680 120,780 -100,920"
+                fill="none" stroke-width="2" stroke-linecap="round" />
+          <!-- Primary glowing cyan beam -->
+          <path class="srv-laser-beam srv-laser-beam-1" filter="url(#services-laser-glow-cyan)"
+                d="M 1450,-40 C 1220,100 1080,240 920,260 C 700,280 580,180 380,240 C 180,300 220,520 620,560 C 1040,600 920,720 480,700 C 260,680 120,780 -100,920"
+                fill="none" stroke="url(#srv-beam-cyan)" stroke-width="4.5" stroke-linecap="round" />
+          <!-- Secondary electric blue wave -->
+          <path class="srv-laser-beam srv-laser-beam-2" filter="url(#services-laser-glow-blue)"
+                d="M 1470,-10 C 1200,120 1060,260 900,280 C 680,300 600,200 400,260 C 200,320 240,540 640,580 C 1060,620 900,740 460,720 C 240,700 100,800 -80,940"
+                fill="none" stroke="url(#srv-beam-blue)" stroke-width="3" stroke-linecap="round" />
+        </svg>
+      </div>
+
       <!-- Floating Pattern Decorative Elements -->
       <div class="floating-pattern-wrapper" aria-hidden="true">
         <div class="floating-pattern fp-1"><img src="assets/images/pattern/2.svg" alt=""></div>
@@ -444,7 +495,7 @@
         <div class="floating-pattern fp-5"><img src="assets/images/pattern/6.svg" alt=""></div>
       </div>
 
-      <div class="container">
+      <div class="container" style="position:relative; z-index:2;">
 
         <div class="section-header" data-reveal>
           <div class="section-header-svg-bg" aria-hidden="true">
@@ -453,7 +504,7 @@
             </svg>
           </div>
           <p class="section-label"><span data-key="servicesLabel">خدماتنا</span></p>
-          <h2 id="services-heading" class="section-title" data-key="servicesTitle">خدماتنا</h2>
+          <h2 id="services-heading" class="section-title" data-key="servicesTitle">خدماتنا البرمجية</h2>
           <p class="section-body" data-key="servicesBody">
             نطوّر حلولًا رقمية تتناسب مع احتياجات مشروعك، من المواقع وتطبيقات الويب إلى الأنظمة المخصصة ومنتجات SaaS.
           </p>
@@ -462,11 +513,14 @@
         <div class="services-grid">
 
           <!-- Service 1: Web Development -->
-          <article class="card service-card hover-lift" data-reveal data-reveal-delay="1">
-            <div class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M3 12h18M3 6h18M3 18h18" stroke-linecap="round"/>
-              </svg>
+          <article class="card service-card hover-lift" data-service-index="1" data-reveal data-reveal-delay="1">
+            <div class="service-card-top">
+              <div class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M3 12h18M3 6h18M3 18h18" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <span class="service-tech-chip"><span class="service-pulse-dot"></span>01 // WEB</span>
             </div>
             <h3 class="card-title" data-key="service1Title">تطوير المواقع وتطبيقات الويب</h3>
             <p class="card-body" data-key="service1Body">
@@ -481,12 +535,15 @@
           </article>
 
           <!-- Service 2: Custom Systems -->
-          <article class="card service-card hover-lift" data-reveal data-reveal-delay="2">
-            <div class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="2" y="3" width="20" height="14" rx="2"/>
-                <path d="M8 21h8M12 17v4" stroke-linecap="round"/>
-              </svg>
+          <article class="card service-card hover-lift" data-service-index="2" data-reveal data-reveal-delay="2">
+            <div class="service-card-top">
+              <div class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="2" y="3" width="20" height="14" rx="2"/>
+                  <path d="M8 21h8M12 17v4" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <span class="service-tech-chip"><span class="service-pulse-dot"></span>02 // SYSTEMS</span>
             </div>
             <h3 class="card-title" data-key="service2Title">الأنظمة البرمجية المخصصة</h3>
             <p class="card-body" data-key="service2Body">
@@ -501,11 +558,14 @@
           </article>
 
           <!-- Service 3: SaaS -->
-          <article class="card service-card hover-lift" data-reveal data-reveal-delay="3">
-            <div class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-              </svg>
+          <article class="card service-card hover-lift" data-service-index="3" data-reveal data-reveal-delay="3">
+            <div class="service-card-top">
+              <div class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+              </div>
+              <span class="service-tech-chip"><span class="service-pulse-dot"></span>03 // SAAS</span>
             </div>
             <h3 class="card-title" data-key="service3Title">منتجات SaaS والحلول الرقمية</h3>
             <p class="card-body" data-key="service3Body">
@@ -520,12 +580,15 @@
           </article>
 
           <!-- Service 4: UI/UX -->
-          <article class="card service-card hover-lift" data-reveal data-reveal-delay="4">
-            <div class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <circle cx="12" cy="12" r="3"/>
-                <path d="M12 1v3M12 20v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M1 12h3M20 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/>
-              </svg>
+          <article class="card service-card hover-lift" data-service-index="4" data-reveal data-reveal-delay="4">
+            <div class="service-card-top">
+              <div class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <circle cx="12" cy="12" r="3"/>
+                  <path d="M12 1v3M12 20v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M1 12h3M20 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/>
+                </svg>
+              </div>
+              <span class="service-tech-chip"><span class="service-pulse-dot"></span>04 // UI/UX</span>
             </div>
             <h3 class="card-title" data-key="service4Title">تصميم UI/UX والدعم التقني</h3>
             <p class="card-body" data-key="service4Body">
@@ -781,70 +844,6 @@
     </section><!-- /about -->
 
 
-
-    <!-- ── TECHNOLOGY ────────────────────────────────── -->
-    <section id="tech" class="tech-section site-section" aria-labelledby="tech-heading">
-      <div class="container">
-
-        <div class="section-header" data-reveal>
-          <p class="section-label"><span data-key="techLabel">التقنيات</span></p>
-          <h2 id="tech-heading" class="section-title" data-key="techTitle">أدواتنا وتقنياتنا</h2>
-          <p class="section-body" data-key="techBody">
-            نختار التقنية المناسبة لكل مشروع — لا أدوات عشوائية، بل قرارات مدروسة.
-          </p>
-        </div>
-
-        <div class="tech-categories">
-
-          <div class="tech-category" data-reveal data-reveal-delay="1">
-            <p class="tech-category-label" data-key="techCat1">الواجهة الأمامية</p>
-            <div class="tech-items">
-              <span class="tech-item">React</span>
-              <span class="tech-item">Next.js</span>
-              <span class="tech-item">TypeScript</span>
-              <span class="tech-item">Tailwind CSS</span>
-              <span class="tech-item">Vue.js</span>
-            </div>
-          </div>
-
-          <div class="tech-category" data-reveal data-reveal-delay="2">
-            <p class="tech-category-label" data-key="techCat2">الواجهة الخلفية</p>
-            <div class="tech-items">
-              <span class="tech-item">Node.js</span>
-              <span class="tech-item">Python</span>
-              <span class="tech-item">Laravel</span>
-              <span class="tech-item">FastAPI</span>
-              <span class="tech-item">REST APIs</span>
-            </div>
-          </div>
-
-          <div class="tech-category" data-reveal data-reveal-delay="3">
-            <p class="tech-category-label" data-key="techCat3">قواعد البيانات</p>
-            <div class="tech-items">
-              <span class="tech-item">PostgreSQL</span>
-              <span class="tech-item">MySQL</span>
-              <span class="tech-item">MongoDB</span>
-              <span class="tech-item">Redis</span>
-            </div>
-          </div>
-
-          <div class="tech-category" data-reveal data-reveal-delay="4">
-            <p class="tech-category-label" data-key="techCat4">السحابة والنشر</p>
-            <div class="tech-items">
-              <span class="tech-item">AWS</span>
-              <span class="tech-item">Vercel</span>
-              <span class="tech-item">Docker</span>
-              <span class="tech-item">GitHub Actions</span>
-              <span class="tech-item">Cloudflare</span>
-            </div>
-          </div>
-
-        </div><!-- /tech-categories -->
-
-        <!-- ⚠️ OWNER_ACTION: Confirm above tech list reflects actual tools used by the team -->
-
-      </div><!-- /container -->
-    </section><!-- /tech -->
 
 
     <!-- ── CONTACT SECTION (With Merged Concise CTA & Channels) ─ -->
@@ -1106,74 +1105,19 @@
 
 
   <!-- ══════════════════════════════════════════════════
-       COOKIE CONSENT BANNER
+       COOKIE TOAST (Minimalist Global Standard)
   ══════════════════════════════════════════════════ -->
-  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-desc" hidden>
-    <div class="cookie-banner-inner">
-      <div class="cookie-text">
-        <p class="cookie-title" id="cookie-title">🍪 نستخدم ملفات تعريف الارتباط</p>
-        <p class="cookie-desc" id="cookie-desc">
-          نستخدم ملفات تعريف الارتباط لتحسين تجربتك وتحليل حركة الزيارات. يمكنك قبول جميع الملفات أو تخصيص اختياراتك.
-          <a href="privacy.html" class="cookie-link">اقرأ سياسة الخصوصية</a>
-        </p>
-      </div>
-      <div class="cookie-actions">
-        <button class="btn btn-sm btn-secondary cookie-btn-settings js-cookie-settings" type="button">إعدادات</button>
-        <button class="btn btn-sm btn-secondary cookie-btn-reject" type="button" id="cookie-reject">رفض غير الضروري</button>
-        <button class="btn btn-sm btn-primary cookie-btn-accept" type="button" id="cookie-accept">قبول الكل</button>
-      </div>
+  <div id="cookie-toast" class="cookie-toast" role="dialog" aria-label="ملفات تعريف الارتباط" hidden>
+    <div class="cookie-toast-content">
+      <span class="cookie-emoji" aria-hidden="true">🍪</span>
+      <p class="cookie-toast-msg">
+        نستخدم ملفات تعريف الارتباط لتحسين تجربة التصفح.
+        <a href="privacy.html" class="cookie-toast-link">الخصوصية</a>
+      </p>
     </div>
-  </div>
-
-  <!-- Cookie Settings Modal -->
-  <div id="cookie-modal" class="cookie-modal" role="dialog" aria-labelledby="cookie-modal-title" aria-modal="true" hidden>
-    <div class="cookie-modal-overlay" id="cookie-modal-overlay"></div>
-    <div class="cookie-modal-box">
-      <div class="cookie-modal-header">
-        <h2 class="cookie-modal-title" id="cookie-modal-title">إعدادات ملفات تعريف الارتباط</h2>
-        <button class="cookie-modal-close" id="cookie-modal-close" aria-label="إغلاق">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-        </button>
-      </div>
-      <div class="cookie-modal-body">
-        <div class="cookie-category">
-          <div class="cookie-category-header">
-            <div>
-              <p class="cookie-category-name">ملفات الارتباط الضرورية</p>
-              <p class="cookie-category-desc">لازمة لعمل الموقع، لا يمكن تعطيلها.</p>
-            </div>
-            <span class="cookie-badge-required">مطلوبة دائماً</span>
-          </div>
-        </div>
-        <div class="cookie-category">
-          <div class="cookie-category-header">
-            <div>
-              <p class="cookie-category-name">ملفات الارتباط التحليلية</p>
-              <p class="cookie-category-desc">تساعدنا في فهم كيفية استخدام الموقع (Google Analytics).</p>
-            </div>
-            <label class="cookie-toggle" for="cookie-analytics">
-              <input type="checkbox" id="cookie-analytics" checked>
-              <span class="cookie-toggle-slider"></span>
-            </label>
-          </div>
-        </div>
-        <div class="cookie-category">
-          <div class="cookie-category-header">
-            <div>
-              <p class="cookie-category-name">ملفات الارتباط التسويقية</p>
-              <p class="cookie-category-desc">تُستخدم لعرض إعلانات ذات صلة (Meta Pixel).</p>
-            </div>
-            <label class="cookie-toggle" for="cookie-marketing">
-              <input type="checkbox" id="cookie-marketing" checked>
-              <span class="cookie-toggle-slider"></span>
-            </label>
-          </div>
-        </div>
-      </div>
-      <div class="cookie-modal-footer">
-        <button class="btn btn-secondary btn-sm" id="cookie-modal-reject">رفض الاختياري</button>
-        <button class="btn btn-primary btn-sm" id="cookie-modal-save">حفظ الإعدادات</button>
-      </div>
+    <div class="cookie-toast-actions">
+      <button class="cookie-toast-btn cookie-toast-btn-accept" id="cookie-accept" type="button">موافق</button>
+      <button class="cookie-toast-btn cookie-toast-btn-reject" id="cookie-reject" type="button">رفض</button>
     </div>
   </div>
 

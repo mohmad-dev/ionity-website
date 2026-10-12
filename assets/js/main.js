@@ -675,12 +675,11 @@
 
 
   /* ─────────────────────────────────────────────────
-     10. Cookie Consent & Privacy Controller
+     10. Cookie Consent Controller (Minimalist Toast)
   ───────────────────────────────────────────────── */
   (function initCookieConsent() {
-    var banner = document.getElementById('cookie-banner');
-    var modal = document.getElementById('cookie-modal');
-    if (!banner) return;
+    var toast = document.getElementById('cookie-toast');
+    if (!toast) return;
 
     var STORAGE_KEY = 'ionity-cookie-consent';
     var savedConsent = null;
@@ -688,83 +687,79 @@
       savedConsent = JSON.parse(localStorage.getItem(STORAGE_KEY));
     } catch (e) {}
 
-    /* Show banner if no choice has been saved yet */
+    /* Show toast if no choice has been saved yet */
     if (!savedConsent) {
       setTimeout(function() {
-        banner.hidden = false;
-      }, 800);
+        toast.hidden = false;
+      }, 700);
     }
 
-    function saveConsent(data) {
+    function saveConsent(accepted) {
       try {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+        localStorage.setItem(STORAGE_KEY, JSON.stringify({
+          accepted: !!accepted,
+          timestamp: Date.now()
+        }));
       } catch (e) {}
-      banner.hidden = true;
-      if (modal) modal.hidden = true;
+      toast.hidden = true;
     }
 
-    /* Accept all */
     var acceptBtn = document.getElementById('cookie-accept');
     if (acceptBtn) {
       acceptBtn.addEventListener('click', function() {
-        saveConsent({ necessary: true, analytics: true, marketing: true, timestamp: Date.now() });
+        saveConsent(true);
       });
     }
 
-    /* Reject non-essential */
     var rejectBtn = document.getElementById('cookie-reject');
     if (rejectBtn) {
       rejectBtn.addEventListener('click', function() {
-        saveConsent({ necessary: true, analytics: false, marketing: false, timestamp: Date.now() });
+        saveConsent(false);
       });
     }
+  })();
 
-    /* Open settings modal */
-    document.querySelectorAll('.js-cookie-settings').forEach(function(btn) {
-      btn.addEventListener('click', function(e) {
-        e.preventDefault();
-        if (!modal) return;
-        /* Sync modal checkboxes with saved preferences */
-        var current = savedConsent || { analytics: true, marketing: true };
-        var aBox = document.getElementById('cookie-analytics');
-        var mBox = document.getElementById('cookie-marketing');
-        if (aBox) aBox.checked = !!current.analytics;
-        if (mBox) mBox.checked = !!current.marketing;
-        modal.hidden = false;
+
+  /* ─────────────────────────────────────────────────
+     11. Services Laser Spine & Sequential Card Illuminator
+  ───────────────────────────────────────────────── */
+  (function initServicesLaser() {
+    var servicesSec = document.getElementById('services');
+    if (!servicesSec) return;
+
+    var cards = servicesSec.querySelectorAll('.service-card');
+    if (!cards.length) return;
+
+    var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (prefersReduced) {
+      cards.forEach(function(card) {
+        card.classList.add('is-active');
       });
+      return;
+    }
+
+    var hasAnimated = false;
+
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting && !hasAnimated) {
+          hasAnimated = true;
+          /* Sequentially illuminate cards as laser weaves through: 01 -> 02 -> 03 -> 04 */
+          cards.forEach(function(card, index) {
+            var delay = (index + 1) * 350;
+            setTimeout(function() {
+              card.classList.add('is-active');
+            }, delay);
+          });
+        }
+      });
+    }, {
+      threshold: 0.15,
+      rootMargin: '0px 0px -40px 0px'
     });
 
-    /* Close modal without changing */
-    var closeBtn = document.getElementById('cookie-modal-close');
-    var overlay = document.getElementById('cookie-modal-overlay');
-    function closeModal() {
-      if (modal) modal.hidden = true;
-    }
-    if (closeBtn) closeBtn.addEventListener('click', closeModal);
-    if (overlay) overlay.addEventListener('click', closeModal);
-
-    /* Modal reject */
-    var modalReject = document.getElementById('cookie-modal-reject');
-    if (modalReject) {
-      modalReject.addEventListener('click', function() {
-        saveConsent({ necessary: true, analytics: false, marketing: false, timestamp: Date.now() });
-      });
-    }
-
-    /* Modal save */
-    var modalSave = document.getElementById('cookie-modal-save');
-    if (modalSave) {
-      modalSave.addEventListener('click', function() {
-        var aBox = document.getElementById('cookie-analytics');
-        var mBox = document.getElementById('cookie-marketing');
-        saveConsent({
-          necessary: true,
-          analytics: aBox ? aBox.checked : false,
-          marketing: mBox ? mBox.checked : false,
-          timestamp: Date.now()
-        });
-      });
-    }
+    observer.observe(servicesSec);
   })();
 
 })();
