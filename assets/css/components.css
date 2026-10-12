@@ -448,6 +448,50 @@ html[dir="ltr"] .sidebar-nav-item:hover {
   flex-shrink: 0;
 }
 
+.theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  min-height: 36px;
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.theme-toggle-btn:hover {
+  border-color: var(--color-border-strong);
+  color: var(--color-text);
+  transform: translateY(-1px);
+}
+
+.theme-toggle-btn svg {
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform var(--transition-base);
+}
+
+.theme-toggle-btn:hover svg {
+  transform: rotate(15deg);
+}
+
+.mobile-theme-toggle {
+  width: 36px;
+  height: 36px;
+  min-height: 36px;
+}
+
 .sidebar-meta {
   display: flex;
   align-items: center;

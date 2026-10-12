@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 46" fill="none" class="ion-logo-svg">
+  <!-- Letter 'i' -->
+  <g class="logo-letter-i">
+    <!-- Green dot -->
+    <circle cx="12" cy="8" r="5" fill="#48B800" />
+    <!-- Dark stem -->
+    <rect x="7" y="17" width="10" height="25" rx="5" fill="#11140F" />
+  </g>
+
+  <!-- Letter 'o' with negative (-) charge -->
+  <g class="logo-letter-o">
+    <!-- Outer ring -->
+    <rect x="29" y="17" width="28" height="25" rx="12.5" stroke="#11140F" stroke-width="7" fill="none" />
+    <!-- Negative charge (-) in green -->
+    <line x1="38" y1="29.5" x2="48" y2="29.5" stroke="#48B800" stroke-width="3" stroke-linecap="round" />
+  </g>
+
+  <!-- Letter 'n' with positive (+) charge -->
+  <g class="logo-letter-n">
+    <!-- Main 'n' shape -->
+    <path d="M69 42 V28 C69 21.5 73.5 17 80 17 C86.5 17 91 21.5 91 28 V42" 
+          stroke="#11140F" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <!-- Positive charge (+) in green -->
+    <g>
+      <line x1="75" y1="30" x2="85" y2="30" stroke="#48B800" stroke-width="2.8" stroke-linecap="round" />
+      <line x1="80" y1="25" x2="80" y2="35" stroke="#48B800" stroke-width="2.8" stroke-linecap="round" />
+    </g>
+  </g>
+</svg>

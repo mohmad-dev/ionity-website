@@ -36,6 +36,15 @@
   <link rel="stylesheet" href="assets/css/muffin.css">
   <link rel="stylesheet" href="assets/css/animations.css">
   <link rel="stylesheet" href="assets/css/ionity-bilingual.css">
+  <link rel="stylesheet" href="assets/css/theme-light.css">
+
+  <!-- Early Theme Init (prevents flash of dark mode) -->
+  <script>
+    (function() {
+      var savedTheme = localStorage.getItem('ionity-theme') || 'light';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
 
   <!-- ── Google Tag Manager ────────────────────────── -->
   <script>
@@ -151,6 +160,10 @@
           <a href="#contact" class="btn btn-primary btn-sm sidebar-cta-btn" data-key="navCta">
             ناقش مشروعك
           </a>
+          <button class="theme-toggle-btn sidebar-theme-toggle"
+                  data-action="toggle-theme"
+                  aria-label="تبديل المظهر"
+                  title="تبديل المظهر (نهاري / ليلي)"></button>
           <button class="lang-toggle-btn sidebar-lang-toggle"
                   data-action="toggle-lang"
                   data-key="toggleBtn"
@@ -177,6 +190,10 @@
       </a>
 
       <div class="mobile-header-actions">
+        <button class="theme-toggle-btn mobile-theme-toggle"
+                data-action="toggle-theme"
+                aria-label="تبديل المظهر"
+                title="تبديل المظهر (نهاري / ليلي)"></button>
         <button class="lang-toggle-btn mobile-lang-toggle"
                 data-action="toggle-lang"
                 data-key="toggleBtn"

@@ -1,0 +1,415 @@
+/**
+ * IONITY — Comfortable Light Mode Theme
+ * High-contrast, warm soothing canvas, eye-friendly typography, elegant surfaces.
+ * File: assets/css/theme-light.css
+ */
+
+[data-theme="light"] {
+  /* ── Color Palette Overrides ──────────────────────────────── */
+  --color-accent:          #2E8B00;   /* Readable high-contrast tech green */
+  --color-accent-hover:    #246E00;
+  --color-accent-dim:      rgba(46, 139, 0, 0.09);
+  --color-accent-glow:     rgba(46, 139, 0, 0.16);
+
+  /* Warm paper off-white surfaces (Gentle on the eyes, avoids stark glare) */
+  --color-bg:              #F7F8F5;
+  --color-surface:         #FFFFFF;
+  --color-surface-2:       #EFF1EB;
+  --color-surface-3:       #E5E9DF;
+
+  /* Typography */
+  --color-text:            #11140F;   /* Deep charcoal black */
+  --color-text-secondary:  #464E41;   /* Calm reading slate */
+  --color-text-muted:      #6F786B;   /* Subtle labels */
+  --color-text-dark:       #11140F;
+
+  /* Borders & Shadows */
+  --color-border:          #DFE4DA;
+  --color-border-strong:   #CCD3C5;
+  --shadow-card:           0 4px 20px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.03);
+  --shadow-float:          0 12px 32px rgba(0, 0, 0, 0.08);
+  --shadow-nav:            0 1px 0 #DFE4DA;
+}
+
+/* ── Base & Layout ─────────────────────────────────────────── */
+[data-theme="light"] body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+[data-theme="light"] ::selection {
+  background-color: rgba(46, 139, 0, 0.22);
+  color: #11140F;
+}
+
+/* ── Desktop Sidebar ───────────────────────────────────────── */
+[data-theme="light"] .desktop-sidebar {
+  background: rgba(255, 255, 255, 0.94);
+  border-inline-end: 1px solid var(--color-border);
+  box-shadow: 2px 0 24px rgba(0, 0, 0, 0.02);
+}
+
+[data-theme="light"] .sidebar-nav-item:hover {
+  color: var(--color-text);
+  background: rgba(0, 0, 0, 0.03);
+}
+
+[data-theme="light"] .sidebar-nav-item.active {
+  color: var(--color-text);
+  background: #E8EDE3;
+  font-weight: 600;
+}
+
+[data-theme="light"] .sidebar-nav-item.active .nav-idx {
+  color: var(--color-accent);
+}
+
+[data-theme="light"] .sidebar-nav-item.active .nav-indicator {
+  background: var(--color-accent);
+  box-shadow: 0 0 8px rgba(46, 139, 0, 0.45);
+}
+
+[data-theme="light"] .sidebar-status-badge {
+  background: #EFF1EB;
+  border-color: var(--color-border);
+  color: var(--color-text-secondary);
+}
+
+[data-theme="light"] .status-pulse-dot {
+  background: var(--color-accent);
+  box-shadow: 0 0 6px var(--color-accent);
+}
+
+/* ── Mobile Header & Drawer ─────────────────────────────────── */
+[data-theme="light"] .mobile-header {
+  background: rgba(247, 248, 245, 0.94);
+  border-bottom: 1px solid var(--color-border);
+}
+
+[data-theme="light"] .mobile-header.scrolled {
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .nav-hamburger span {
+  background-color: var(--color-text);
+}
+
+[data-theme="light"] .mobile-nav-drawer {
+  background: #FFFFFF;
+}
+
+[data-theme="light"] .mobile-nav-link {
+  color: var(--color-text-secondary);
+}
+
+[data-theme="light"] .mobile-nav-link:hover,
+[data-theme="light"] .mobile-nav-link.active {
+  color: var(--color-text);
+  background: #EFF1EB;
+}
+
+/* ── Buttons & Controls ────────────────────────────────────── */
+[data-theme="light"] .btn-primary {
+  background: #11140F;
+  color: #A8FF00;
+  border-color: #11140F;
+  box-shadow: 0 4px 14px rgba(17, 20, 15, 0.14);
+}
+
+[data-theme="light"] .btn-primary:hover {
+  background: #232A20;
+  color: #C0FF40;
+  border-color: #232A20;
+  box-shadow: 0 6px 20px rgba(17, 20, 15, 0.22);
+}
+
+[data-theme="light"] .btn-secondary {
+  background: #FFFFFF;
+  color: var(--color-text);
+  border-color: var(--color-border-strong);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+[data-theme="light"] .btn-secondary:hover {
+  background: #F7F8F5;
+  border-color: var(--color-text);
+  color: var(--color-text);
+}
+
+[data-theme="light"] .lang-toggle-btn,
+[data-theme="light"] .theme-toggle-btn {
+  background: var(--color-surface);
+  border-color: var(--color-border);
+  color: var(--color-text-secondary);
+}
+
+[data-theme="light"] .lang-toggle-btn:hover,
+[data-theme="light"] .theme-toggle-btn:hover {
+  border-color: var(--color-border-strong);
+  color: var(--color-text);
+  background: #F7F8F5;
+}
+
+/* ── Cards & Surfaces ──────────────────────────────────────── */
+[data-theme="light"] .card,
+[data-theme="light"] .solution-card,
+[data-theme="light"] .process-card,
+[data-theme="light"] .tech-category {
+  background: var(--color-surface);
+  border-color: var(--color-border);
+  box-shadow: var(--shadow-card);
+}
+
+[data-theme="light"] .card:hover,
+[data-theme="light"] .solution-card:hover {
+  border-color: var(--color-border-strong);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .card-icon {
+  background: #EFF1EB;
+  border-color: var(--color-border);
+  color: var(--color-accent);
+}
+
+[data-theme="light"] .tech-item {
+  background: #EFF1EB;
+  border-color: var(--color-border);
+  color: var(--color-text-secondary);
+}
+
+[data-theme="light"] .tech-item:hover {
+  background: #FFFFFF;
+  border-color: var(--color-border-strong);
+  color: var(--color-text);
+}
+
+/* ── Section Specifics ─────────────────────────────────────── */
+[data-theme="light"] .solutions-section,
+[data-theme="light"] .about-section {
+  background: #EFF2EC;
+}
+
+[data-theme="light"] .about-visual-card {
+  background: #FFFFFF;
+  border-color: var(--color-border);
+  box-shadow: var(--shadow-card);
+}
+
+[data-theme="light"] .diff-icon {
+  color: var(--color-accent);
+  background: #EFF1EB;
+  border-radius: var(--radius-sm);
+  padding: 4px;
+}
+
+/* Section watermark */
+[data-theme="light"] .section-watermark-svg text {
+  stroke: #8EBFB5;
+  opacity: 0.22;
+}
+
+/* ── Laser Beam & Stats Section in Light Mode ──────────────── */
+[data-theme="light"] .laser-stats-section {
+  background: #EBF1EA;
+  border-color: var(--color-border);
+}
+
+[data-theme="light"] .stat-vertical-number {
+  color: #11140F;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .stat-vertical-label {
+  color: #0077CC;
+  text-shadow: none;
+  font-weight: 600;
+}
+
+[data-theme="light"] .bg-outline-svg path {
+  stroke: #A8CEE0;
+  opacity: 0.55;
+  filter: none;
+}
+
+[data-theme="light"] .laser-track {
+  stroke: rgba(0, 119, 204, 0.25);
+  filter: drop-shadow(0 0 6px rgba(0, 119, 204, 0.25));
+}
+
+[data-theme="light"] .laser-beam-1 {
+  stroke: #007CE8 !important;
+  filter: drop-shadow(0 0 8px rgba(0, 124, 232, 0.45));
+}
+
+[data-theme="light"] .laser-beam-2 {
+  stroke: #005BB5 !important;
+  filter: drop-shadow(0 0 6px rgba(0, 91, 181, 0.35));
+}
+
+/* ── Team Showcase in Light Mode ───────────────────────────── */
+[data-theme="light"] .team-card {
+  background: #FFFFFF;
+  border-color: var(--color-border);
+  box-shadow: var(--shadow-card);
+}
+
+[data-theme="light"] .team-card:hover {
+  border-color: #007CE8;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08), 0 0 20px rgba(0, 124, 232, 0.12);
+}
+
+[data-theme="light"] .team-avatar {
+  border-color: #007CE8;
+}
+
+[data-theme="light"] .team-avatar-glow {
+  background: radial-gradient(circle, rgba(0, 124, 232, 0.22) 0%, transparent 70%);
+}
+
+[data-theme="light"] .team-chip {
+  background: #E8F4FD;
+  border-color: #C3E3FA;
+  color: #0066CC;
+  font-weight: 600;
+}
+
+/* ── Contact Section in Light Mode ─────────────────────────── */
+[data-theme="light"] .contact-section-wrapper {
+  background: var(--color-bg);
+}
+
+[data-theme="light"] .contact-channel-card {
+  background: #FFFFFF;
+  border-color: var(--color-border);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .contact-channel-card:hover {
+  border-color: #00A896;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08), 0 0 20px rgba(0, 168, 150, 0.15);
+}
+
+[data-theme="light"] .contact-channel-title-text {
+  color: #11140F;
+  text-shadow: none;
+}
+
+[data-theme="light"] .contact-channel-bg-svg path {
+  stroke: #A7DFD6;
+  opacity: 0.55;
+  filter: none;
+}
+
+[data-theme="light"] .btn-pill-glow {
+  background: #00A896;
+  color: #FFFFFF !important;
+  border-color: #00A896;
+  box-shadow: 0 4px 18px rgba(0, 168, 150, 0.25);
+}
+
+[data-theme="light"] .btn-pill-glow:hover {
+  background: #028072;
+  border-color: #028072;
+  box-shadow: 0 6px 24px rgba(0, 168, 150, 0.35);
+}
+
+[data-theme="light"] .btn-pill-glow .arrow img {
+  filter: brightness(0) invert(1);
+}
+
+[data-theme="light"] .contact-merged-cta .section-title span[style*="35EDCA"] {
+  color: #00A896 !important;
+  text-shadow: none !important;
+}
+
+/* Form */
+[data-theme="light"] .form-input,
+[data-theme="light"] .form-textarea,
+[data-theme="light"] .form-select {
+  background: #FFFFFF;
+  border-color: var(--color-border);
+  color: var(--color-text);
+}
+
+[data-theme="light"] .form-input:focus,
+[data-theme="light"] .form-textarea:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(46, 139, 0, 0.12);
+}
+
+/* ── Hero Orbital Visual in Light Mode ─────────────────────── */
+[data-theme="light"] .hud-card {
+  background: rgba(255, 255, 255, 0.94);
+  border-color: var(--color-border);
+  color: var(--color-text-secondary);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .ionic-field-ring {
+  border-color: rgba(46, 139, 0, 0.22);
+}
+
+[data-theme="light"] .ionic-ring-2 {
+  border-color: rgba(0, 168, 150, 0.26);
+}
+
+[data-theme="light"] .ionic-plasma-core {
+  background: radial-gradient(circle, #3BB300 0%, rgba(59, 179, 0, 0.25) 50%, rgba(247, 248, 245, 0) 75%);
+  box-shadow: 0 0 35px rgba(59, 179, 0, 0.3);
+}
+
+[data-theme="light"] .plasma-inner-symbol {
+  color: #11140F;
+}
+
+[data-theme="light"] .orbital-node.node-pos {
+  background: rgba(46, 139, 0, 0.1);
+  border-color: #2E8B00;
+  color: #2E8B00;
+}
+
+[data-theme="light"] .orbital-node.node-neg {
+  background: rgba(0, 168, 150, 0.1);
+  border-color: #00A896;
+  color: #00A896;
+}
+
+/* ── Floating Pattern Particles in Light Mode ──────────────── */
+[data-theme="light"] .floating-pattern {
+  opacity: 0.32;
+  filter: drop-shadow(0 0 6px rgba(0, 168, 150, 0.2));
+}
+
+/* ── Footer in Light Mode ──────────────────────────────────── */
+[data-theme="light"] .site-footer {
+  background: #EEF2EB;
+  border-top: 1px solid var(--color-border);
+}
+
+[data-theme="light"] .footer-social-link {
+  background: #FFFFFF;
+  border-color: var(--color-border);
+  color: var(--color-text-secondary);
+}
+
+[data-theme="light"] .footer-social-link:hover {
+  border-color: var(--color-text);
+  color: var(--color-text);
+}
+
+/* ── Custom Cursor in Light Mode ───────────────────────────── */
+[data-theme="light"] .cursor-dot {
+  background: #2E8B00;
+  box-shadow: 0 0 10px rgba(46, 139, 0, 0.45);
+}
+
+[data-theme="light"] .cursor-ring {
+  border-color: rgba(46, 139, 0, 0.35);
+}
+
+/* ── Preloader in Light Mode ───────────────────────────────── */
+[data-theme="light"] .preloader {
+  background: #F7F8F5;
+}
