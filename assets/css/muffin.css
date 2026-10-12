@@ -789,64 +789,11 @@ body.lang-ar .about-inner {
 }
 
 /* ═══════════════════════════════════════════════════════════
-   TEAM SHOWCASE (Optional On-Demand Collapsible Drawer)
+   TEAM SHOWCASE (5 Core Members in Studio/About)
    ═══════════════════════════════════════════════════════════ */
 
-.team-toggle-wrapper {
-  text-align: center;
-  margin-top: clamp(2.5rem, 5vw, 4rem);
-  position: relative;
-  z-index: 3;
-}
-
-.team-toggle-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-  padding: 10px 24px;
-  font-size: 0.9375rem;
-  font-weight: var(--weight-medium);
-  border-radius: var(--radius-pill);
-  cursor: pointer;
-  background: var(--color-surface-2);
-  border: 1px solid var(--color-border);
-  color: var(--color-text);
-  transition: all var(--transition-fast);
-}
-
-.team-toggle-btn:hover {
-  border-color: var(--color-accent);
-  box-shadow: 0 0 16px var(--color-accent-dim);
-  color: #FFFFFF;
-}
-
-.team-toggle-chevron {
-  transition: transform var(--transition-fast);
-}
-
-.team-toggle-btn[aria-expanded="true"] .team-toggle-chevron {
-  transform: rotate(180deg);
-}
-
-.team-collapsible {
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease, margin 0.35s ease;
-  pointer-events: none;
-  visibility: hidden;
-}
-
-.team-collapsible.is-open {
-  max-height: 1600px;
-  opacity: 1;
-  pointer-events: auto;
-  visibility: visible;
-  margin-top: var(--space-6);
-}
-
 .team-showcase {
-  margin-top: var(--space-4);
+  margin-top: clamp(4rem, 7vw, 6rem);
   width: 100%;
   position: relative;
   z-index: 2;
