@@ -14,16 +14,28 @@
   <!-- ── Canonical ──────────────────────────────────── -->
   <link rel="canonical" href="https://mohmad-dev.github.io/ionity-website/">
 
-  <!-- ── Open Graph ────────────────────────────────── -->
+  <!-- ── Open Graph / Social Sharing (WhatsApp, LinkedIn, Twitter) ── -->
   <meta property="og:type"        content="website">
   <meta property="og:url"         content="https://mohmad-dev.github.io/ionity-website/">
-  <meta property="og:title"       content="IONITY | حلول برمجية ذكية لنمو أعمالك">
-  <meta property="og:description" content="نطوّر مواقع ويب وأنظمة برمجية ومنتجات SaaS تساعد الشركات على النمو.">
-  <meta property="og:image"       content="assets/images/logo.svg">
+  <meta property="og:title"       content="IONITY | أنظمة رقمية وحلول برمجية متقدمة لنمو أعمالك">
+  <meta property="og:description" content="نطوّر مواقع ويب وأنظمة برمجية مخصصة ومنتجات SaaS تساعد الشركات على النمو والريادة التقنية.">
+  <meta property="og:image"       content="assets/images/og-share.jpg">
+  <meta property="og:image:secure_url" content="https://mohmad-dev.github.io/ionity-website/assets/images/og-share.jpg">
+  <meta property="og:image:type"  content="image/jpeg">
+  <meta property="og:image:width"  content="1080">
+  <meta property="og:image:height" content="1350">
   <meta property="og:locale"      content="ar_SA">
 
+  <!-- ── Twitter Card ───────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="IONITY | أنظمة رقمية وحلول برمجية متقدمة">
+  <meta name="twitter:description" content="نطوّر مواقع ويب وأنظمة برمجية مخصصة ومنتجات SaaS تساعد الشركات على النمو.">
+  <meta name="twitter:image"       content="https://mohmad-dev.github.io/ionity-website/assets/images/og-share.jpg">
+
   <!-- ── Favicon ───────────────────────────────────── -->
-  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logos/favicon.svg">
+  <link rel="alternate icon" type="image/x-icon" href="assets/images/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/images/logos/favicon.svg">
 
   <!-- ── Preconnect for performance ────────────────── -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -361,21 +373,17 @@
           <div class="laser-background" aria-hidden="true">
             <svg class="laser-svg" viewBox="0 0 1600 1000" preserveAspectRatio="none">
               <defs>
-                <filter id="laser-glow-cyan" x="-50%" y="-50%" width="200%" height="200%">
-                  <feGaussianBlur stdDeviation="5" result="blur1" />
-                  <feGaussianBlur stdDeviation="15" result="blur2" />
+                <filter id="laser-glow-cyan" x="-15%" y="-15%" width="130%" height="130%">
+                  <feGaussianBlur stdDeviation="6" result="blur" />
                   <feMerge>
-                    <feMergeNode in="blur2" />
-                    <feMergeNode in="blur1" />
+                    <feMergeNode in="blur" />
                     <feMergeNode in="SourceGraphic" />
                   </feMerge>
                 </filter>
-                <filter id="laser-glow-blue" x="-50%" y="-50%" width="200%" height="200%">
-                  <feGaussianBlur stdDeviation="4" result="blur1" />
-                  <feGaussianBlur stdDeviation="12" result="blur2" />
+                <filter id="laser-glow-blue" x="-15%" y="-15%" width="130%" height="130%">
+                  <feGaussianBlur stdDeviation="5" result="blur" />
                   <feMerge>
-                    <feMergeNode in="blur2" />
-                    <feMergeNode in="blur1" />
+                    <feMergeNode in="blur" />
                     <feMergeNode in="SourceGraphic" />
                   </feMerge>
                 </filter>
@@ -441,21 +449,17 @@
       <div class="services-laser-bg" aria-hidden="true">
         <svg class="services-laser-svg" viewBox="0 0 1400 900" preserveAspectRatio="none">
           <defs>
-            <filter id="services-laser-glow-cyan" x="-50%" y="-50%" width="200%" height="200%">
-              <feGaussianBlur stdDeviation="6" result="blur1" />
-              <feGaussianBlur stdDeviation="16" result="blur2" />
+            <filter id="services-laser-glow-cyan" x="-15%" y="-15%" width="130%" height="130%">
+              <feGaussianBlur stdDeviation="6" result="blur" />
               <feMerge>
-                <feMergeNode in="blur2" />
-                <feMergeNode in="blur1" />
+                <feMergeNode in="blur" />
                 <feMergeNode in="SourceGraphic" />
               </feMerge>
             </filter>
-            <filter id="services-laser-glow-blue" x="-50%" y="-50%" width="200%" height="200%">
-              <feGaussianBlur stdDeviation="5" result="blur1" />
-              <feGaussianBlur stdDeviation="12" result="blur2" />
+            <filter id="services-laser-glow-blue" x="-15%" y="-15%" width="130%" height="130%">
+              <feGaussianBlur stdDeviation="5" result="blur" />
               <feMerge>
-                <feMergeNode in="blur2" />
-                <feMergeNode in="blur1" />
+                <feMergeNode in="blur" />
                 <feMergeNode in="SourceGraphic" />
               </feMerge>
             </filter>
@@ -480,13 +484,13 @@
           <!-- Primary glowing cyan beam -->
           <path class="srv-laser-beam srv-laser-beam-1" filter="url(#services-laser-glow-cyan)"
                 d="M 1450,-40 C 1220,100 1080,240 920,260 C 700,280 580,180 380,240 C 180,300 220,520 620,560 C 1040,600 920,720 480,700 C 260,680 120,780 -100,920"
-                fill="none" stroke="url(#srv-beam-cyan)" stroke-width="4.5" stroke-linecap="round" />
+                fill="none" stroke="url(#srv-beam-cyan)" stroke-width="4" stroke-linecap="round" />
           <!-- Secondary electric blue wave -->
           <path class="srv-laser-beam srv-laser-beam-2" filter="url(#services-laser-glow-blue)"
                 d="M 1470,-10 C 1200,120 1060,260 900,280 C 680,300 600,200 400,260 C 200,320 240,540 640,580 C 1060,620 900,740 460,720 C 240,700 100,800 -80,940"
-                fill="none" stroke="url(#srv-beam-blue)" stroke-width="3" stroke-linecap="round" />
+                fill="none" stroke="url(#srv-beam-blue)" stroke-width="2.5" stroke-linecap="round" />
           <!-- Traveling photon spark head that ignites each card on contact -->
-          <circle id="srv-photon-spark" class="srv-photon-spark" r="9" cx="1450" cy="-40" fill="#FFFFFF" filter="url(#services-laser-glow-cyan)" />
+          <circle id="srv-photon-spark" class="srv-photon-spark" r="8" cx="1450" cy="-40" fill="#FFFFFF" filter="url(#services-laser-glow-cyan)" />
         </svg>
       </div>
 
@@ -528,12 +532,6 @@
             <p class="card-body" data-key="service1Body">
               مواقع ويب احترافية وسريعة ومستجيبة تعكس هويتك وتحقق أهدافك.
             </p>
-            <a href="#contact" class="card-link">
-              <span data-key="service1Link">اعرف المزيد</span>
-              <svg class="card-link-arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </a>
           </article>
 
           <!-- Service 2: Custom Systems -->
@@ -551,12 +549,6 @@
             <p class="card-body" data-key="service2Body">
               أنظمة مبنية خصيصًا لسير عمل شركتك لتبسيط العمليات وزيادة الكفاءة.
             </p>
-            <a href="#contact" class="card-link">
-              <span data-key="service2Link">اعرف المزيد</span>
-              <svg class="card-link-arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </a>
           </article>
 
           <!-- Service 3: SaaS -->
@@ -573,12 +565,6 @@
             <p class="card-body" data-key="service3Body">
               منتجات برمجية قابلة للتوسع ومبنية بتقنيات حديثة لتنمية أعمالك.
             </p>
-            <a href="#contact" class="card-link">
-              <span data-key="service3Link">اعرف المزيد</span>
-              <svg class="card-link-arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </a>
           </article>
 
           <!-- Service 4: UI/UX -->
@@ -596,12 +582,6 @@
             <p class="card-body" data-key="service4Body">
               تصميم واجهات مستخدم مدروسة، صيانة مستمرة، ودعم فني متواصل لمنتجك.
             </p>
-            <a href="#contact" class="card-link">
-              <span data-key="service4Link">اعرف المزيد</span>
-              <svg class="card-link-arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </a>
           </article>
 
         </div><!-- /services-grid -->
@@ -633,8 +613,44 @@
 
         <div class="solutions-grid">
 
+          <!-- Solution 1: E-Commerce System -->
           <article class="solution-card" data-reveal data-reveal-delay="1">
-            <img src="assets/images/slides/1.png" alt="نظام متجر إلكتروني متكامل" class="solution-card-img" loading="lazy">
+            <div class="solution-ui-preview" aria-hidden="true">
+              <div class="sol-ui-bar">
+                <div class="sol-ui-dots"><span></span><span></span><span></span></div>
+                <span class="sol-ui-tag">ION // COMMERCE OS</span>
+                <span class="sol-ui-live"><i class="sol-live-dot"></i>LIVE</span>
+              </div>
+              <div class="sol-ui-canvas">
+                <div class="sol-ui-metrics">
+                  <div class="sol-metric-box">
+                    <span class="sol-m-label">CONVERSION</span>
+                    <span class="sol-m-val accent">+240%</span>
+                  </div>
+                  <div class="sol-metric-box">
+                    <span class="sol-m-label">CHECKOUT</span>
+                    <span class="sol-m-val cyan">0.4s</span>
+                  </div>
+                </div>
+                <svg class="sol-ui-svg" viewBox="0 0 280 90" fill="none">
+                  <defs>
+                    <linearGradient id="sol-grad-1" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#A8FF00" stop-opacity="0.28"/>
+                      <stop offset="100%" stop-color="#A8FF00" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                  <!-- Grid lines -->
+                  <line x1="0" y1="22" x2="280" y2="22" stroke="rgba(255,255,255,0.05)" stroke-dasharray="3 3"/>
+                  <line x1="0" y1="50" x2="280" y2="50" stroke="rgba(255,255,255,0.05)" stroke-dasharray="3 3"/>
+                  <line x1="0" y1="78" x2="280" y2="78" stroke="rgba(255,255,255,0.05)"/>
+                  <!-- Revenue area & curve -->
+                  <path d="M10,72 C50,68 75,45 115,48 C155,51 180,22 220,18 C245,15 260,10 272,8 L272,82 L10,82 Z" fill="url(#sol-grad-1)"/>
+                  <path d="M10,72 C50,68 75,45 115,48 C155,51 180,22 220,18 C245,15 260,10 272,8" stroke="#A8FF00" stroke-width="2.2" stroke-linecap="round"/>
+                  <circle cx="220" cy="18" r="3.5" fill="#0A0E0A" stroke="#A8FF00" stroke-width="2"/>
+                  <circle cx="272" cy="8" r="4" fill="#A8FF00"/>
+                </svg>
+              </div>
+            </div>
             <div class="solution-card-body">
               <span class="solution-card-category">نموذج تجارة إلكترونية</span>
               <h3 class="solution-card-title">نظام متجر إلكتروني متكامل</h3>
@@ -647,8 +663,34 @@
             </div>
           </article>
 
+          <!-- Solution 2: ERP & Operations -->
           <article class="solution-card" data-reveal data-reveal-delay="2">
-            <img src="assets/images/slides/2.png" alt="نظام إدارة الموارد والشركات" class="solution-card-img" loading="lazy">
+            <div class="solution-ui-preview" aria-hidden="true">
+              <div class="sol-ui-bar">
+                <div class="sol-ui-dots"><span></span><span></span><span></span></div>
+                <span class="sol-ui-tag">ION // ERP CORE</span>
+                <span class="sol-ui-live"><i class="sol-live-dot cyan"></i>SYNCED</span>
+              </div>
+              <div class="sol-ui-canvas">
+                <div class="sol-erp-bars">
+                  <div class="sol-erp-row">
+                    <span class="sol-erp-lbl">FINANCE &amp; LEDGER</span>
+                    <div class="sol-erp-track"><div class="sol-erp-fill accent" style="width:94%"></div></div>
+                    <span class="sol-erp-pct">94%</span>
+                  </div>
+                  <div class="sol-erp-row">
+                    <span class="sol-erp-lbl">WORKFLOW ENGINE</span>
+                    <div class="sol-erp-track"><div class="sol-erp-fill cyan" style="width:88%"></div></div>
+                    <span class="sol-erp-pct">88%</span>
+                  </div>
+                  <div class="sol-erp-row">
+                    <span class="sol-erp-lbl">RESOURCE OPS</span>
+                    <div class="sol-erp-track"><div class="sol-erp-fill accent" style="width:98%"></div></div>
+                    <span class="sol-erp-pct">98%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="solution-card-body">
               <span class="solution-card-category">نموذج إدارة الأعمال</span>
               <h3 class="solution-card-title">نظام إدارة الموارد والعمليات</h3>
@@ -661,8 +703,37 @@
             </div>
           </article>
 
+          <!-- Solution 3: Cloud SaaS Platform -->
           <article class="solution-card" data-reveal data-reveal-delay="3">
-            <img src="assets/images/slides/3.png" alt="منصة إدارة المشاريع وSaaS" class="solution-card-img" loading="lazy">
+            <div class="solution-ui-preview" aria-hidden="true">
+              <div class="sol-ui-bar">
+                <div class="sol-ui-dots"><span></span><span></span><span></span></div>
+                <span class="sol-ui-tag">ION // SAAS CLOUD</span>
+                <span class="sol-ui-live"><i class="sol-live-dot"></i>99.9% SLA</span>
+              </div>
+              <div class="sol-ui-canvas">
+                <svg class="sol-ui-svg" viewBox="0 0 280 115" fill="none">
+                  <!-- Connected cloud nodes -->
+                  <line x1="65" y1="58" x2="140" y2="34" stroke="rgba(0,229,255,0.35)" stroke-width="1.5" stroke-dasharray="3 3"/>
+                  <line x1="65" y1="58" x2="140" y2="82" stroke="rgba(168,255,0,0.35)" stroke-width="1.5" stroke-dasharray="3 3"/>
+                  <line x1="140" y1="34" x2="215" y2="58" stroke="rgba(0,229,255,0.35)" stroke-width="1.5" stroke-dasharray="3 3"/>
+                  <line x1="140" y1="82" x2="215" y2="58" stroke="rgba(168,255,0,0.35)" stroke-width="1.5" stroke-dasharray="3 3"/>
+                  <line x1="140" y1="34" x2="140" y2="82" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+                  <!-- Node 1: Gateway -->
+                  <rect x="28" y="42" width="54" height="32" rx="6" fill="rgba(255,255,255,0.03)" stroke="rgba(0,229,255,0.45)" stroke-width="1.2"/>
+                  <text x="55" y="61" text-anchor="middle" fill="#00E5FF" font-family="monospace" font-size="9" font-weight="600">API GW</text>
+                  <!-- Node 2: Core Top -->
+                  <rect x="112" y="18" width="56" height="30" rx="6" fill="rgba(168,255,0,0.06)" stroke="rgba(168,255,0,0.5)" stroke-width="1.2"/>
+                  <text x="140" y="36" text-anchor="middle" fill="#A8FF00" font-family="monospace" font-size="8.5" font-weight="600">AUTH // AI</text>
+                  <!-- Node 3: Core Bottom -->
+                  <rect x="112" y="68" width="56" height="30" rx="6" fill="rgba(0,229,255,0.05)" stroke="rgba(0,229,255,0.4)" stroke-width="1.2"/>
+                  <text x="140" y="86" text-anchor="middle" fill="#E0F7FA" font-family="monospace" font-size="8.5" font-weight="600">DATA SYNC</text>
+                  <!-- Node 4: Edge Cluster -->
+                  <rect x="198" y="42" width="56" height="32" rx="6" fill="rgba(168,255,0,0.08)" stroke="#A8FF00" stroke-width="1.4"/>
+                  <text x="226" y="61" text-anchor="middle" fill="#A8FF00" font-family="monospace" font-size="9" font-weight="600">SAAS UI</text>
+                </svg>
+              </div>
+            </div>
             <div class="solution-card-body">
               <span class="solution-card-category">نموذج سحابي SaaS</span>
               <h3 class="solution-card-title">منصة سحابية متقدمة</h3>

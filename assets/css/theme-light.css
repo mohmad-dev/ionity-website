@@ -494,7 +494,6 @@
 /* ── Footer in Light Mode ──────────────────────────────────── */
 [data-theme="light"] .site-footer {
   background: #EEF2EB;
-  border-top: 1px solid var(--color-border);
 }
 
 [data-theme="light"] .footer-social-link {
@@ -544,3 +543,16 @@
   color: var(--color-text-secondary);
   border-color: var(--color-border);
 }
+
+/* ── Solution Cards in Light Mode ──────────────────────────── */
+[data-theme="light"] .solution-card {
+  background: #FFFFFF !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .solution-card:hover {
+  border-color: rgba(46, 139, 0, 0.4) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+

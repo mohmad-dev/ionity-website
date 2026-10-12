@@ -25,25 +25,18 @@
 
     var dot = cursor.querySelector('.cursor-dot');
     var ring = cursor.querySelector('.cursor-ring');
-
-    var mouseX = -100, mouseY = -100;
-    var ringX = -100, ringY = -100;
     var isVisible = false;
 
     window.addEventListener('mousemove', function (e) {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
+      var pos = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0) translate(-50%, -50%)';
 
       if (!isVisible) {
         isVisible = true;
         cursor.classList.add('is-visible');
-        ringX = mouseX;
-        ringY = mouseY;
       }
 
-      if (dot) {
-        dot.style.transform = 'translate3d(' + mouseX + 'px, ' + mouseY + 'px, 0) translate(-50%, -50%)';
-      }
+      if (dot) dot.style.transform = pos;
+      if (ring) ring.style.transform = pos;
     }, { passive: true });
 
     document.addEventListener('mouseleave', function () {
@@ -55,17 +48,6 @@
       isVisible = true;
       cursor.classList.add('is-visible');
     });
-
-    function renderCursor() {
-      if (isVisible && ring) {
-        /* Snappy responsive follow (0.45 factor for fast instant response without lag) */
-        ringX += (mouseX - ringX) * 0.45;
-        ringY += (mouseY - ringY) * 0.45;
-        ring.style.transform = 'translate3d(' + ringX + 'px, ' + ringY + 'px, 0) translate(-50%, -50%)';
-      }
-      requestAnimationFrame(renderCursor);
-    }
-    requestAnimationFrame(renderCursor);
 
     var interactiveSel = 'a, button, input, textarea, select, [role="button"], .card, .btn, .sidebar-nav-item, .clickable';
     document.addEventListener('mouseover', function (e) {
@@ -772,87 +754,90 @@
       if (hasTriggered) return;
       hasTriggered = true;
 
-      var duration = 2400; /* 2.4s smooth energetic surge */
-      var startTime = null;
+      /* 600ms contemplation pause so the user settles on the section first */
+      setTimeout(function () {
+        var duration = 4800; /* 4.8s calm, contemplative surge */
+        var startTime = null;
 
-      if (spark) {
-        spark.classList.add('is-active');
-      }
-
-      function step(timestamp) {
-        if (!startTime) startTime = timestamp;
-        var progress = Math.min((timestamp - startTime) / duration, 1);
-
-        /* Smooth cubic-out easing curve */
-        var ease = 1 - Math.pow(1 - progress, 3);
-        var currentLen = totalLength * ease;
-        var currentOffset = totalLength - currentLen;
-
-        /* Draw laser lines in real time */
-        beam1.style.strokeDashoffset = currentOffset;
-        if (beam2) {
-          beam2.style.strokeDashoffset = Math.max(0, currentOffset + 120);
-        }
-
-        /* Move traveling photon spark along SVG curve */
         if (spark) {
-          try {
-            var pt = beam1.getPointAtLength(currentLen);
-            spark.setAttribute('cx', pt.x);
-            spark.setAttribute('cy', pt.y);
-          } catch (e) {}
+          spark.classList.add('is-active');
         }
 
-        /* Materialize card the exact instant the laser spark arrives */
-        checkpoints.forEach(function (cp) {
-          if (!cp.triggered && currentLen >= cp.targetLen) {
-            cp.triggered = true;
-            if (cp.card) {
-              cp.card.classList.add('is-revealed');
-            }
-          }
-        });
+        function step(timestamp) {
+          if (!startTime) startTime = timestamp;
+          var progress = Math.min((timestamp - startTime) / duration, 1);
 
-        if (progress < 1) {
-          requestAnimationFrame(step);
-        } else {
-          /* Surge complete: fade out traveling spark */
+          /* Gentle sinusoidal ease-in-out (no sudden fast burst at the start) */
+          var ease = 0.5 - 0.5 * Math.cos(progress * Math.PI);
+          var currentLen = totalLength * ease;
+          var currentOffset = totalLength - currentLen;
+
+          /* Draw laser lines smoothly */
+          beam1.style.strokeDashoffset = currentOffset;
+          if (beam2) {
+            beam2.style.strokeDashoffset = Math.max(0, currentOffset + 120);
+          }
+
+          /* Move traveling photon spark along SVG curve */
           if (spark) {
-            spark.classList.remove('is-active');
+            try {
+              var pt = beam1.getPointAtLength(currentLen);
+              spark.setAttribute('cx', pt.x);
+              spark.setAttribute('cy', pt.y);
+            } catch (e) {}
           }
 
-          /* Ensure all cards are revealed */
-          cards.forEach(function (card) {
-            card.classList.add('is-revealed');
+          /* Materialize each card calmly as the laser spark reaches it */
+          checkpoints.forEach(function (cp) {
+            if (!cp.triggered && currentLen >= cp.targetLen) {
+              cp.triggered = true;
+              if (cp.card) {
+                cp.card.classList.add('is-revealed');
+              }
+            }
           });
 
-          /* Hand off seamlessly to continuous ambient wave flow */
-          setTimeout(function () {
-            beam1.style.strokeDasharray = '450 1100';
-            beam1.style.animation = 'srvLaserFlow1 11s linear infinite';
-            if (beam2) {
-              beam2.style.strokeDasharray = '450 1100';
-              beam2.style.animation = 'srvLaserFlow2 15s linear infinite';
+          if (progress < 1) {
+            requestAnimationFrame(step);
+          } else {
+            /* Surge complete: fade out traveling spark */
+            if (spark) {
+              spark.classList.remove('is-active');
             }
-          }, 400);
-        }
-      }
 
-      requestAnimationFrame(step);
+            /* Ensure all cards are revealed */
+            cards.forEach(function (card) {
+              card.classList.add('is-revealed');
+            });
+
+            /* Hand off seamlessly to continuous ambient wave flow */
+            setTimeout(function () {
+              beam1.style.strokeDasharray = '450 1100';
+              beam1.style.animation = 'srvLaserFlow1 14s linear infinite';
+              if (beam2) {
+                beam2.style.strokeDasharray = '450 1100';
+                beam2.style.animation = 'srvLaserFlow2 18s linear infinite';
+              }
+            }, 400);
+          }
+        }
+
+        requestAnimationFrame(step);
+      }, 600);
     }
 
     function checkLaser() {
       if (hasTriggered) return;
       var rect = servicesSec.getBoundingClientRect();
       var winH = window.innerHeight || document.documentElement.clientHeight;
-      if (rect.top < winH * 0.8 && rect.bottom > 100) {
+      if (rect.top < winH * 0.65 && rect.bottom > 150) {
         startLaserSurge();
       }
     }
 
     window.addEventListener('scroll', checkLaser, { passive: true });
     window.addEventListener('resize', checkLaser, { passive: true });
-    setTimeout(checkLaser, 250);
+    setTimeout(checkLaser, 300);
 
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
@@ -861,11 +846,33 @@
         }
       });
     }, {
-      threshold: 0.15,
-      rootMargin: '0px 0px -40px 0px'
+      threshold: 0.25,
+      rootMargin: '0px 0px -60px 0px'
     });
 
     observer.observe(servicesSec);
+  })();
+
+
+  /* ─────────────────────────────────────────────────
+     12. GPU Performance Optimizer — Pause Offscreen Animations
+  ───────────────────────────────────────────────── */
+  (function initOffscreenAnimationPause() {
+    if (!('IntersectionObserver' in window)) return;
+    var animatedSections = document.querySelectorAll('.hero-section, .laser-stats-section, .services-section');
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove('is-offscreen');
+        } else {
+          entry.target.classList.add('is-offscreen');
+        }
+      });
+    }, { rootMargin: '120px 0px 120px 0px' });
+
+    animatedSections.forEach(function (sec) {
+      obs.observe(sec);
+    });
   })();
 
 })();
