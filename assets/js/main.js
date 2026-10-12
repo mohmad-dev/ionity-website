@@ -1,203 +1,328 @@
 /**
- * IONITY — Main Setup & Controller
+ * IONITY — Main JavaScript Controller
+ * Handles: preloader, nav scroll, mobile menu, scroll animations,
+ *          contact form, dynamic copyright year.
  * File: assets/js/main.js
- * 
- * Handles preloader, fullpage.js initialization, smooth scrolling, section animations, sliders, and mobile menus.
+ *
+ * Dependencies: none (vanilla JS only; jQuery retained for audio-controller compat)
  */
 
-$(document).ready(function() {
-    'use strict';
+(function () {
+  'use strict';
 
-    /* 1. Preloader Initial State */
-    $(".preloaderWindow .logo").addClass("show");
-    $(".preloaderWindow .line").addClass("show");
-    $(".preloaderWindow .text").addClass("show");
+  /* ─────────────────────────────────────────────────
+     1. Preloader
+  ───────────────────────────────────────────────── */
+  function hidePreloader() {
+    var el = document.querySelector('.preloader');
+    if (!el) return;
+    el.classList.add('is-hidden');
+    // Remove from DOM after transition
+    setTimeout(function () {
+      if (el.parentNode) el.parentNode.removeChild(el);
+    }, 600);
+  }
 
-    $(window).resize();
+  if (document.readyState === 'complete') {
+    setTimeout(hidePreloader, 400);
+  } else {
+    window.addEventListener('load', function () {
+      setTimeout(hidePreloader, 400);
+    });
+  }
 
-    /* 2. Fullpage.js Initialization */
-    $('#fullpage').fullpage({
-        autoScrolling: false,
-        fitToSection: false,
-        menu: '#menu',
-        anchors: ['homePage', 'whyPage', 'clientsPage', 'websitesPage', 'premiumPage', 'contactPage'],
-        onLeave: function(index, nextIndex, direction) {
-            if (index == 1 && direction == 'down') {
-                $('.hamburger').addClass("active");
-            } else if (index == 2 && direction == 'up') {
-                $('.hamburger').removeClass("active");
-            }
-        },
-        afterLoad: function(anchorLink, index) {
-            $('body').removeClass(function(i, c) {
-                return (c.match(/\bfp-viewing-\S+/g) || []).join(' ');
-            }).addClass('fp-viewing-' + anchorLink);
-            
-            $('.section[data-anchor="' + anchorLink + '"] > div').addClass('is-inview');
-        }
+
+  /* ─────────────────────────────────────────────────
+     2. Navigation — scroll state & active link
+  ───────────────────────────────────────────────── */
+  var nav = document.querySelector('.site-nav');
+
+  function updateNavScroll() {
+    if (!nav) return;
+    if (window.scrollY > 24) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  }
+
+  window.addEventListener('scroll', updateNavScroll, { passive: true });
+  updateNavScroll();
+
+  /* Active section highlighting */
+  var sections = document.querySelectorAll('[data-nav-id]');
+  var navLinks = document.querySelectorAll('.nav-link[data-target]');
+
+  function updateActiveLink() {
+    var scrollPos = window.scrollY + 80;
+    var active = '';
+
+    sections.forEach(function (section) {
+      if (section.offsetTop <= scrollPos) {
+        active = section.getAttribute('data-nav-id');
+      }
     });
 
-    /* 3. Universal Precision SVG Stroke Drawing Controller */
-    var svgAnimatedMap = {};
+    navLinks.forEach(function (link) {
+      link.classList.toggle('active', link.getAttribute('data-target') === active);
+    });
+  }
 
-    function initSvgStrokes() {
-        var svgItems = document.querySelectorAll(
-            '#bigCirclesSvg path, .whySection .whyColumnCenter svg circle, .clientsSection .bg-outline-svg path, .websitesSection .number svg path, .contactSection .column .title svg path'
-        );
-        svgItems.forEach(function(el) {
-            if (typeof el.getTotalLength === 'function') {
-                var len = Math.ceil(el.getTotalLength());
-                if (len > 0) {
-                    el.style.strokeDasharray = len + 'px ' + len + 'px';
-                    el.style.strokeDashoffset = len + 'px';
-                }
-            }
+  window.addEventListener('scroll', updateActiveLink, { passive: true });
+
+  /* Smooth scroll for nav links */
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('a[href^="#"]');
+    if (!link) return;
+    var id = link.getAttribute('href').slice(1);
+    var target = document.getElementById(id);
+    if (!target) return;
+    e.preventDefault();
+    var top = target.getBoundingClientRect().top + window.scrollY - 70;
+    window.scrollTo({ top: top, behavior: 'smooth' });
+  });
+
+
+  /* ─────────────────────────────────────────────────
+     3. Mobile Navigation
+  ───────────────────────────────────────────────── */
+  var hamburger = document.querySelector('.nav-hamburger');
+  var mobileNav = document.querySelector('.mobile-nav');
+  var mobileOverlay = document.querySelector('.mobile-nav-overlay');
+
+  function openMobileNav() {
+    if (!mobileNav) return;
+    mobileNav.classList.add('is-open');
+    hamburger && hamburger.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMobileNav() {
+    if (!mobileNav) return;
+    mobileNav.classList.remove('is-open');
+    hamburger && hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  if (hamburger) {
+    hamburger.addEventListener('click', function () {
+      var isOpen = mobileNav && mobileNav.classList.contains('is-open');
+      isOpen ? closeMobileNav() : openMobileNav();
+    });
+  }
+
+  if (mobileOverlay) {
+    mobileOverlay.addEventListener('click', closeMobileNav);
+  }
+
+  /* Close mobile nav when a link is clicked */
+  if (mobileNav) {
+    mobileNav.querySelectorAll('.mobile-nav-link').forEach(function (link) {
+      link.addEventListener('click', closeMobileNav);
+    });
+  }
+
+  /* Escape key closes menu */
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeMobileNav();
+  });
+
+
+  /* ─────────────────────────────────────────────────
+     4. Scroll-reveal Animations (IntersectionObserver)
+  ───────────────────────────────────────────────── */
+  if ('IntersectionObserver' in window) {
+    var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (!prefersReducedMotion) {
+      var revealObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            revealObserver.unobserve(entry.target);
+          }
         });
+      }, {
+        rootMargin: '0px 0px -8% 0px',
+        threshold: 0.1
+      });
+
+      document.querySelectorAll('[data-reveal]').forEach(function (el) {
+        revealObserver.observe(el);
+      });
+    } else {
+      /* Immediately show all when motion is reduced */
+      document.querySelectorAll('[data-reveal]').forEach(function (el) {
+        el.classList.add('is-visible');
+      });
     }
+  } else {
+    /* Fallback: show all */
+    document.querySelectorAll('[data-reveal]').forEach(function (el) {
+      el.classList.add('is-visible');
+    });
+  }
 
-    function animateSectionSvg(sectionEl) {
-        if (!sectionEl) return;
-        var sectionKey = $(sectionEl).attr('class') || 'sec';
-        if (svgAnimatedMap[sectionKey]) return;
-        svgAnimatedMap[sectionKey] = true;
 
-        var paths = sectionEl.querySelectorAll(
-            '#bigCirclesSvg path, .whyColumnCenter svg circle, .bg-outline-svg path, .number svg path, .column .title svg path'
-        );
+  /* ─────────────────────────────────────────────────
+     4b. Precision SVG Stroke Drawing Controller
+  ───────────────────────────────────────────────── */
+  function initSvgStrokeAnimation() {
+    var svgPaths = document.querySelectorAll(
+      '.bg-outline-svg path, .contact-channel-bg-svg path'
+    );
 
-        paths.forEach(function(el, i) {
-            if (typeof el.getTotalLength === 'function') {
-                var len = Math.ceil(el.getTotalLength());
-                if (len > 0) {
-                    var delay = (i * 0.12) + 0.1;
-                    var duration = len > 1500 ? 1.6 : (len > 600 ? 1.3 : 0.7);
-                    el.style.transition = 'stroke-dashoffset ' + duration + 's cubic-bezier(0.25, 1, 0.5, 1) ' + delay + 's';
-                    el.style.strokeDashoffset = '0px';
-                }
-            }
-        });
-
-        // Trigger icon fade-ins in whySection
-        if ($(sectionEl).hasClass('whySection')) {
-            var imgs = sectionEl.querySelectorAll('.icons .iconRow .circle img');
-            imgs.forEach(function(img, idx) {
-                setTimeout(function() {
-                    img.style.opacity = '1';
-                    img.style.transition = 'opacity 0.4s ease';
-                }, 300 + (idx * 150));
-            });
+    svgPaths.forEach(function (path) {
+      try {
+        var length = path.getTotalLength();
+        if (length && length > 0) {
+          path.style.strokeDasharray = length + ' ' + length;
+          path.style.strokeDashoffset = length;
+          path.style.transition = 'stroke-dashoffset 2.2s cubic-bezier(0.16, 1, 0.3, 1)';
         }
-    }
+      } catch (e) {}
+    });
 
-    // Initialize all SVG stroke dash offsets immediately
-    initSvgStrokes();
-
-    /* 4. Intersection Observer & Scroll Trigger */
     if ('IntersectionObserver' in window) {
-        var sectionObserver = new IntersectionObserver(function(entries) {
-            entries.forEach(function(entry) {
-                if (entry.isIntersecting) {
-                    var $target = $(entry.target);
-                    $target.addClass('is-inview');
-                    animateSectionSvg(entry.target);
-
-                    var parentSection = $target.closest('.section');
-                    var anchor = parentSection.attr('data-anchor');
-                    if (anchor) {
-                        $('body').addClass('fp-viewing-' + anchor);
-                    }
-                }
+      var svgObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            var paths = entry.target.querySelectorAll('path');
+            paths.forEach(function (p) {
+              p.style.strokeDashoffset = '0';
             });
-        }, { root: null, rootMargin: '0px 0px -5% 0px', threshold: 0.1 });
-
-        $('.whySection, .clientsSection, .websitesSection, .premiumSection, .contactSection').each(function() {
-            sectionObserver.observe(this);
+            entry.target.classList.add('is-drawn');
+            svgObserver.unobserve(entry.target);
+          }
         });
+      }, { rootMargin: '0px 0px -5% 0px', threshold: 0.1 });
+
+      document.querySelectorAll('.bg-outline-svg, .contact-channel-bg-svg, .section-watermark-svg').forEach(function (svg) {
+        svgObserver.observe(svg);
+      });
+    } else {
+      svgPaths.forEach(function (path) {
+        path.style.strokeDashoffset = '0';
+      });
+      document.querySelectorAll('.section-watermark-svg').forEach(function (svg) {
+        svg.classList.add('is-drawn');
+      });
     }
+  }
 
-    // Fail-safe Scroll & Touch Listener for all browsers & devices
-    $(window).on('scroll resize touchmove touchend', function() {
-        var winTop = $(window).scrollTop();
-        var winBottom = winTop + $(window).height();
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSvgStrokeAnimation);
+  } else {
+    initSvgStrokeAnimation();
+  }
 
-        $('.whySection, .clientsSection, .websitesSection, .premiumSection, .contactSection').each(function() {
-            var $this = $(this);
-            var top = $this.offset().top;
-            var height = $this.outerHeight();
-            if (winBottom > top + 50 && winTop < top + height) {
-                $this.addClass('is-inview');
-                animateSectionSvg(this);
-            }
+
+  /* ─────────────────────────────────────────────────
+     5. Contact Form Handling
+  ───────────────────────────────────────────────── */
+  var contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      var submitBtn = contactForm.querySelector('[type="submit"]');
+      var successMsg = document.getElementById('form-success');
+      var errorMsg   = document.getElementById('form-error');
+
+      /* Reset state */
+      if (successMsg) successMsg.hidden = true;
+      if (errorMsg)   errorMsg.hidden = true;
+
+      /* Basic validation */
+      var name    = contactForm.querySelector('[name="name"]');
+      var email   = contactForm.querySelector('[name="email"]');
+      var message = contactForm.querySelector('[name="message"]');
+      var isValid = true;
+
+      [name, email, message].forEach(function (field) {
+        if (field && !field.value.trim()) {
+          field.setAttribute('aria-invalid', 'true');
+          isValid = false;
+        } else if (field) {
+          field.removeAttribute('aria-invalid');
+        }
+      });
+
+      if (email && email.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+        email.setAttribute('aria-invalid', 'true');
+        isValid = false;
+      }
+
+      if (!isValid) {
+        if (errorMsg) errorMsg.hidden = false;
+        return;
+      }
+
+      /* Submit state */
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.setAttribute('aria-busy', 'true');
+      }
+
+      /* 
+       * ⚠️ OWNER_ACTION: Replace this section with your actual form submission.
+       * Options: Formspree, EmailJS, a backend endpoint, etc.
+       * Current: Opens WhatsApp with pre-filled message as fallback.
+       */
+      var lang = document.documentElement.lang || 'ar';
+      var nameVal    = name    ? name.value.trim()    : '';
+      var emailVal   = email   ? email.value.trim()   : '';
+      var messageVal = message ? message.value.trim() : '';
+
+      var waText = (lang === 'ar')
+        ? 'مرحباً، اسمي ' + nameVal + ' (' + emailVal + ') - ' + messageVal
+        : 'Hello, my name is ' + nameVal + ' (' + emailVal + ') - ' + messageVal;
+
+      /* ⚠️ OWNER_ACTION: Replace +000000000000 with the real WhatsApp number */
+      var waUrl = 'https://wa.me/?text=' + encodeURIComponent(waText);
+
+      /* Show success before opening */
+      if (successMsg) successMsg.hidden = false;
+      contactForm.reset();
+
+      setTimeout(function () {
+        window.open(waUrl, '_blank', 'noopener');
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.removeAttribute('aria-busy');
+        }
+      }, 600);
+    });
+  }
+
+
+  /* ─────────────────────────────────────────────────
+     6. Dynamic Copyright Year
+  ───────────────────────────────────────────────── */
+  document.querySelectorAll('.js-year').forEach(function (el) {
+    el.textContent = new Date().getFullYear();
+  });
+
+
+  /* ─────────────────────────────────────────────────
+     7. Slick Hero Slider (if present, kept for compat)
+  ───────────────────────────────────────────────── */
+  if (typeof jQuery !== 'undefined' && typeof jQuery.fn.slick === 'function') {
+    jQuery(document).ready(function ($) {
+      var $slider = $('.hero-slider');
+      if ($slider.length) {
+        $slider.slick({
+          infinite:     true,
+          slidesToShow: 1,
+          autoplay:     true,
+          autoplaySpeed: 5000,
+          fade:         true,
+          arrows:       false,
+          dots:         true,
+          pauseOnHover: false
         });
+      }
     });
+  }
 
-    /* 5. Smooth Scrolling (Local Nav) */
-    var body = $("html, body");
-
-    $('.scrollDown a').click(function() {
-        $.fn.fullpage.moveSectionDown();
-    });
-
-    $('.scrollUp a, .buttonHome a, .logo a').click(function() {
-        body.animate({
-            scrollTop: $(".muffin").offset().top
-        }, 800);
-        return false;
-    });
-
-    /* 6. Sliders Initialization */
-    if ($('.muffinSlider').length && typeof $.fn.slick === 'function') {
-        var muffinSlider = $('.muffinSlider').slick({
-            infinite: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            swipeToSlide: false,
-            focusOnSelect: false,
-            arrows: true,
-            dots: false,
-            autoplay: true,
-            autoplaySpeed: 5000,
-            fade: true,
-            pauseOnFocus: false,
-            pauseOnHover: false
-        });
-
-        $('.goToPrev').click(function() {
-            $('.muffinSlider .slick-prev').click();
-        });
-
-        $('.goToNext').click(function() {
-            $('.muffinSlider .slick-next').click();
-        });
-
-        $('.goTo1Slide').click(function() { muffinSlider.slick('slickGoTo', 0); });
-        $('.goTo2Slide').click(function() { muffinSlider.slick('slickGoTo', 1); });
-        $('.goTo3Slide').click(function() { muffinSlider.slick('slickGoTo', 2); });
-        $('.goTo4Slide').click(function() { muffinSlider.slick('slickGoTo', 3); });
-        $('.goTo5Slide').click(function() { muffinSlider.slick('slickGoTo', 4); });
-    }
-
-    /* 7. Mobile Menu */
-    $(".hamburger").click(function() {
-        $(".menuMobilePopup").css('display', 'table').hide().fadeIn(200);
-        setTimeout(function() {
-            $(".menuMobilePopupWindow").addClass("show");
-        }, 50);
-    });
-
-    $(".menuMobilePopupClose, .menuMobilePopup a").click(function() {
-        $(".menuMobilePopupWindow").removeClass("show");
-        setTimeout(function() {
-            $(".menuMobilePopup").fadeOut(200);
-        }, 150);
-    });
-
-});
-
-/* 7. Preloader Hide on Load */
-$(window).on('load', function() {
-    $(".preloaderWindow .logo").removeClass("show");
-    $(".preloaderWindow .line").removeClass("show");
-    $(".preloaderWindow .text").removeClass("show");
-    $(".preloaderWindow").addClass("hide");
-});
+})();

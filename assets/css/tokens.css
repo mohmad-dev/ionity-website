@@ -1,56 +1,102 @@
+/**
+ * IONITY — Design Tokens
+ * Centralized brand identity variables.
+ * File: assets/css/tokens.css
+ */
+
 :root {
-  /* Colors — Deep Emerald Luxury Palette */
-  --color-background: #0c2e29;
-  --color-background-dark: #071f1b;
-  --color-surface: #113f38;
-  --color-surface-glass: rgba(17, 63, 56, 0.75);
-  --color-text: #ffffff;
-  --color-text-secondary: #b3ddd6;
-  --color-text-tertiary: #7faaa3;
+  /* ── Brand Colors ───────────────────────────────────────── */
+  --color-accent:          #A8FF00;   /* Ionity Neon Green */
+  --color-accent-hover:    #C0FF40;   /* Lighter on hover */
+  --color-accent-dim:      rgba(168, 255, 0, 0.12);  /* Tinted background */
+  --color-accent-glow:     rgba(168, 255, 0, 0.20);  /* Subtle glow */
 
-  /* Primary Brand & Neon Accents */
-  --color-accent: #155B51;
-  --color-accent-light: #1d7a6a;
-  --color-accent-dark: #092823;
-  --color-neon-mint: #00f5d4;
-  --color-neon-cyan: #35edca;
-  --color-accent-glow: rgba(0, 245, 212, 0.35);
+  /* ── Background Surfaces ─────────────────────────────────── */
+  --color-bg:              #080A08;   /* Primary Background */
+  --color-surface:         #101310;   /* Elevated Surface */
+  --color-surface-2:       #151915;   /* Secondary Surface */
+  --color-surface-3:       #1C211B;   /* Tertiary Surface (cards) */
 
-  --color-border: rgba(0, 245, 212, 0.2);
-  --color-dark: #071f1b;
-  --color-dark-surface: #113f38;
+  /* ── Text ────────────────────────────────────────────────── */
+  --color-text:            #FFFFFF;
+  --color-text-secondary:  #B0B7AC;
+  --color-text-muted:      #7F887B;
+  --color-text-dark:       #11140F;   /* Dark text on light bg */
 
-  /* Typography */
-  --font-primary: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-arabic: 'Tajawal', 'Cairo', system-ui, -apple-system, sans-serif;
+  /* ── Borders ─────────────────────────────────────────────── */
+  --color-border:          #272D26;
+  --color-border-strong:   #3A4337;
 
-  /* Logical Spacing */
-  --spacing-xs: 0.5rem;
-  --spacing-sm: 1rem;
-  --spacing-md: 2rem;
-  --spacing-lg: 4rem;
-  --spacing-xl: 6rem;
-  --spacing-2xl: 8rem;
-  --spacing-section: clamp(4rem, 8vw, 8rem);
+  /* ── Light Mode (for selective light sections) ────────────── */
+  --color-light-bg:        #F7F8F5;
+  --color-light-surface:   #FFFFFF;
+  --color-light-border:    #E2E6DE;
 
-  /* Border Radius */
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 20px;
-  --radius-xl: 32px;
+  /* ── Status Colors ──────────────────────────────────────── */
+  --color-success:         #35B66A;
+  --color-error:           #F05B5B;
+  --color-warning:         #E8B34B;
 
-  /* Transitions */
-  --transition-fast: 0.15s ease;
-  --transition-base: 0.3s ease;
-  --transition-slow: 0.6s ease;
-  --transition-smooth: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  /* ── Typography ─────────────────────────────────────────── */
+  --font-arabic:   'IBM Plex Sans Arabic', 'Tajawal', 'Segoe UI', sans-serif;
+  --font-english:  'Inter', 'Manrope', 'Segoe UI', sans-serif;
+  --font-primary:  var(--font-english); /* overridden in .lang-ar */
 
-  /* Layout */
-  --container-max: 1280px;
-  --container-wide: 1440px;
+  /* ── Font Weights ───────────────────────────────────────── */
+  --weight-regular:   400;
+  --weight-medium:    500;
+  --weight-semibold:  600;
+  --weight-bold:      700;
+  --weight-display:   800;
+
+  /* ── Spacing Scale ──────────────────────────────────────── */
+  --space-1:    4px;
+  --space-2:    8px;
+  --space-3:    12px;
+  --space-4:    16px;
+  --space-6:    24px;
+  --space-8:    32px;
+  --space-12:   48px;
+  --space-16:   64px;
+  --space-20:   80px;
+  --space-24:   96px;
+  --space-30:   120px;
+
+  /* ── Section Vertical Padding ───────────────────────────── */
+  --section-py-desktop: clamp(5.5rem, 9vw, 7rem);
+  --section-py-tablet:  clamp(4rem, 7vw, 5rem);
+  --section-py-mobile:  clamp(3rem, 8vw, 4rem);
+
+  /* ── Container ──────────────────────────────────────────── */
+  --container-max:    1240px;
+  --container-px:     clamp(1.25rem, 4vw, 3rem);
+
+  /* ── Border Radii ───────────────────────────────────────── */
+  --radius-sm:    8px;
+  --radius-md:    12px;
+  --radius-lg:    16px;
+  --radius-xl:    20px;
+  --radius-pill:  9999px;
+
+  /* ── Transitions ────────────────────────────────────────── */
+  --transition-fast:    150ms ease;
+  --transition-base:    220ms ease;
+  --transition-slow:    400ms ease;
+  --transition-spring:  500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ── Shadows ─────────────────────────────────────────────── */
+  --shadow-card:    0 1px 0 var(--color-border), 0 0 0 1px var(--color-border);
+  --shadow-float:   0 8px 32px rgba(0, 0, 0, 0.40);
+  --shadow-nav:     0 1px 0 var(--color-border);
+
+  /* ── Z-Index Stack ──────────────────────────────────────── */
+  --z-nav:      100;
+  --z-overlay:  200;
+  --z-modal:    300;
+  --z-toast:    400;
 }
 
-/* RTL Specific Tokens */
+/* Arabic language overrides */
 body.lang-ar {
   --font-primary: var(--font-arabic);
 }

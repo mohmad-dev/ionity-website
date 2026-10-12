@@ -1,4 +1,13 @@
-/* Reset & Base Styles */
+/*
+ * IONITY — Base Styles
+ * Reset, typography, layout foundations.
+ * File: assets/css/base.css
+ */
+
+/* ── Font Imports ────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+/* ── Reset ───────────────────────────────────────────────── */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -7,37 +16,74 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 15px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
 }
 
 body {
   font-family: var(--font-primary);
-  background-color: var(--color-background);
+  background-color: var(--color-bg);
   color: var(--color-text);
-  font-weight: 500;
-  line-height: 1.6;
+  font-weight: var(--weight-regular);
+  line-height: 1.7;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
-/* Typography */
+/* ── Typography Scale ─────────────────────────────────────── */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-display, var(--font-primary));
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: var(--spacing-sm);
+  font-family: var(--font-primary);
+  font-weight: var(--weight-bold);
   color: var(--color-text);
+  line-height: 1.12;
+  margin-bottom: 0;
 }
 
-h1 { font-size: clamp(2.5rem, 5vw, 4rem); letter-spacing: -0.02em; }
-h2 { font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -0.01em; }
-h3 { font-size: clamp(1.5rem, 3vw, 2.25rem); }
-h4 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
+h1 {
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+}
+
+h2 {
+  font-size: clamp(1.875rem, 3.5vw, 2.875rem);
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+h4 {
+  font-size: clamp(1.0625rem, 1.5vw, 1.25rem);
+  line-height: 1.3;
+}
+
+/* Arabic typography adjustments */
+body.lang-ar h1,
+body.lang-ar h2,
+body.lang-ar h3,
+body.lang-ar h4 {
+  letter-spacing: 0;
+  line-height: 1.4;
+  font-weight: var(--weight-bold);
+}
+
+body.lang-ar h1 {
+  line-height: 1.35;
+}
 
 p {
-  margin-bottom: var(--spacing-md);
+  line-height: 1.75;
   color: var(--color-text-secondary);
+}
+
+body.lang-ar p {
+  line-height: 1.85;
 }
 
 a {
@@ -46,53 +92,88 @@ a {
   transition: color var(--transition-fast);
 }
 
-img, picture, svg, video {
+img, picture, video, svg {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-button, input, select, textarea {
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+input, select, textarea {
   font: inherit;
 }
 
-/* Layout Utilities */
+ul, ol {
+  list-style: none;
+}
+
+/* ── Container ──────────────────────────────────────────── */
 .container {
   width: 100%;
   max-width: var(--container-max);
   margin-inline: auto;
-  padding-inline: var(--spacing-md);
+  padding-inline: var(--container-px);
 }
 
-.section {
-  padding-block: var(--spacing-section);
+/* ── Section Spacing ────────────────────────────────────── */
+.site-section {
+  padding-block: var(--section-py-desktop);
   position: relative;
 }
 
-.text-center { text-align: center; }
-.text-accent { color: var(--color-accent-dark); }
+@media (max-width: 1024px) {
+  .site-section {
+    padding-block: var(--section-py-tablet);
+  }
+}
 
-/* Grid Utilities */
-.grid {
+@media (max-width: 640px) {
+  .site-section {
+    padding-block: var(--section-py-mobile);
+  }
+}
+
+/* ── Grid Utilities ──────────────────────────────────────── */
+.grid-auto {
   display: grid;
-  gap: var(--spacing-md);
+  gap: var(--space-6);
 }
 
-.grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
-.grid-3 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
-.grid-4 { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+.grid-2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); }
+.grid-3 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); }
+.grid-4 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
 
-/* RTL Adjustments */
-body.lang-ar {
-  text-align: right;
+/* ── Flex Utilities ──────────────────────────────────────── */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* LTR defaults */
-body {
-  text-align: left;
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-/* Accessibility */
+/* ── Text Utilities ──────────────────────────────────────── */
+.text-center { text-align: center; }
+.text-start  { text-align: start; }
+.text-accent { color: var(--color-accent); }
+.text-muted  { color: var(--color-text-muted); }
+.text-secondary { color: var(--color-text-secondary); }
+
+/* ── RTL direction ──────────────────────────────────────── */
+body.lang-ar,
+body.lang-ar * {
+  --dir: rtl;
+}
+
+/* ── Accessibility ───────────────────────────────────────── */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -102,5 +183,55 @@ body {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
-  border: 0;
+  border-width: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Remove default focus for mouse users */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ── Divider ────────────────────────────────────────────── */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: var(--color-border);
+}
+
+/* ── Section Label ──────────────────────────────────────── */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.8125rem;
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-4);
+}
+
+.section-label::before {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 6px;
+  background: var(--color-accent);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ── Reduced Motion ─────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

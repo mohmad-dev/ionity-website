@@ -1,184 +1,282 @@
 /**
  * IONITY — Language Data Module
+ * Bilingual string registry (Arabic & English).
  * File: assets/js/lang-data.js
- * 
- * Contains all the text strings for the bilingual setup.
  */
 
 window.IONITY_STRINGS = {
-    ar: {
-        /* Navigation Links */
-        navHome: 'الرئيسية',
-        navWhy: 'خدماتنا',
-        navClients: 'من نحن وإحصائياتنا',
-        navWebsites: 'الحلول الجاهزة',
-        navPremium: 'أدوات متطورة',
-        navContact: 'تواصل معنا',
 
-        /* Scroll Controls */
-        scrollDown: 'انتقل للأسفل',
-        scrollUp: 'انتقل للأعلى',
+  /* ─────────────── Arabic ─────────────── */
+  ar: {
 
-        /* Hero 5 Slides Headlines */
-        slide1Title: 'أنظمة رقمية عملية <br>ومنتجات SaaS لنمو أعمالك',
-        slide2Title: 'حلول برمجية مخصصة <br>لتطوير وتوسيع نطاق أعمالك',
-        slide3Title: 'سرعة ومرونة في التنفيذ <br>مع أعلى معايير الجودة التقنية',
-        slide4Title: 'تجربة مستخدم سلسة <br>وواجهات ذكية وسهلة الاستخدام',
-        slide5Title: 'دعم فني وشراكة مستمرة <br>لضمان نجاح واستقرار منظومتك',
+    /* Navigation */
+    navHome:     'الرئيسية',
+    navServices: 'خدماتنا',
+    navSolutions: 'حلولنا',
+    navWork:     'أعمالنا',
+    navAbout:    'من نحن',
+    navContact:  'تواصل معنا',
+    navCta:      'ناقش مشروعك',
 
-        /* Hero Nav Column Labels */
-        slideNav1: 'Cura & Haggag',
-        slideNav2: 'حلول مخصصة',
-        slideNav3: 'تنفيذ سريع ومرن',
-        slideNav4: 'واجهات ذكية',
-        slideNav5: 'دعم وشراكة',
+    /* Lang toggle labels */
+    toggleBtn: 'EN',
 
-        /* Slide Buttons */
-        readMore: 'استكشف المزيد',
+    /* Hero */
+    heroEyebrow: 'حلول برمجية متخصصة',
+    heroHeadline: 'نبني حلولًا رقمية تحوّل\nأفكارك إلى واقع.',
+    heroHeadlineAccent: 'تحوّل أفكارك إلى واقع.',
+    heroBody: 'نطوّر مواقع ويب، وأنظمة برمجية، ومنتجات SaaS تساعد الشركات على تبسيط عملياتها وبناء تجارب رقمية أكثر كفاءة.',
+    heroCtaPrimary: 'ناقش مشروعك',
+    heroCtaSecondary: 'استكشف خدماتنا',
+    heroFloatTag: 'منتجات تعمل بكفاءة',
 
-        /* 1. Why Section */
-        whyTitle: 'ما الذي يجعلنا <br>الخيار الأفضل <br>لمشروعك؟',
-        whyIcon1: 'دعم فني <br>استثنائي',
-        whyIcon2: 'تحديثات <br>وتطوير مستمر',
-        whyIcon3: 'أكثر من 650 <br>نموذج ونظام جاهز',
-        whyIcon4: 'برمجيات مطورة <br>داخلياً 100%',
+    /* Stats (Laser section) — Image 1 numbers */
+    stat1Value: '18',
+    stat1Label: 'سنوات من الخبرة',
+    stat2Value: '650+',
+    stat2Label: 'مشاريع منجزة',
+    stat3Value: '250,000',
+    stat3Label: 'مستخدم وعميل راضٍ',
 
-        /* 2. Clients / Social Proof Section */
-        stat1Text: 'سنوات من الخبرة',
-        stat2Text: 'مشاريع منجزة',
-        stat3Text: 'مستخدم وعميل راضٍ!',
-        aboutUsTitle: 'من نحن',
-        aboutUsDesc: 'نحن فريق محترف ومتخصص في تطوير الأنظمة الرقمية، وتطبيقات الويب، وحلول الـ SaaS المبتكرة. ندمج أحدث التقنيات مع تجربة مستخدم استثنائية لتمكين الشركات من التوسع والنمو. هدفنا هو تقديم حلول برمجية تلبي تطلعاتك وتدعم استقرار ونجاح أعمالك.',
+    /* Services */
+    servicesLabel:  'خدماتنا',
+    servicesTitle:  'ما نقدمه لك',
+    servicesBody:   'من الفكرة إلى المنتج — نبني الحل الرقمي المناسب لاحتياجات عملك.',
 
-        /* 3. Websites Section */
-        websitesTitle: 'أنظمة ومواقع جاهزة <br>للاستخدام السريع <br>بضغطة زر واحدة',
-        websitesButton: 'استعراض جميع النماذج',
+    service1Title:  'تطوير المواقع وتطبيقات الويب',
+    service1Body:   'مواقع ويب احترافية وسريعة ومستجيبة تعكس هويتك وتحقق أهدافك.',
+    service1Link:   'اعرف المزيد',
 
-        /* 4. Premium Solutions Section */
-        premiumTitle: 'أدوات وحلول برمجية متقدمة',
-        pluginRevSliderDesc: 'لبناء سلايدرات وتفاعلات بصرية مبهرة',
-        pluginLayerSliderDesc: 'لإنشاء عروض تفاعلية ومتحركة متقدمة',
-        pluginWpBakeryDesc: 'لبناء وإدارة المحتوى والصفحات بسهولة',
-        pluginWooCommerceDesc: 'لحلول المتاجر الإلكترونية وبوابات الدفع',
-        pluginWpmlDesc: 'لدعم المواقع متعددة اللغات بالكامل',
-        pluginHubspotDesc: 'لأتمتة التسويق والمبيعات وإدارة العملاء CRM',
-        pluginRankMathDesc: 'لأفضل نتائج تصدر محركات البحث SEO',
-        pluginContactFormDesc: 'لإنشاء نماذج تواصل واستمارات ذكية',
-        pluginMailchimpDesc: 'لإدارة الحملات البريدية والنشرات الإخبارية',
-        pluginEventsCalDesc: 'لتنظيم الفعاليات والمواعيد والحجوزات بذكاء',
-        pluginAdsProDesc: 'لإدارة المساحات والحملات الإعلانية',
-        pluginW3CacheDesc: 'لتحسين السرعة والأداء العالي والاستقرار',
-        pluginBuddyPressDesc: 'لبناء مجتمعات ومنتديات تفاعلية متقدمة',
-        pluginBbPressDesc: 'لمنصات النقاش والتفاعل الاجتماعي',
-        pluginCookieLawDesc: 'للامتثال لسياسات الخصوصية وملفات تعريف الارتباط',
-        pluginYoastDesc: 'لتحسين أرشفة الموقع في محركات البحث',
+    service2Title:  'الأنظمة البرمجية المخصصة',
+    service2Body:   'أنظمة مبنية خصيصًا لسير عمل شركتك لتبسيط العمليات وزيادة الكفاءة.',
+    service2Link:   'اعرف المزيد',
 
-        /* 5. Who We Are Section */
-        whoTitle: 'من نحن',
-        whoTeamDesc: 'أعضاء فريق<br>خبراء ومبدعون',
-        whoCenterText: 'نحن فريق محترف ومتخصص في تطوير الأنظمة الرقمية، وتطبيقات الويب، وحلول الـ SaaS المبتكرة. ندمج أحدث التقنيات مع تجربة مستخدم استثنائية لتمكين الشركات من التوسع والنمو. هدفنا هو تقديم حلول برمجية تلبي تطلعاتك وتدعم استقرار ونجاح أعمالك.',
-        whoExpDesc: 'سنوات من<br>الخبرة في البرمجة<br>والتطوير التقني',
+    service3Title:  'منتجات SaaS والحلول الرقمية',
+    service3Body:   'منتجات برمجية قابلة للتوسع ومبنية بتقنيات حديثة لتنمية أعمالك.',
+    service3Link:   'اعرف المزيد',
 
-        /* 6. Contact Section */
-        contactTitle: 'تواصل معنا',
-        contactSupport: 'مركز الدعم الفني',
-        contactDirect: 'تواصل مباشرة معنا',
-        linkDoc: 'دليل التوثيق والمساعدة',
-        linkForum: 'منتدى الدعم والمجتمع',
-        linkVideo: 'شروحات ودروس الفيديو',
-        copyright: 'جميع الحقوق محفوظة © 2024 لـ IONITY.',
+    service4Title:  'تصميم UI/UX والدعم التقني',
+    service4Body:   'تصميم واجهات مستخدم مدروسة، صيانة مستمرة، ودعم فني متواصل لمنتجك.',
+    service4Link:   'اعرف المزيد',
 
-        /* Toggle Button Labels */
-        toggleDesktop: 'EN',
-        toggleHeader: 'EN',
-        toggleMobileMenu: 'English (EN)'
-    },
+    /* About */
+    aboutLabel:    'من نحن',
+    aboutTitle:    'فريق متخصص في بناء\nالحلول الرقمية',
+    aboutBody:     'IONITY شركة برمجيات متخصصة في بناء المواقع والتطبيقات والأنظمة البرمجية المخصصة. نعمل مع الشركات والرياديين لتحويل أفكارهم إلى منتجات رقمية حقيقية وعملية.\n\nنؤمن أن التقنية الجيدة يجب أن تكون بسيطة وقابلة للفهم وموثوقة — وهذا ما نسعى إليه في كل مشروع.',
 
-    en: {
-        /* Navigation Links */
-        navHome: 'Home',
-        navWhy: 'Services',
-        navClients: 'About Us & Stats',
-        navWebsites: 'Ready Solutions',
-        navPremium: 'Advanced Tools',
-        navContact: 'Contact Us',
+    diff1Title: 'تقنيات حديثة',
+    diff1Desc:  'نستخدم أحدث الأدوات والمنصات لبناء حلول قابلة للتوسع والصيانة.',
 
-        /* Scroll Controls */
-        scrollDown: 'Scroll down',
-        scrollUp: 'Scroll up',
+    diff2Title: 'تسليم احترافي',
+    diff2Desc:  'نلتزم بالمواعيد والجودة في كل مرحلة من مراحل التطوير.',
 
-        /* Hero 5 Slides Headlines */
-        slide1Title: 'Practical Digital Systems <br>& SaaS Products for Business Growth',
-        slide2Title: 'Custom Software Solutions <br>Engineered to Scale Your Business',
-        slide3Title: 'Fast & Agile Execution <br>With Enterprise-Grade Quality',
-        slide4Title: 'Seamless User Experience <br>With Smart & Intuitive Interfaces',
-        slide5Title: 'Continuous Support & Partnership <br>To Ensure Stability & Growth',
+    diff3Title: 'تواصل مستمر',
+    diff3Desc:  'نبقيك على اطلاع دائم بتقدم مشروعك في كل خطوة.',
 
-        /* Hero Nav Column Labels */
-        slideNav1: 'Cura & Haggag',
-        slideNav2: 'Custom Solutions',
-        slideNav3: 'Agile Execution',
-        slideNav4: 'Smart UI',
-        slideNav5: 'Support & Care',
+    diff4Title: 'دعم ما بعد الإطلاق',
+    diff4Desc:  'لا ننتهي عند التسليم — نتابع ونحسّن منتجك باستمرار.',
 
-        /* Slide Buttons */
-        readMore: 'Explore More',
+    /* Numbers (about visual) — ⚠️ OWNER_VERIFY */
+    aboutNum1Value: '٥+',
+    aboutNum1Label: 'سنوات خبرة',
+    aboutNum2Value: '٥٠+',
+    aboutNum2Label: 'مشروع منجز',
+    aboutNum3Value: '١٠٠٪',
+    aboutNum3Label: 'شغف حقيقي',
+    aboutNum4Value: '٢٤/٧',
+    aboutNum4Label: 'دعم مستمر',
 
-        /* 1. Why Section */
-        whyTitle: 'What makes <br>us better <br>than others?',
-        whyIcon1: 'Outstanding <br>support',
-        whyIcon2: 'Updates <br>every week',
-        whyIcon3: '650+ pre-built <br>websites',
-        whyIcon4: '100% built <br>in-house software',
+    /* Process */
+    processLabel:   'كيف نعمل',
+    processTitle:   'من الفكرة إلى المنتج',
+    processBody:    'منهجية واضحة ومجربة لضمان نتيجة تلبّي توقعاتك.',
 
-        /* 2. Clients / Social Proof Section */
-        stat1Text: 'Years of existence',
-        stat2Text: 'Completed projects',
-        stat3Text: 'Satisfied users!',
-        aboutUsTitle: 'About Us',
-        aboutUsDesc: 'We are a professional team specializing in developing digital systems, web applications, and innovative SaaS solutions. We integrate the latest technologies with exceptional user experience to empower companies to scale and grow. Our goal is to provide software solutions that meet your aspirations and support the stability and success of your business.',
+    step1Title:  'الاكتشاف وفهم الاحتياج',
+    step1Body:   'نبدأ بفهم عملك وأهدافك ومتطلبات مشروعك بشكل كامل.',
 
-        /* 3. Websites Section */
-        websitesTitle: 'ready to use pre-built <br>websites with 1-click <br>installation',
-        websitesButton: 'View all demos',
+    step2Title:  'التخطيط والتصميم',
+    step2Body:   'نضع خارطة طريق واضحة ونصمم تجربة المستخدم قبل كتابة أي سطر كود.',
 
-        /* 4. Premium Solutions Section */
-        premiumTitle: 'Premium plugins',
-        pluginRevSliderDesc: 'for building beautiful sliders',
-        pluginLayerSliderDesc: 'for creating advanced sliders',
-        pluginWpBakeryDesc: 'for content building',
-        pluginWooCommerceDesc: 'for e-commerce solutions',
-        pluginWpmlDesc: 'for multilingual websites',
-        pluginHubspotDesc: 'for inbound marketing & sales',
-        pluginRankMathDesc: 'for best SEO results',
-        pluginContactFormDesc: 'for building great forms',
-        pluginMailchimpDesc: 'for mailing campaigns',
-        pluginEventsCalDesc: 'for smarter organization',
-        pluginAdsProDesc: 'for ads',
-        pluginW3CacheDesc: 'for performance optimization',
-        pluginBuddyPressDesc: 'for advanced forums',
-        pluginBbPressDesc: 'for social sharing',
-        pluginCookieLawDesc: 'for EU Cookie Law',
-        pluginYoastDesc: 'for SEO',
+    step3Title:  'التطوير والاختبار',
+    step3Body:   'ننفّذ الحل بشكل احترافي ونختبره بدقة لضمان الجودة والاستقرار.',
 
-        /* 5. Who We Are Section */
-        whoTitle: 'Who we are',
-        whoTeamDesc: 'Experienced<br>and creative<br>team members',
-        whoCenterText: 'We are an experienced team creating great, unique and scalable software solutions, digital systems, and SaaS platforms. In our work we use the latest technologies, with creativity, engineering precision, and openness to new horizons. We ensure our products fully satisfy your business needs.',
-        whoExpDesc: 'Years<br>of experience<br>in coding',
+    step4Title:  'الإطلاق والتحسين',
+    step4Body:   'نطلق المنتج ونتابع أداءه ونستمر في تحسينه بعد الإطلاق.',
 
-        /* 6. Contact Section */
-        contactTitle: 'Get in touch with us',
-        contactSupport: 'Support Center',
-        contactDirect: 'Contact us',
-        linkDoc: 'IONITY documentation',
-        linkForum: 'Support forum & community',
-        linkVideo: 'Learn with video tutorials',
-        copyright: 'Copyright © 2024 by IONITY. All Rights Reserved.',
+    /* Solutions (ready-made) */
+    solutionsLabel: 'حلول جاهزة',
+    solutionsTitle: 'أنظمة ومواقع جاهزة للتخصيص',
+    solutionsBody:  'نستعرض هنا نماذج لحلول وأنظمة رقمية قابلة للتخصيص والتطوير لتناسب احتياجات عملك.',
+    solutionsNote:  '⚠️ هذا القسم قيد التحديث — سيتم إضافة المشاريع الفعلية بعد التحقق من المالك.',
+    solutionsCta:   'ناقش احتياجاتك',
 
-        /* Toggle Button Labels */
-        toggleDesktop: 'عربي',
-        toggleHeader: 'عربي',
-        toggleMobileMenu: 'العربية (AR)'
-    }
+    /* Tech */
+    techLabel:  'التقنيات',
+    techTitle:  'أدواتنا وتقنياتنا',
+    techBody:   'نختار التقنية المناسبة لكل مشروع — لا أدوات عشوائية، بل قرارات مدروسة.',
+
+    techCat1:   'الواجهة الأمامية',
+    techCat2:   'الواجهة الخلفية',
+    techCat3:   'قواعد البيانات',
+    techCat4:   'السحابة والنشر',
+
+    /* CTA */
+    ctaLabel:   'ابدأ الآن',
+    ctaTitle:   'لديك فكرة أو مشروع؟\nلنحوّله إلى حل رقمي.',
+    ctaBody:    'أخبرنا بما تحتاج إليه، وسنساعدك في تحديد الخطوة المناسبة للبدء.',
+    ctaPrimary: 'ابدأ مناقشة مشروعك',
+    /* Contact Section (Image 2) */
+    contactSupportTitle: 'مركز الدعم الفني',
+    contactDirectTitle:  'تواصل مباشرة معنا',
+    contactSupportBtn:    'استكشف المزيد',
+    contactDirectBtn:     'استكشف المزيد',
+    contactFormTitle:     'أو أرسل لنا رسالة مباشرة',
+    contactFormSubtitle:  'املأ البيانات وسيقوم فريقنا بالرد عليك في غضون ٢٤ ساعة.',
+    sendBtn:              'إرسال الرسالة',
+
+    /* Footer */
+    footerDesc:    'شركة برمجيات متخصصة في بناء المواقع والتطبيقات والحلول الرقمية.',
+    footerNavTitle:    'التنقل',
+    footerContactTitle: 'تواصل معنا',
+    footerWhatsApp:    'واتساب',
+    footerEmail:       'البريد الإلكتروني',
+    copyright:         'جميع الحقوق محفوظة © {year} لـ IONITY.'
+  },
+
+  /* ─────────────── English ─────────────── */
+  en: {
+
+    /* Navigation */
+    navHome:     'Home',
+    navServices: 'Services',
+    navSolutions: 'Solutions',
+    navWork:     'Work',
+    navAbout:    'About',
+    navContact:  'Contact',
+    navCta:      'Start a project',
+
+    /* Lang toggle */
+    toggleBtn: 'عربي',
+
+    /* Hero */
+    heroEyebrow: 'Specialized Software Solutions',
+    heroHeadline: 'We build digital solutions that\nturn your ideas into reality.',
+    heroHeadlineAccent: 'turn your ideas into reality.',
+    heroBody: 'We develop websites, software systems, and SaaS products that help businesses streamline operations and build more efficient digital experiences.',
+    heroCtaPrimary: 'Discuss your project',
+    heroCtaSecondary: 'Explore our services',
+    heroFloatTag: 'Products that work efficiently',
+
+    /* Stats (Laser section) — Image 1 numbers */
+    stat1Value: '18',
+    stat1Label: 'Years of experience',
+    stat2Value: '650+',
+    stat2Label: 'Projects delivered',
+    stat3Value: '250,000',
+    stat3Label: 'Happy clients',
+
+    /* Services */
+    servicesLabel:  'Services',
+    servicesTitle:  'What we offer',
+    servicesBody:   'From idea to product — we build the right digital solution for your business needs.',
+
+    service1Title:  'Web Development & Web Apps',
+    service1Body:   'Professional, fast, and responsive websites that reflect your identity and drive results.',
+    service1Link:   'Learn more',
+
+    service2Title:  'Custom Software Systems',
+    service2Body:   'Systems built around your business workflows to simplify operations and increase efficiency.',
+    service2Link:   'Learn more',
+
+    service3Title:  'SaaS Products & Digital Solutions',
+    service3Body:   'Scalable software products built with modern technology to grow your business.',
+    service3Link:   'Learn more',
+
+    service4Title:  'UI/UX Design & Technical Support',
+    service4Body:   'Thoughtful interface design, ongoing maintenance, and continuous technical support.',
+    service4Link:   'Learn more',
+
+    /* About */
+    aboutLabel:    'About Us',
+    aboutTitle:    'A team specialized in building\ndigital solutions',
+    aboutBody:     'IONITY is a software company specializing in building websites, applications, and custom software systems. We work with businesses and entrepreneurs to turn their ideas into real, practical digital products.\n\nWe believe great technology should be simple, understandable, and reliable — and that\'s what we aim for in every project.',
+
+    diff1Title: 'Modern Technology',
+    diff1Desc:  'We use the latest tools and platforms to build scalable, maintainable solutions.',
+
+    diff2Title: 'Professional Delivery',
+    diff2Desc:  'We commit to deadlines and quality at every stage of development.',
+
+    diff3Title: 'Continuous Communication',
+    diff3Desc:  'We keep you informed about your project progress at every step.',
+
+    diff4Title: 'Post-launch Support',
+    diff4Desc:  "We don't stop at delivery — we continue monitoring and improving your product.",
+
+    /* Numbers — ⚠️ OWNER_VERIFY */
+    aboutNum1Value: '5+',
+    aboutNum1Label: 'Years experience',
+    aboutNum2Value: '50+',
+    aboutNum2Label: 'Projects delivered',
+    aboutNum3Value: '100%',
+    aboutNum3Label: 'Real passion',
+    aboutNum4Value: '24/7',
+    aboutNum4Label: 'Ongoing support',
+
+    /* Process */
+    processLabel:   'How we work',
+    processTitle:   'From idea to product',
+    processBody:    'A clear and proven methodology to ensure results that meet your expectations.',
+
+    step1Title:  'Discovery & Requirements',
+    step1Body:   'We start by fully understanding your business, goals, and project requirements.',
+
+    step2Title:  'Planning & Design',
+    step2Body:   'We set a clear roadmap and design the user experience before writing any code.',
+
+    step3Title:  'Development & Testing',
+    step3Body:   'We implement the solution professionally and test it rigorously for quality and stability.',
+
+    step4Title:  'Launch & Improvement',
+    step4Body:   'We launch the product, monitor its performance, and continue improving it post-launch.',
+
+    /* Solutions */
+    solutionsLabel: 'Ready Solutions',
+    solutionsTitle: 'Systems & Websites Ready to Customize',
+    solutionsBody:  'A curated selection of ready-made solutions that can be customized and developed faster to fit your needs.',
+    solutionsNote:  '⚠️ This section is being updated — actual projects will be added after owner verification.',
+    solutionsCta:   'Discuss your needs',
+
+    /* Tech */
+    techLabel:  'Technology',
+    techTitle:  'Our tools & technologies',
+    techBody:   'We choose the right technology for each project — not random tools, but deliberate decisions.',
+
+    techCat1:   'Frontend',
+    techCat2:   'Backend',
+    techCat3:   'Databases',
+    techCat4:   'Cloud & Deployment',
+
+    /* CTA */
+    ctaLabel:   'Get started',
+    ctaTitle:   'Have an idea or project?\nLet\'s turn it into a digital solution.',
+    ctaBody:    "Tell us what you need, and we'll help you determine the right next step to get started.",
+    ctaPrimary: 'Start discussing your project',
+    /* Contact Section (Image 2) */
+    contactSupportTitle: 'Technical Support Center',
+    contactDirectTitle:  'Contact Us Directly',
+    contactSupportBtn:    'Explore More',
+    contactDirectBtn:     'Explore More',
+    contactFormTitle:     'Or send us a direct message',
+    contactFormSubtitle:  'Fill out the details and our team will get back to you within 24 hours.',
+    sendBtn:              'Send Message',
+
+    /* Footer */
+    footerDesc:    'A software company specializing in building websites, applications, and digital solutions.',
+    footerNavTitle:    'Navigation',
+    footerContactTitle: 'Contact',
+    footerWhatsApp:    'WhatsApp',
+    footerEmail:       'Email',
+    copyright:         'Copyright © {year} IONITY. All Rights Reserved.'
+  }
 };
