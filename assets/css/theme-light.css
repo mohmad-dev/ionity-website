@@ -427,3 +427,37 @@
 [data-theme="light"] .preloader {
   background: #F7F8F5;
 }
+
+/* ── Cookie Banner & Modal in Light Mode ───────────────────── */
+[data-theme="light"] .cookie-banner {
+  background: rgba(255, 255, 255, 0.96);
+  border-color: var(--color-border);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(46, 139, 0, 0.15);
+}
+
+[data-theme="light"] .cookie-title {
+  color: var(--color-text);
+}
+
+[data-theme="light"] .cookie-desc {
+  color: var(--color-text-secondary);
+}
+
+[data-theme="light"] .cookie-modal-overlay {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+[data-theme="light"] .cookie-modal-box {
+  background: #FFFFFF;
+  border-color: var(--color-border);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12);
+}
+
+[data-theme="light"] .cookie-category {
+  background: #F7F8F5;
+  border-color: var(--color-border);
+}
+
+[data-theme="light"] .cookie-toggle input:checked + .cookie-toggle-slider::before {
+  background-color: #FFFFFF;
+}

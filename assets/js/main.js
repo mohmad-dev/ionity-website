@@ -674,4 +674,97 @@
   })();
 
 
+  /* ─────────────────────────────────────────────────
+     10. Cookie Consent & Privacy Controller
+  ───────────────────────────────────────────────── */
+  (function initCookieConsent() {
+    var banner = document.getElementById('cookie-banner');
+    var modal = document.getElementById('cookie-modal');
+    if (!banner) return;
+
+    var STORAGE_KEY = 'ionity-cookie-consent';
+    var savedConsent = null;
+    try {
+      savedConsent = JSON.parse(localStorage.getItem(STORAGE_KEY));
+    } catch (e) {}
+
+    /* Show banner if no choice has been saved yet */
+    if (!savedConsent) {
+      setTimeout(function() {
+        banner.hidden = false;
+      }, 800);
+    }
+
+    function saveConsent(data) {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+      } catch (e) {}
+      banner.hidden = true;
+      if (modal) modal.hidden = true;
+    }
+
+    /* Accept all */
+    var acceptBtn = document.getElementById('cookie-accept');
+    if (acceptBtn) {
+      acceptBtn.addEventListener('click', function() {
+        saveConsent({ necessary: true, analytics: true, marketing: true, timestamp: Date.now() });
+      });
+    }
+
+    /* Reject non-essential */
+    var rejectBtn = document.getElementById('cookie-reject');
+    if (rejectBtn) {
+      rejectBtn.addEventListener('click', function() {
+        saveConsent({ necessary: true, analytics: false, marketing: false, timestamp: Date.now() });
+      });
+    }
+
+    /* Open settings modal */
+    document.querySelectorAll('.js-cookie-settings').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (!modal) return;
+        /* Sync modal checkboxes with saved preferences */
+        var current = savedConsent || { analytics: true, marketing: true };
+        var aBox = document.getElementById('cookie-analytics');
+        var mBox = document.getElementById('cookie-marketing');
+        if (aBox) aBox.checked = !!current.analytics;
+        if (mBox) mBox.checked = !!current.marketing;
+        modal.hidden = false;
+      });
+    });
+
+    /* Close modal without changing */
+    var closeBtn = document.getElementById('cookie-modal-close');
+    var overlay = document.getElementById('cookie-modal-overlay');
+    function closeModal() {
+      if (modal) modal.hidden = true;
+    }
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (overlay) overlay.addEventListener('click', closeModal);
+
+    /* Modal reject */
+    var modalReject = document.getElementById('cookie-modal-reject');
+    if (modalReject) {
+      modalReject.addEventListener('click', function() {
+        saveConsent({ necessary: true, analytics: false, marketing: false, timestamp: Date.now() });
+      });
+    }
+
+    /* Modal save */
+    var modalSave = document.getElementById('cookie-modal-save');
+    if (modalSave) {
+      modalSave.addEventListener('click', function() {
+        var aBox = document.getElementById('cookie-analytics');
+        var mBox = document.getElementById('cookie-marketing');
+        saveConsent({
+          necessary: true,
+          analytics: aBox ? aBox.checked : false,
+          marketing: mBox ? mBox.checked : false,
+          timestamp: Date.now()
+        });
+      });
+    }
+  })();
+
 })();

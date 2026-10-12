@@ -32,6 +32,14 @@ window.IONITY_STRINGS = {
     heroCtaSecondary: 'استكشف خدماتنا',
     heroFloatTag: 'أنظمة تعمل بكفاءة',
 
+    /* Laser Stats */
+    stat1Value: '+5',
+    stat1Label: 'سنوات خبرة تقنية',
+    stat2Value: '+50',
+    stat2Label: 'مشروع رقمي تم تسليمه',
+    stat3Value: '100%',
+    stat3Label: 'التزام بالجودة والاستقرار',
+
     /* Services */
     servicesLabel:  'خدماتنا',
     servicesTitle:  'خدماتنا البرمجية',
@@ -171,6 +179,14 @@ window.IONITY_STRINGS = {
     heroCtaPrimary: 'Discuss your project',
     heroCtaSecondary: 'Explore our services',
     heroFloatTag: 'Systems that work efficiently',
+
+    /* Laser Stats */
+    stat1Value: '5+',
+    stat1Label: 'Years of Technical Experience',
+    stat2Value: '50+',
+    stat2Label: 'Digital Projects Delivered',
+    stat3Value: '100%',
+    stat3Label: 'Quality & Stability Commitment',
 
     /* Services */
     servicesLabel:  'Services',
