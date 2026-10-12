@@ -1,45 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 46" fill="none" class="ionity-logo-svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 54" fill="none" class="ionity-logo-svg">
   <!-- Letter 1: 'i' -->
   <g class="logo-letter-i1">
-    <!-- Green dot -->
-    <circle cx="12" cy="8" r="4.8" fill="#48B800" />
-    <!-- Dark stem -->
-    <rect x="7.5" y="17" width="9" height="25" rx="4.5" fill="#11140F" />
+    <circle cx="36" cy="10" r="3.8" fill="#48B800" />
+    <line x1="36" y1="18" x2="36" y2="39" stroke="#0A0A0A" stroke-width="7.6" stroke-linecap="round" />
   </g>
 
-  <!-- Letter 2: 'o' with negative (-) charge -->
-  <g class="logo-letter-o">
-    <rect x="27" y="17" width="28" height="25" rx="12.5" stroke="#11140F" stroke-width="7" fill="none" />
-    <line x1="36" y1="29.5" x2="46" y2="29.5" stroke="#48B800" stroke-width="2.8" stroke-linecap="round" />
-  </g>
-
-  <!-- Letter 3: 'n' with positive (+) charge -->
-  <g class="logo-letter-n">
-    <path d="M66 42 V28 C66 21.5 70.5 17 77 17 C83.5 17 88 21.5 88 28 V42" 
-          stroke="#11140F" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  <!-- Merged 'on' infinity letterform -->
+  <g class="logo-letter-on">
+    <path d="M 76,26 C 74.5,20 71,18 65.5,18 A 10.5 10.5 0 0 0 55,28.5 A 10.5 10.5 0 0 0 65.5,39 C 76.5,39 82.5,18 93.5,18 A 10.5 10.5 0 0 1 104,28.5 L 104,39" 
+          stroke="#0A0A0A" stroke-width="7.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <!-- Negative charge (-) inside left loop -->
+    <line x1="60.5" y1="28.5" x2="70.5" y2="28.5" stroke="#48B800" stroke-width="2.8" stroke-linecap="round" />
+    <!-- Positive charge (+) inside right loop -->
     <g>
-      <line x1="72" y1="30" x2="82" y2="30" stroke="#48B800" stroke-width="2.6" stroke-linecap="round" />
-      <line x1="77" y1="25" x2="77" y2="35" stroke="#48B800" stroke-width="2.6" stroke-linecap="round" />
+      <line x1="88.5" y1="28.5" x2="98.5" y2="28.5" stroke="#48B800" stroke-width="2.8" stroke-linecap="round" />
+      <line x1="93.5" y1="23.5" x2="93.5" y2="33.5" stroke="#48B800" stroke-width="2.8" stroke-linecap="round" />
     </g>
   </g>
 
-  <!-- Letter 4: 'i' -->
+  <!-- Letter 3: 'i' -->
   <g class="logo-letter-i2">
-    <!-- Green dot -->
-    <circle cx="103" cy="8" r="4.8" fill="#48B800" />
-    <!-- Dark stem -->
-    <rect x="98.5" y="17" width="9" height="25" rx="4.5" fill="#11140F" />
+    <circle cx="130" cy="10" r="3.8" fill="#48B800" />
+    <line x1="130" y1="18" x2="130" y2="39" stroke="#0A0A0A" stroke-width="7.6" stroke-linecap="round" />
   </g>
 
-  <!-- Letter 5: 't' -->
+  <!-- Letter 4: 't' -->
   <g class="logo-letter-t">
-    <path d="M121 9 V35 C121 39 124 42 129 42 H133" stroke="#11140F" stroke-width="7" stroke-linecap="round" fill="none" />
-    <line x1="113" y1="18" x2="131" y2="18" stroke="#11140F" stroke-width="6.5" stroke-linecap="round" />
+    <line x1="149" y1="18" x2="169" y2="18" stroke="#0A0A0A" stroke-width="7.2" stroke-linecap="round" />
+    <path d="M 156,10 L 156,33 C 156,37 159,39 164,39 H 168" 
+          stroke="#0A0A0A" stroke-width="7.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
   </g>
 
-  <!-- Letter 6: 'y' -->
+  <!-- Letter 5: 'y' -->
   <g class="logo-letter-y">
-    <path d="M142 18 L152 35" stroke="#11140F" stroke-width="7" stroke-linecap="round" fill="none" />
-    <path d="M164 18 L150 42 C147 47 143 49 138 49" stroke="#11140F" stroke-width="7" stroke-linecap="round" fill="none" />
+    <path d="M 191,18 L 203,35" stroke="#0A0A0A" stroke-width="7.6" stroke-linecap="round" fill="none" />
+    <path d="M 215,18 L 203,35 L 195,46.5" stroke="#0A0A0A" stroke-width="7.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
   </g>
 </svg>

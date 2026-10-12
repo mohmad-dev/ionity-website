@@ -1,29 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 46" fill="none" class="ion-logo-svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 54" fill="none" class="ion-logo-svg">
   <!-- Letter 'i' -->
   <g class="logo-letter-i">
-    <!-- Green dot -->
-    <circle cx="12" cy="8" r="5" fill="#48B800" />
-    <!-- Dark stem -->
-    <rect x="7" y="17" width="10" height="25" rx="5" fill="#11140F" />
+    <circle cx="26" cy="10" r="3.8" fill="#48B800" />
+    <line x1="26" y1="18" x2="26" y2="39" stroke="#0A0A0A" stroke-width="7.6" stroke-linecap="round" />
   </g>
 
-  <!-- Letter 'o' with negative (-) charge -->
-  <g class="logo-letter-o">
-    <!-- Outer ring -->
-    <rect x="29" y="17" width="28" height="25" rx="12.5" stroke="#11140F" stroke-width="7" fill="none" />
-    <!-- Negative charge (-) in green -->
-    <line x1="38" y1="29.5" x2="48" y2="29.5" stroke="#48B800" stroke-width="3" stroke-linecap="round" />
-  </g>
-
-  <!-- Letter 'n' with positive (+) charge -->
-  <g class="logo-letter-n">
-    <!-- Main 'n' shape -->
-    <path d="M69 42 V28 C69 21.5 73.5 17 80 17 C86.5 17 91 21.5 91 28 V42" 
-          stroke="#11140F" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none" />
-    <!-- Positive charge (+) in green -->
+  <!-- Merged 'on' infinity letterform -->
+  <g class="logo-letter-on">
+    <path d="M 66,26 C 64.5,20 61,18 55.5,18 A 10.5 10.5 0 0 0 45,28.5 A 10.5 10.5 0 0 0 55.5,39 C 66.5,39 72.5,18 83.5,18 A 10.5 10.5 0 0 1 94,28.5 L 94,39" 
+          stroke="#0A0A0A" stroke-width="7.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <!-- Negative charge (-) inside left loop -->
+    <line x1="50.5" y1="28.5" x2="60.5" y2="28.5" stroke="#48B800" stroke-width="2.8" stroke-linecap="round" />
+    <!-- Positive charge (+) inside right loop -->
     <g>
-      <line x1="75" y1="30" x2="85" y2="30" stroke="#48B800" stroke-width="2.8" stroke-linecap="round" />
-      <line x1="80" y1="25" x2="80" y2="35" stroke="#48B800" stroke-width="2.8" stroke-linecap="round" />
+      <line x1="78.5" y1="28.5" x2="88.5" y2="28.5" stroke="#48B800" stroke-width="2.8" stroke-linecap="round" />
+      <line x1="83.5" y1="23.5" x2="83.5" y2="33.5" stroke="#48B800" stroke-width="2.8" stroke-linecap="round" />
     </g>
   </g>
 </svg>
