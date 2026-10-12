@@ -67,7 +67,81 @@ body.lang-ar [data-reveal="slide-end"].is-visible {
   transform: translateX(0);
 }
 
-/* ── Card hover micro-interactions ─────────────────────── */
+/* ── Scroll-Snap: section alignment ────────────────────── */
+
+.site-section {
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+  /* Offset so the sidebar header / mobile bar doesn't overlap section headings */
+  scroll-margin-top: 0px;
+}
+
+@media (max-width: 991px) {
+  /* On mobile the top bar is 64px tall */
+  .site-section {
+    scroll-margin-top: 64px;
+  }
+}
+
+/* ── Section Progress Bar ───────────────────────────────── */
+
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: transparent;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.scroll-progress-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--color-accent);
+  transition: width 0.1s linear;
+  box-shadow: 0 0 8px var(--color-accent), 0 0 2px var(--color-accent);
+}
+
+/* ── Section Transition Flash (subtle pulse on snap land) ── */
+
+.section-snap-flash {
+  animation: snapFlash 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes snapFlash {
+  0%   { opacity: 0.7; }
+  100% { opacity: 1;   }
+}
+
+/* ── Reduced Motion ────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal],
+  [data-reveal="scale"],
+  [data-reveal="slide-start"],
+  [data-reveal="slide-end"],
+  .hover-lift,
+  .hero-float-animate {
+    animation: none;
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    scroll-snap-type: none;
+  }
+
+  .preloader-bar-fill {
+    animation: none;
+    width: 100%;
+  }
+}
 
 .hover-lift {
   transition: transform var(--transition-base),
@@ -136,22 +210,4 @@ body.lang-ar [data-reveal="slide-end"].is-visible {
   animation: shimmer 1.8s ease-in-out infinite;
 }
 
-/* ── Reduced Motion ────────────────────────────────────── */
-@media (prefers-reduced-motion: reduce) {
-  [data-reveal],
-  [data-reveal="scale"],
-  [data-reveal="slide-start"],
-  [data-reveal="slide-end"],
-  .hover-lift,
-  .hero-float-animate {
-    animation: none;
-    transition: none;
-    transform: none;
-    opacity: 1;
-  }
 
-  .preloader-bar-fill {
-    animation: none;
-    width: 100%;
-  }
-}

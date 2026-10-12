@@ -477,4 +477,201 @@
   updateThemeUI(initialTheme);
 
 
+  /* ─────────────────────────────────────────────────
+     9. Smart Glider Engine — Guided Section Scroll
+  ───────────────────────────────────────────────── */
+  (function initSmartGlider() {
+
+    /* Bail immediately on touch/reduced-motion devices */
+    var isTouch = window.matchMedia('(hover: none) or (pointer: coarse)').matches;
+    var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    /* ── Scroll Progress Bar ─────────────────────── */
+    var progressFill = document.getElementById('scroll-progress-fill');
+
+    function updateProgressBar() {
+      if (!progressFill) return;
+      var docH = document.documentElement.scrollHeight - window.innerHeight;
+      var pct  = docH > 0 ? (window.scrollY / docH) * 100 : 0;
+      progressFill.style.width = Math.min(pct, 100).toFixed(2) + '%';
+    }
+
+    window.addEventListener('scroll', updateProgressBar, { passive: true });
+    updateProgressBar();
+
+    /* ── On touch/reduced-motion: progress bar only, no glider ── */
+    if (isTouch || prefersReducedMotion) return;
+
+    /* ── Build ordered section list ──────────────── */
+    /* Include ALL site-sections even those without data-nav-id (process, tech) */
+    function getSections() {
+      return Array.from(document.querySelectorAll('.site-section'));
+    }
+
+    /* ── Determine the section currently most "in view" ──────── */
+    function getActiveSectionIndex(sections) {
+      var vh   = window.innerHeight;
+      var sy   = window.scrollY;
+      var best = 0;
+
+      for (var i = 0; i < sections.length; i++) {
+        var rect = sections[i].getBoundingClientRect();
+        /* Section starts in the top half of viewport → it's the active one */
+        if (rect.top <= vh * 0.35) {
+          best = i;
+        }
+      }
+      return best;
+    }
+
+    /* ── Glide to a section by index ─────────────── */
+    var isGliding = false;
+    var cooldown  = false;
+    var COOLDOWN_MS = 700; /* ms to lock glider after a glide triggers */
+
+    function glideToSection(section) {
+      if (!section) return;
+      isGliding = true;
+      cooldown  = true;
+
+      var targetY = section.getBoundingClientRect().top + window.scrollY;
+
+      /* Subtract mobile header height on small screens */
+      if (window.innerWidth <= 991) {
+        targetY = Math.max(0, targetY - 64);
+      }
+
+      window.scrollTo({ top: targetY, behavior: 'smooth' });
+
+      /* Kick IntersectionObserver re-run for reveals in target section */
+      var reveals = section.querySelectorAll('[data-reveal]:not(.is-visible)');
+      reveals.forEach(function(el) {
+        /* Small delay ensures the scroll lands first */
+        setTimeout(function() {
+          el.classList.add('is-visible');
+        }, 400);
+      });
+
+      /* Update nav immediately */
+      var navId = section.getAttribute('data-nav-id');
+      if (navId) {
+        document.querySelectorAll('[data-target]').forEach(function(link) {
+          link.classList.toggle('active', link.getAttribute('data-target') === navId);
+        });
+      }
+
+      /* Unlock after scroll animation completes */
+      setTimeout(function() {
+        isGliding = false;
+      }, 900);
+
+      setTimeout(function() {
+        cooldown = false;
+      }, COOLDOWN_MS);
+    }
+
+    /* ── Tall section boundary helpers ─────────────── */
+    function sectionIsScrolledToBottom(section) {
+      var rect = section.getBoundingClientRect();
+      /* Section bottom is at or above viewport bottom */
+      return rect.bottom <= window.innerHeight + 8;
+    }
+
+    function sectionIsScrolledToTop(section) {
+      var rect = section.getBoundingClientRect();
+      /* Section top is at or above the viewport top */
+      return rect.top >= -8;
+    }
+
+    /* ── Wheel Handler ────────────────────────────── */
+    var wheelAccum = 0;
+    var WHEEL_THRESHOLD = 60; /* pixels of accumulated delta to trigger glide */
+
+    window.addEventListener('wheel', function(e) {
+      if (cooldown || isGliding) {
+        /* During glide, consume the event to prevent native scroll override */
+        return;
+      }
+
+      var sections = getSections();
+      if (!sections.length) return;
+
+      var idx     = getActiveSectionIndex(sections);
+      var current = sections[idx];
+
+      /* Accumulate deltas to distinguish intentional scroll from micro-nudge */
+      wheelAccum += e.deltaY;
+
+      if (Math.abs(wheelAccum) < WHEEL_THRESHOLD) return;
+
+      var direction = wheelAccum > 0 ? 1 : -1;
+      wheelAccum = 0; /* reset accumulator */
+
+      if (direction > 0) {
+        /* Scrolling DOWN */
+        /* If current section hasn't been fully seen yet, let native scroll run */
+        if (!sectionIsScrolledToBottom(current)) return;
+        /* Otherwise glide to next section */
+        var next = sections[idx + 1];
+        if (next) {
+          e.preventDefault();
+          glideToSection(next);
+        }
+      } else {
+        /* Scrolling UP */
+        /* If we're not at the top of the current section yet, let native scroll run */
+        if (!sectionIsScrolledToTop(current)) return;
+        /* Otherwise glide to previous section */
+        var prev = sections[idx - 1];
+        if (prev) {
+          e.preventDefault();
+          glideToSection(prev);
+        }
+      }
+    }, { passive: false }); /* Must be non-passive to call preventDefault */
+
+    /* Reset wheel accumulator on scroll pause */
+    var wheelResetTimer = null;
+    window.addEventListener('wheel', function() {
+      clearTimeout(wheelResetTimer);
+      wheelResetTimer = setTimeout(function() { wheelAccum = 0; }, 150);
+    }, { passive: true });
+
+    /* ── Keyboard Navigation ──────────────────────── */
+    document.addEventListener('keydown', function(e) {
+      /* Skip if focus is inside a form element */
+      var tag = document.activeElement ? document.activeElement.tagName : '';
+      if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+      if (document.activeElement && document.activeElement.isContentEditable) return;
+
+      if (cooldown || isGliding) return;
+
+      var sections = getSections();
+      if (!sections.length) return;
+      var idx = getActiveSectionIndex(sections);
+
+      if (e.key === 'ArrowDown' || e.key === 'PageDown') {
+        var next = sections[idx + 1];
+        if (next) {
+          e.preventDefault();
+          glideToSection(next);
+        }
+      } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+        var prev = sections[idx - 1];
+        if (prev) {
+          e.preventDefault();
+          glideToSection(prev);
+        }
+      } else if (e.key === 'Home') {
+        e.preventDefault();
+        glideToSection(sections[0]);
+      } else if (e.key === 'End') {
+        e.preventDefault();
+        glideToSection(sections[sections.length - 1]);
+      }
+    });
+
+  })();
+
+
 })();
