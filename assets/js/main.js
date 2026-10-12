@@ -42,8 +42,7 @@
       }
 
       if (dot) {
-        dot.style.left = mouseX + 'px';
-        dot.style.top = mouseY + 'px';
+        dot.style.transform = 'translate3d(' + mouseX + 'px, ' + mouseY + 'px, 0) translate(-50%, -50%)';
       }
     }, { passive: true });
 
@@ -59,10 +58,10 @@
 
     function renderCursor() {
       if (isVisible && ring) {
-        ringX += (mouseX - ringX) * 0.18;
-        ringY += (mouseY - ringY) * 0.18;
-        ring.style.left = ringX + 'px';
-        ring.style.top = ringY + 'px';
+        /* Snappy responsive follow (0.45 factor for fast instant response without lag) */
+        ringX += (mouseX - ringX) * 0.45;
+        ringY += (mouseY - ringY) * 0.45;
+        ring.style.transform = 'translate3d(' + ringX + 'px, ' + ringY + 'px, 0) translate(-50%, -50%)';
       }
       requestAnimationFrame(renderCursor);
     }
@@ -721,37 +720,144 @@
 
 
   /* ─────────────────────────────────────────────────
-     11. Services Laser Spine & Sequential Card Illuminator
+     11. Services Laser Spine & Synchronized Card Reveal
   ───────────────────────────────────────────────── */
   (function initServicesLaser() {
     var servicesSec = document.getElementById('services');
     if (!servicesSec) return;
 
     var cards = servicesSec.querySelectorAll('.service-card');
-    if (!cards.length) return;
+    var beam1 = servicesSec.querySelector('.srv-laser-beam-1');
+    var beam2 = servicesSec.querySelector('.srv-laser-beam-2');
+    var spark = document.getElementById('srv-photon-spark');
+
+    if (!cards.length || !beam1) return;
 
     var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     if (prefersReduced) {
-      cards.forEach(function(card) {
-        card.classList.add('is-active');
+      cards.forEach(function (card) {
+        card.classList.add('is-revealed');
       });
       return;
     }
 
-    var hasAnimated = false;
+    var totalLength = 3111;
+    try {
+      totalLength = beam1.getTotalLength() || 3111;
+    } catch (e) {}
 
-    var observer = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting && !hasAnimated) {
-          hasAnimated = true;
-          /* Sequentially illuminate cards as laser weaves through: 01 -> 02 -> 03 -> 04 */
-          cards.forEach(function(card, index) {
-            var delay = (index + 1) * 350;
-            setTimeout(function() {
-              card.classList.add('is-active');
-            }, delay);
+    var hasTriggered = false;
+
+    /* Prep initial stroke offset so the laser draws forward from 0 */
+    beam1.style.animation = 'none';
+    beam1.style.strokeDasharray = totalLength + ' ' + totalLength;
+    beam1.style.strokeDashoffset = totalLength;
+
+    if (beam2) {
+      beam2.style.animation = 'none';
+      beam2.style.strokeDasharray = totalLength + ' ' + totalLength;
+      beam2.style.strokeDashoffset = totalLength;
+    }
+
+    /* Precise path distance checkpoints for each card (01 Web, 02 Systems, 03 SaaS, 04 UI/UX) */
+    var checkpoints = [
+      { card: cards[0], targetLen: totalLength * 0.19, triggered: false },
+      { card: cards[1], targetLen: totalLength * 0.39, triggered: false },
+      { card: cards[2], targetLen: totalLength * 0.65, triggered: false },
+      { card: cards[3], targetLen: totalLength * 0.86, triggered: false }
+    ];
+
+    function startLaserSurge() {
+      if (hasTriggered) return;
+      hasTriggered = true;
+
+      var duration = 2400; /* 2.4s smooth energetic surge */
+      var startTime = null;
+
+      if (spark) {
+        spark.classList.add('is-active');
+      }
+
+      function step(timestamp) {
+        if (!startTime) startTime = timestamp;
+        var progress = Math.min((timestamp - startTime) / duration, 1);
+
+        /* Smooth cubic-out easing curve */
+        var ease = 1 - Math.pow(1 - progress, 3);
+        var currentLen = totalLength * ease;
+        var currentOffset = totalLength - currentLen;
+
+        /* Draw laser lines in real time */
+        beam1.style.strokeDashoffset = currentOffset;
+        if (beam2) {
+          beam2.style.strokeDashoffset = Math.max(0, currentOffset + 120);
+        }
+
+        /* Move traveling photon spark along SVG curve */
+        if (spark) {
+          try {
+            var pt = beam1.getPointAtLength(currentLen);
+            spark.setAttribute('cx', pt.x);
+            spark.setAttribute('cy', pt.y);
+          } catch (e) {}
+        }
+
+        /* Materialize card the exact instant the laser spark arrives */
+        checkpoints.forEach(function (cp) {
+          if (!cp.triggered && currentLen >= cp.targetLen) {
+            cp.triggered = true;
+            if (cp.card) {
+              cp.card.classList.add('is-revealed');
+            }
+          }
+        });
+
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        } else {
+          /* Surge complete: fade out traveling spark */
+          if (spark) {
+            spark.classList.remove('is-active');
+          }
+
+          /* Ensure all cards are revealed */
+          cards.forEach(function (card) {
+            card.classList.add('is-revealed');
           });
+
+          /* Hand off seamlessly to continuous ambient wave flow */
+          setTimeout(function () {
+            beam1.style.strokeDasharray = '450 1100';
+            beam1.style.animation = 'srvLaserFlow1 11s linear infinite';
+            if (beam2) {
+              beam2.style.strokeDasharray = '450 1100';
+              beam2.style.animation = 'srvLaserFlow2 15s linear infinite';
+            }
+          }, 400);
+        }
+      }
+
+      requestAnimationFrame(step);
+    }
+
+    function checkLaser() {
+      if (hasTriggered) return;
+      var rect = servicesSec.getBoundingClientRect();
+      var winH = window.innerHeight || document.documentElement.clientHeight;
+      if (rect.top < winH * 0.8 && rect.bottom > 100) {
+        startLaserSurge();
+      }
+    }
+
+    window.addEventListener('scroll', checkLaser, { passive: true });
+    window.addEventListener('resize', checkLaser, { passive: true });
+    setTimeout(checkLaser, 250);
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting && !hasTriggered) {
+          startLaserSurge();
         }
       });
     }, {
