@@ -104,16 +104,19 @@
     setText('[data-key="diff3Desc"]', s.diff3Desc);
     setText('[data-key="diff4Title"]', s.diff4Title);
     setText('[data-key="diff4Desc"]', s.diff4Desc);
-    setText('[data-key="aboutNum1Value"]', s.aboutNum1Value);
-    setText('[data-key="aboutNum1Label"]', s.aboutNum1Label);
-    setText('[data-key="aboutNum2Value"]', s.aboutNum2Value);
-    setText('[data-key="aboutNum2Label"]', s.aboutNum2Label);
-    setText('[data-key="aboutNum3Value"]', s.aboutNum3Value);
-    setText('[data-key="aboutNum3Label"]', s.aboutNum3Label);
-    setText('[data-key="aboutNum4Value"]', s.aboutNum4Value);
-    setText('[data-key="aboutNum4Label"]', s.aboutNum4Label);
+    setText('[data-key="aboutPillar1Title"]', s.aboutPillar1Title);
+    setText('[data-key="aboutPillar1Desc"]', s.aboutPillar1Desc);
+    setText('[data-key="aboutPillar2Title"]', s.aboutPillar2Title);
+    setText('[data-key="aboutPillar2Desc"]', s.aboutPillar2Desc);
+    setText('[data-key="aboutPillar3Title"]', s.aboutPillar3Title);
+    setText('[data-key="aboutPillar3Desc"]', s.aboutPillar3Desc);
+    setText('[data-key="aboutPillar4Title"]', s.aboutPillar4Title);
+    setText('[data-key="aboutPillar4Desc"]', s.aboutPillar4Desc);
 
-    /* 7b. Team showcase */
+    /* 7b. Team showcase & toggle */
+    var teamPanel = document.getElementById('team-showcase-panel');
+    var isTeamOpen = teamPanel && teamPanel.classList.contains('is-open');
+    setText('[data-key="teamToggleOpen"]', isTeamOpen ? s.teamToggleClose : s.teamToggleOpen);
     setText('[data-key="teamLabel"]', s.teamLabel);
     setText('[data-key="teamTitle"]', s.teamTitle);
     setText('[data-key="teamDesc"]', s.teamDesc);

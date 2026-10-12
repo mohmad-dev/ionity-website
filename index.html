@@ -38,10 +38,10 @@
   <link rel="stylesheet" href="assets/css/ionity-bilingual.css">
   <link rel="stylesheet" href="assets/css/theme-light.css">
 
-  <!-- Early Theme Init (prevents flash of dark mode) -->
+  <!-- Early Theme Init (prevents flash of light mode, defaults to dark) -->
   <script>
     (function() {
-      var savedTheme = localStorage.getItem('ionity-theme') || 'light';
+      var savedTheme = localStorage.getItem('ionity-theme') || 'dark';
       document.documentElement.setAttribute('data-theme', savedTheme);
     })();
   </script>
@@ -260,12 +260,12 @@
             </p>
 
             <h1 class="hero-headline" data-reveal data-reveal-delay="1">
-              <span data-key="heroHeadlineBase">نبني حلولًا رقمية تحوّل</span><br>
-              <span class="accent-line" data-key="heroHeadlineAccent">أفكارك إلى واقع.</span>
+              <span data-key="heroHeadlineBase">حلول برمجية مصممة</span><br>
+              <span class="accent-line" data-key="heroHeadlineAccent">لاحتياجات أعمالك.</span>
             </h1>
 
             <p class="hero-body" data-reveal data-reveal-delay="2" data-key="heroBody">
-              نطوّر مواقع ويب، وأنظمة برمجية، ومنتجات SaaS تساعد الشركات على تبسيط عملياتها وبناء تجارب رقمية أكثر كفاءة.
+              نطوّر مواقع الويب والأنظمة المخصصة ومنتجات البرمجيات التي تساعد الشركات على تحسين عملياتها وتقديم خدماتها بكفاءة.
             </p>
 
             <div class="hero-actions" data-reveal data-reveal-delay="3">
@@ -323,112 +323,6 @@
     </section><!-- /hero -->
 
 
-    <!-- ── IONIC LASER STATS (Edge-to-Edge Electric Wave) ── -->
-    <section class="laser-stats-section site-section" aria-label="إحصائيات المنصة">
-
-      <!-- Floating Pattern Particles Behind Laser & Stats -->
-      <div class="floating-pattern-wrapper" aria-hidden="true">
-        <div class="floating-pattern fp-1"><img src="assets/images/pattern/3.svg" alt=""></div>
-        <div class="floating-pattern fp-2"><img src="assets/images/pattern/6.svg" alt=""></div>
-        <div class="floating-pattern fp-4"><img src="assets/images/pattern/8.svg" alt=""></div>
-        <div class="floating-pattern fp-6"><img src="assets/images/pattern/9.svg" alt=""></div>
-      </div>
-
-      <div class="container" style="position:relative; z-index:2;">
-
-        <!-- Vertical Stats with Edge-to-Edge Laser Beam -->
-        <div class="laser-stats-container">
-
-          <!-- Background Outline Numbers Artwork "25000" -->
-          <div class="bg-outline-text-wrapper" aria-hidden="true">
-            <svg class="bg-outline-svg" viewBox="0 0 1033 226" preserveAspectRatio="xMidYMid meet">
-              <g>
-                <path class="number2" fill="none" stroke="#00E5FF" stroke-width="2" stroke-miterlimit="10" d="M14 219.9C6.7 219.9 3 216.7 3 210.4V203.4C3 198.3 5.3 193.3 10 188.3L53.8 142.2C67 128.2 79 115.8 90 104.9C100.9 94 106.4 83 106.4 71.9C106.4 60.8 103.6 52.6 98.1 47.4C92.6 42.2 85.6 39.6 77.1 39.6C63.6 39.6 54.2 42.7 49 49C43.7 55.3 39.9 61.9 37.6 69.1C35.4 76 31.3 78.5 25.3 76.6L10.5 71.6C5.7 69.9 4.3 65.4 6.4 57.8C10.2 43.8 18 31.8 29.7 21.8C41.4 11.8 58.8 6.8 81.8 6.8C105.8 6.8 123.3 13 134.1 25.3C144.9 37.7 150.4 51.1 150.4 65.5C150.4 84.5 142.5 101.2 126.7 115.5C110.9 129.8 96.5 143.8 83.6 157.4L58.4 183.7V184.3C64.3 183.9 69.2 183.7 73.1 183.7H141.7C149 183.7 152.7 186.9 152.7 193.2V210.5C152.7 216.8 149 220 141.7 220H14V219.9Z"/>
-                <path class="number5" fill="none" stroke="#00E5FF" stroke-width="2" stroke-miterlimit="10" d="M180.864 204.787C177.566 200.395 177.116 196.602 179.515 193.408L190.007 179.034C194.203 173.245 199.3 173.095 205.295 178.585C208.892 181.879 214.438 184.874 221.932 187.569C229.427 190.164 236.921 191.462 244.415 191.462C255.807 191.462 265.399 188.267 273.193 181.879C281.087 175.491 285.034 166.158 285.034 153.88C285.034 142.202 282.536 132.769 277.54 125.582C272.544 118.396 266.498 114.802 259.404 114.802C253.308 114.802 247.713 115.301 242.617 116.299C237.52 117.198 232.224 120.043 226.729 124.834C222.932 128.128 218.335 129.775 212.939 129.775H196.602C190.107 129.775 186.859 126.531 186.859 120.043V16.7321C186.859 10.244 190.107 7 196.602 7H304.519C311.014 7 314.262 10.244 314.262 16.7321V34.3997C314.262 40.8878 311.014 44.1319 304.519 44.1319H228.827V80.8146C228.827 84.8072 228.627 88.7999 228.228 92.7926H229.127C234.423 88.201 240.318 85.1566 246.813 83.6593C253.308 82.0623 260.253 81.2637 267.647 81.2637C285.134 81.2637 299.873 87.2528 311.864 99.2308C323.955 111.109 330 129.525 330 154.479C330 177.437 322.306 194.955 306.918 207.033C291.629 219.011 273.443 225 252.359 225C234.773 225 219.534 223.103 206.644 219.31C193.854 215.418 185.26 210.576 180.864 204.787Z"/>
-                <path class="number0" fill="none" stroke="#00E5FF" stroke-width="2" stroke-miterlimit="10" d="M354.6 115.7C354.6 76.1 360.8 48.1 373.1 31.5C385.4 14.9 404.3 6.6 429.6 6.6C455 6.6 473.8 14.9 486.1 31.5C498.4 48.1 504.6 76.2 504.6 115.7C504.6 155.2 498.4 183.3 486.1 199.9C473.8 216.5 454.9 224.8 429.6 224.8C404.2 224.8 385.4 216.5 373.1 199.9C360.7 183.3 354.6 155.3 354.6 115.7ZM398 115.7C398 133.8 399.5 151.1 402.5 167.8C405.5 184.5 414.5 192.8 429.7 192.8C444.8 192.8 453.9 184.5 456.9 167.8C459.9 151.1 461.4 133.7 461.4 115.7C461.4 97.6 459.9 80.3 456.9 63.6C453.9 46.9 444.9 38.6 429.7 38.6C414.6 38.6 405.5 46.9 402.5 63.6C399.4 80.3 398 97.7 398 115.7Z"/>
-                <path class="number0" fill="none" stroke="#00E5FF" stroke-width="2" stroke-miterlimit="10" d="M527.4 115.7C527.4 76.1 533.6 48.1 545.9 31.5C558.2 14.9 577.1 6.6 602.4 6.6C627.8 6.6 646.6 14.9 658.9 31.5C671.2 48.1 677.4 76.2 677.4 115.7C677.4 155.2 671.2 183.3 658.9 199.9C646.6 216.5 627.7 224.8 602.4 224.8C577 224.8 558.2 216.5 545.9 199.9C533.5 183.3 527.4 155.3 527.4 115.7ZM570.8 115.7C570.8 133.8 572.3 151.1 575.3 167.8C578.3 184.5 587.3 192.8 602.5 192.8C617.6 192.8 626.7 184.5 629.7 167.8C632.7 151.1 634.2 133.7 634.2 115.7C634.2 97.6 632.7 80.3 629.7 63.6C626.7 46.9 617.7 38.6 602.5 38.6C587.4 38.6 578.3 46.9 575.3 63.6C572.2 80.3 570.8 97.7 570.8 115.7Z"/>
-                <path class="number0" fill="none" stroke="#00E5FF" stroke-width="2" stroke-miterlimit="10" d="M703.2 115.7C703.2 76.1 709.4 48.1 721.7 31.5C734 14.9 752.9 6.6 778.2 6.6C803.6 6.6 822.4 14.9 834.7 31.5C847 48.1 853.2 76.2 853.2 115.7C853.2 155.2 847 183.3 834.7 199.9C822.4 216.5 803.5 224.8 778.2 224.8C752.8 224.8 734 216.5 721.7 199.9C709.3 183.3 703.2 155.3 703.2 115.7ZM746.6 115.7C746.6 133.8 748.1 151.1 751.1 167.8C754.1 184.5 763.1 192.8 778.3 192.8C793.4 192.8 802.5 184.5 805.5 167.8C808.5 151.1 810 133.7 810 115.7C810 97.6 808.5 80.3 805.5 63.6C802.5 46.9 793.5 38.6 778.3 38.6C763.2 38.6 754.1 46.9 751.1 63.6C748 80.3 746.6 97.7 746.6 115.7Z"/>
-              </g>
-            </svg>
-          </div>
-
-          <!-- Glowing Full-Bleed Ionic Laser Beams Background -->
-          <div class="laser-background" aria-hidden="true">
-            <svg class="laser-svg" viewBox="0 0 1600 1000" preserveAspectRatio="none">
-              <defs>
-                <filter id="laser-glow-cyan" x="-50%" y="-50%" width="200%" height="200%">
-                  <feGaussianBlur stdDeviation="5" result="blur1" />
-                  <feGaussianBlur stdDeviation="15" result="blur2" />
-                  <feMerge>
-                    <feMergeNode in="blur2" />
-                    <feMergeNode in="blur1" />
-                    <feMergeNode in="SourceGraphic" />
-                  </feMerge>
-                </filter>
-                <filter id="laser-glow-blue" x="-50%" y="-50%" width="200%" height="200%">
-                  <feGaussianBlur stdDeviation="4" result="blur1" />
-                  <feGaussianBlur stdDeviation="12" result="blur2" />
-                  <feMerge>
-                    <feMergeNode in="blur2" />
-                    <feMergeNode in="blur1" />
-                    <feMergeNode in="SourceGraphic" />
-                  </feMerge>
-                </filter>
-                <linearGradient id="beam-cyan-grad" x1="100%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" stop-color="#00E5FF" stop-opacity="0" />
-                  <stop offset="15%" stop-color="#00E5FF" stop-opacity="0.95" />
-                  <stop offset="50%" stop-color="#BBFFFF" stop-opacity="1" />
-                  <stop offset="85%" stop-color="#00A3FF" stop-opacity="0.95" />
-                  <stop offset="100%" stop-color="#00E5FF" stop-opacity="0" />
-                </linearGradient>
-                <linearGradient id="beam-blue-grad" x1="100%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" stop-color="#0088FF" stop-opacity="0" />
-                  <stop offset="25%" stop-color="#00A3FF" stop-opacity="0.9" />
-                  <stop offset="70%" stop-color="#00E5FF" stop-opacity="1" />
-                  <stop offset="100%" stop-color="#0088FF" stop-opacity="0" />
-                </linearGradient>
-              </defs>
-              <!-- Base continuous glowing laser track (Edge to Edge) -->
-              <path class="laser-track"
-                    d="M 1800,-50 C 1450,80 1200,200 820,260 C 420,320 540,500 880,560 C 1240,620 1150,810 780,870 C 440,930 180,980 -200,1050"
-                    fill="none" stroke-width="2.5" stroke-linecap="round" />
-              <!-- Beam 1: Primary glowing cyan wave weaving through stats -->
-              <path class="laser-beam laser-beam-1" filter="url(#laser-glow-cyan)"
-                    d="M 1800,-50 C 1450,80 1200,200 820,260 C 420,320 540,500 880,560 C 1240,620 1150,810 780,870 C 440,930 180,980 -200,1050"
-                    fill="none" stroke="url(#beam-cyan-grad)" stroke-width="5" stroke-linecap="round" />
-              <!-- Beam 2: Secondary offset electric blue wave -->
-              <path class="laser-beam laser-beam-2" filter="url(#laser-glow-blue)"
-                    d="M 1820,-20 C 1430,110 1180,230 800,290 C 400,350 560,530 900,590 C 1260,650 1130,840 760,900 C 420,960 160,1010 -180,1080"
-                    fill="none" stroke="url(#beam-blue-grad)" stroke-width="3.5" stroke-linecap="round" />
-            </svg>
-          </div>
-
-          <!-- Vertical Statistics Stack (Image 1) -->
-          <div class="stat-vertical-list" data-reveal>
-
-            <div class="stat-vertical-item">
-              <div class="stat-vertical-number" data-key="stat1Value">18</div>
-              <div class="stat-vertical-label" data-key="stat1Label">سنوات من الخبرة</div>
-            </div>
-
-            <div class="stat-vertical-item">
-              <div class="stat-vertical-number" data-key="stat2Value">650+</div>
-              <div class="stat-vertical-label" data-key="stat2Label">مشاريع منجزة</div>
-            </div>
-
-            <div class="stat-vertical-item">
-              <div class="stat-vertical-number" data-key="stat3Value">250,000</div>
-              <div class="stat-vertical-label" data-key="stat3Label">مستخدم وعميل راضٍ</div>
-            </div>
-
-          </div>
-
-        </div><!-- /laser-stats-container -->
-
-      </div><!-- /container -->
-    </section><!-- /laser-stats-section -->
-
-
     <!-- ── SERVICES ─────────────────────────────────── -->
     <section id="services" class="services-section site-section" data-nav-id="services" aria-labelledby="services-heading">
 
@@ -448,9 +342,9 @@
             </svg>
           </div>
           <p class="section-label"><span data-key="servicesLabel">خدماتنا</span></p>
-          <h2 id="services-heading" class="section-title" data-key="servicesTitle">ما نقدمه لك</h2>
+          <h2 id="services-heading" class="section-title" data-key="servicesTitle">خدماتنا</h2>
           <p class="section-body" data-key="servicesBody">
-            من الفكرة إلى المنتج — نبني الحل الرقمي المناسب لاحتياجات عملك.
+            نطوّر حلولًا رقمية تتناسب مع احتياجات مشروعك، من المواقع وتطبيقات الويب إلى الأنظمة المخصصة ومنتجات SaaS.
           </p>
         </div>
 
@@ -552,12 +446,12 @@
       <div class="container">
 
         <div class="section-header" data-reveal>
-          <p class="section-label"><span data-key="solutionsLabel">حلول جاهزة</span></p>
+          <p class="section-label"><span data-key="solutionsLabel">نماذج وأنظمة برمجية</span></p>
           <h2 id="solutions-heading" class="section-title" data-key="solutionsTitle">
-            أنظمة ومواقع جاهزة للتخصيص
+            نماذج برمجية قابلة للتخصيص
           </h2>
           <p class="section-body" data-key="solutionsBody">
-            نستعرض هنا نماذج لحلول وأنظمة رقمية قابلة للتخصيص والتطوير لتناسب احتياجات عملك.
+            نماذج أولية وأنظمة قابلة للتخصيص والتطوير السريع لتناسب احتياجات مشروعك ومرحلة نمو عملك.
           </p>
         </div>
 
@@ -566,12 +460,12 @@
           <article class="solution-card" data-reveal data-reveal-delay="1">
             <img src="assets/images/slides/1.png" alt="نظام متجر إلكتروني متكامل" class="solution-card-img" loading="lazy">
             <div class="solution-card-body">
-              <span class="solution-card-category">متجر إلكتروني</span>
+              <span class="solution-card-category">نموذج تجارة إلكترونية</span>
               <h3 class="solution-card-title">نظام متجر إلكتروني متكامل</h3>
-              <p class="solution-card-desc">حل جاهز للتخصيص يشمل إدارة المنتجات والطلبات والعملاء وبوابات الدفع.</p>
+              <p class="solution-card-desc">حل نموذجي قابل للتخصيص يشمل إدارة المنتجات والطلبات والعملاء وبوابات الدفع.</p>
               <div class="solution-card-footer">
                 <a href="#contact" class="btn btn-secondary btn-sm">
-                  <span data-key="solutionsCta">ناقش احتياجاتك</span>
+                  <span data-key="solutionsCta">ناقش مشروعك</span>
                 </a>
               </div>
             </div>
@@ -580,12 +474,12 @@
           <article class="solution-card" data-reveal data-reveal-delay="2">
             <img src="assets/images/slides/2.png" alt="نظام إدارة الموارد والشركات" class="solution-card-img" loading="lazy">
             <div class="solution-card-body">
-              <span class="solution-card-category">إدارة الأعمال</span>
+              <span class="solution-card-category">نموذج إدارة الأعمال</span>
               <h3 class="solution-card-title">نظام إدارة الموارد والعمليات</h3>
               <p class="solution-card-desc">نظام متكامل لإدارة تدفق العمل، الموظفين، الفواتير، والتقارير التنفيذية.</p>
               <div class="solution-card-footer">
                 <a href="#contact" class="btn btn-secondary btn-sm">
-                  <span data-key="solutionsCta">ناقش احتياجاتك</span>
+                  <span data-key="solutionsCta">ناقش مشروعك</span>
                 </a>
               </div>
             </div>
@@ -594,23 +488,18 @@
           <article class="solution-card" data-reveal data-reveal-delay="3">
             <img src="assets/images/slides/3.png" alt="منصة إدارة المشاريع وSaaS" class="solution-card-img" loading="lazy">
             <div class="solution-card-body">
-              <span class="solution-card-category">SaaS</span>
+              <span class="solution-card-category">نموذج سحابي SaaS</span>
               <h3 class="solution-card-title">منصة سحابية متقدمة</h3>
               <p class="solution-card-desc">أداة تعاون وتتبع مهام الفرق مع مؤشرات أداء فورية ولوحة تحكم شاملة.</p>
               <div class="solution-card-footer">
                 <a href="#contact" class="btn btn-secondary btn-sm">
-                  <span data-key="solutionsCta">ناقش احتياجاتك</span>
+                  <span data-key="solutionsCta">ناقش مشروعك</span>
                 </a>
               </div>
             </div>
           </article>
 
         </div><!-- /solutions-grid -->
-
-        <!-- Development note — visible in code, not to end users -->
-        <p class="solutions-note" data-reveal data-key="solutionsNote" style="display:none">
-          ⚠️ هذا القسم قيد التحديث — سيتم إضافة المشاريع الفعلية بعد التحقق من المالك.
-        </p>
 
       </div><!-- /container -->
     </section><!-- /solutions -->
@@ -633,14 +522,14 @@
           <!-- Left/Right: content -->
           <div class="about-content">
             <div data-reveal>
-              <p class="section-label"><span data-key="aboutLabel">من نحن</span></p>
+              <p class="section-label"><span data-key="aboutLabel">عن IONITY</span></p>
               <h2 id="about-heading" class="section-title" data-key="aboutTitle">
-                فريق متخصص في بناء<br>الحلول الرقمية
+                نبني البرمجيات انطلاقًا من احتياجات العمل.
               </h2>
             </div>
 
             <p class="about-body" data-reveal data-reveal-delay="1" data-key="aboutBody">
-              IONITY شركة برمجيات متخصصة في بناء المواقع والتطبيقات والأنظمة البرمجية المخصصة. نعمل مع الشركات والرياديين لتحويل أفكارهم إلى منتجات رقمية حقيقية وعملية.
+              IONITY شركة متخصصة في تطوير الحلول البرمجية للشركات وأصحاب المشاريع. نعمل على فهم الاحتياج، وتحديد نطاق الحل، ثم تصميمه وتطويره بما يتناسب مع أهداف المشروع.
             </p>
 
             <div class="differentiators" data-reveal data-reveal-delay="2">
@@ -650,8 +539,8 @@
                   <path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
                 <div>
-                  <p class="diff-title" data-key="diff1Title">تقنيات حديثة</p>
-                  <p class="diff-desc" data-key="diff1Desc">نستخدم أحدث الأدوات والمنصات لبناء حلول قابلة للتوسع والصيانة.</p>
+                  <p class="diff-title" data-key="diff1Title">فهم المتطلبات</p>
+                  <p class="diff-desc" data-key="diff1Desc">تحليل دقيق لنموذج العمل وتحديد نطاق الحل والجدوى التقنية.</p>
                 </div>
               </div>
 
@@ -660,8 +549,8 @@
                   <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
                 <div>
-                  <p class="diff-title" data-key="diff2Title">تسليم احترافي</p>
-                  <p class="diff-desc" data-key="diff2Desc">نلتزم بالمواعيد والجودة في كل مرحلة من مراحل التطوير.</p>
+                  <p class="diff-title" data-key="diff2Title">بنية برمجية رصينة</p>
+                  <p class="diff-desc" data-key="diff2Desc">معمارية حديثة قابلة للتوسع والصيانة طويلة الأمد.</p>
                 </div>
               </div>
 
@@ -670,8 +559,8 @@
                   <path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
                 <div>
-                  <p class="diff-title" data-key="diff3Title">تواصل مستمر</p>
-                  <p class="diff-desc" data-key="diff3Desc">نبقيك على اطلاع دائم بتقدم مشروعك في كل خطوة.</p>
+                  <p class="diff-title" data-key="diff3Title">تواصل مستمر وشفاف</p>
+                  <p class="diff-desc" data-key="diff3Desc">مواكبة دورية لتقدم العمل عبر قنوات تواصل مباشرة.</p>
                 </div>
               </div>
 
@@ -680,38 +569,40 @@
                   <path d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
                 <div>
-                  <p class="diff-title" data-key="diff4Title">دعم ما بعد الإطلاق</p>
-                  <p class="diff-desc" data-key="diff4Desc">لا ننتهي عند التسليم — نتابع ونحسّن منتجك باستمرار.</p>
+                  <p class="diff-title" data-key="diff4Title">دعم ومتابعة ما بعد الإطلاق</p>
+                  <p class="diff-desc" data-key="diff4Desc">متابعة الاستقرار وتحسين الأداء وتقديم الدعم الفني.</p>
                 </div>
               </div>
 
             </div><!-- /differentiators -->
           </div><!-- /about-content -->
 
-          <!-- Visual: stat grid -->
+          <!-- Visual: Technical Engineering Pillars (No unverified numbers) -->
           <div class="about-visual" data-reveal="slide-end" data-reveal-delay="1">
             <div class="about-visual-grid" aria-hidden="true">
 
               <div class="about-visual-card">
-                <!-- ⚠️ OWNER_VERIFY: confirm actual years of experience -->
-                <span class="about-visual-number accent" data-key="aboutNum1Value">٥+</span>
-                <span class="about-visual-label" data-key="aboutNum1Label">سنوات خبرة</span>
+                <span class="about-visual-pillar-tag">01 // B2B</span>
+                <h4 class="about-visual-pillar-title" data-key="aboutPillar1Title">معمارية حديثة</h4>
+                <p class="about-visual-label" data-key="aboutPillar1Desc">أنظمة سحابية مرنة وقابلة للتوسع</p>
               </div>
 
               <div class="about-visual-card">
-                <!-- ⚠️ OWNER_VERIFY: confirm actual project count -->
-                <span class="about-visual-number" data-key="aboutNum2Value">٥٠+</span>
-                <span class="about-visual-label" data-key="aboutNum2Label">مشروع منجز</span>
+                <span class="about-visual-pillar-tag">02 // QA</span>
+                <h4 class="about-visual-pillar-title" data-key="aboutPillar2Title">أمان واستقرار</h4>
+                <p class="about-visual-label" data-key="aboutPillar2Desc">أعلى معايير الحماية وموثوقية الأداء</p>
               </div>
 
               <div class="about-visual-card">
-                <span class="about-visual-number accent" data-key="aboutNum3Value">١٠٠٪</span>
-                <span class="about-visual-label" data-key="aboutNum3Label">شغف حقيقي</span>
+                <span class="about-visual-pillar-tag">03 // CODE</span>
+                <h4 class="about-visual-pillar-title" data-key="aboutPillar3Title">كود نظيف</h4>
+                <p class="about-visual-label" data-key="aboutPillar3Desc">بنية برمجية معيارية قابلة للصيانة</p>
               </div>
 
               <div class="about-visual-card">
-                <span class="about-visual-number" data-key="aboutNum4Value">٢٤/٧</span>
-                <span class="about-visual-label" data-key="aboutNum4Label">دعم مستمر</span>
+                <span class="about-visual-pillar-tag">04 // OPS</span>
+                <h4 class="about-visual-pillar-title" data-key="aboutPillar4Title">التزام مستمر</h4>
+                <p class="about-visual-label" data-key="aboutPillar4Desc">شراكة تقنية ودعم استراتيجي دائم</p>
               </div>
 
             </div>
@@ -719,58 +610,76 @@
 
         </div><!-- /about-inner -->
 
-        <!-- Dedicated Team Showcase (5 Core Members) -->
-        <div class="team-showcase" data-reveal>
-          <div class="team-header">
-            <p class="section-label" style="justify-content:center;"><span data-key="teamLabel">فريق العمل</span></p>
-            <h3 class="team-title" data-key="teamTitle">خبراء وراء كل سطر برمجي</h3>
-            <p class="team-desc" data-key="teamDesc">نخبة متكاملة من المهندسين والمصممين المحترفين لتحويل رؤيتك إلى منتج استثنائي.</p>
-          </div>
-          <div class="team-cards-grid">
-            <div class="team-card">
-              <div class="team-avatar-wrap">
-                <div class="team-avatar-glow"></div>
-                <img src="assets/images/Konrad.jpg" alt="Konrad" class="team-avatar" loading="lazy">
-              </div>
-              <h4 class="team-name">Konrad</h4>
-              <p class="team-role" data-key="memberRole1">كبير مهندسي النظم والبنية السحابية</p>
-              <span class="team-chip">Backend / Cloud</span>
+        <!-- Optional Team Toggle Button -->
+        <div class="team-toggle-wrapper" data-reveal>
+          <button type="button" class="btn btn-secondary team-toggle-btn" id="team-toggle-btn" aria-expanded="false" aria-controls="team-showcase-panel">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+            <span class="team-toggle-text" data-key="teamToggleOpen">استكشف الفريق التقني (اختياري)</span>
+            <svg class="team-toggle-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Optional Collapsible Team Showcase Drawer -->
+        <div id="team-showcase-panel" class="team-collapsible" aria-hidden="true">
+          <div class="team-showcase">
+            <div class="team-header">
+              <p class="section-label" style="justify-content:center;"><span data-key="teamLabel">فريق العمل</span></p>
+              <h3 class="team-title" data-key="teamTitle">خبراء وراء كل سطر برمجي</h3>
+              <p class="team-desc" data-key="teamDesc">نخبة متكاملة من المهندسين والمصممين المحترفين لبناء حلولك الرقمية بدقة.</p>
             </div>
-            <div class="team-card">
-              <div class="team-avatar-wrap">
-                <div class="team-avatar-glow"></div>
-                <img src="assets/images/Marcin.jpg" alt="Marcin" class="team-avatar" loading="lazy">
+            <div class="team-cards-grid">
+              <div class="team-card">
+                <div class="team-avatar-wrap">
+                  <div class="team-avatar-glow"></div>
+                  <img src="assets/images/Konrad.jpg" alt="Konrad" class="team-avatar" loading="lazy">
+                </div>
+                <h4 class="team-name">Konrad</h4>
+                <p class="team-role" data-key="memberRole1">كبير مهندسي النظم والبنية السحابية</p>
+                <span class="team-chip">Backend / Cloud</span>
               </div>
-              <h4 class="team-name">Marcin</h4>
-              <p class="team-role" data-key="memberRole2">مهندس أول واجهات أمامية وتفاعل</p>
-              <span class="team-chip">UI / React / Next</span>
-            </div>
-            <div class="team-card">
-              <div class="team-avatar-wrap">
-                <div class="team-avatar-glow"></div>
-                <img src="assets/images/Albert.jpg" alt="Albert" class="team-avatar" loading="lazy">
+              <div class="team-card">
+                <div class="team-avatar-wrap">
+                  <div class="team-avatar-glow"></div>
+                  <img src="assets/images/Marcin.jpg" alt="Marcin" class="team-avatar" loading="lazy">
+                </div>
+                <h4 class="team-name">Marcin</h4>
+                <p class="team-role" data-key="memberRole2">مهندس أول واجهات أمامية وتفاعل</p>
+                <span class="team-chip">UI / React / Next</span>
               </div>
-              <h4 class="team-name">Albert</h4>
-              <p class="team-role" data-key="memberRole3">مصمم أنظمة المنتجات وتجربة المستخدم</p>
-              <span class="team-chip">Design Systems</span>
-            </div>
-            <div class="team-card">
-              <div class="team-avatar-wrap">
-                <div class="team-avatar-glow"></div>
-                <img src="assets/images/Lukasz.jpg" alt="Łukasz" class="team-avatar" loading="lazy">
+              <div class="team-card">
+                <div class="team-avatar-wrap">
+                  <div class="team-avatar-glow"></div>
+                  <img src="assets/images/Albert.jpg" alt="Albert" class="team-avatar" loading="lazy">
+                </div>
+                <h4 class="team-name">Albert</h4>
+                <p class="team-role" data-key="memberRole3">مصمم أنظمة المنتجات وتجربة المستخدم</p>
+                <span class="team-chip">Design Systems</span>
               </div>
-              <h4 class="team-name">Łukasz</h4>
-              <p class="team-role" data-key="memberRole4">مطور برمجيات وأنظمة متكاملة</p>
-              <span class="team-chip">APIs & Integrations</span>
-            </div>
-            <div class="team-card">
-              <div class="team-avatar-wrap">
-                <div class="team-avatar-glow"></div>
-                <img src="assets/images/Filip.jpg" alt="Filip" class="team-avatar" loading="lazy">
+              <div class="team-card">
+                <div class="team-avatar-wrap">
+                  <div class="team-avatar-glow"></div>
+                  <img src="assets/images/Lukasz.jpg" alt="Łukasz" class="team-avatar" loading="lazy">
+                </div>
+                <h4 class="team-name">Łukasz</h4>
+                <p class="team-role" data-key="memberRole4">مطور برمجيات وأنظمة متكاملة</p>
+                <span class="team-chip">APIs & Integrations</span>
               </div>
-              <h4 class="team-name">Filip</h4>
-              <p class="team-role" data-key="memberRole5">مهندس عمليات الأداء والاستقرار</p>
-              <span class="team-chip">Security / Scale</span>
+              <div class="team-card">
+                <div class="team-avatar-wrap">
+                  <div class="team-avatar-glow"></div>
+                  <img src="assets/images/Filip.jpg" alt="Filip" class="team-avatar" loading="lazy">
+                </div>
+                <h4 class="team-name">Filip</h4>
+                <p class="team-role" data-key="memberRole5">مهندس عمليات الأداء والاستقرار</p>
+                <span class="team-chip">Security / Scale</span>
+              </div>
             </div>
           </div>
         </div>
@@ -784,10 +693,10 @@
       <div class="container">
 
         <div class="section-header" data-reveal>
-          <p class="section-label"><span data-key="processLabel">كيف نعمل</span></p>
-          <h2 id="process-heading" class="section-title" data-key="processTitle">من الفكرة إلى المنتج</h2>
+          <p class="section-label"><span data-key="processLabel">منهجية العمل</span></p>
+          <h2 id="process-heading" class="section-title" data-key="processTitle">خطوات واضحة من البداية إلى الإطلاق.</h2>
           <p class="section-body" data-key="processBody">
-            منهجية واضحة ومجربة لضمان نتيجة تلبّي توقعاتك.
+            منهجية عمل محددة تضمن الوضوح وسرعة الإنجاز وجودة المخرجات.
           </p>
         </div>
 
@@ -796,9 +705,9 @@
           <div class="process-card" data-reveal data-reveal-delay="1">
             <div class="process-card-number" aria-hidden="true">01</div>
             <div>
-              <h3 class="process-card-title" data-key="step1Title">الاكتشاف وفهم الاحتياج</h3>
+              <h3 class="process-card-title" data-key="step1Title">فهم المتطلبات</h3>
               <p class="process-card-body" data-key="step1Body">
-                نبدأ بفهم عملك وأهدافك ومتطلبات مشروعك بشكل كامل.
+                تحليل فكرة المشروع وتحديد الأهداف والنطاق التقني بدقة.
               </p>
             </div>
           </div>
@@ -808,7 +717,7 @@
             <div>
               <h3 class="process-card-title" data-key="step2Title">التخطيط والتصميم</h3>
               <p class="process-card-body" data-key="step2Body">
-                نضع خارطة طريق واضحة ونصمم تجربة المستخدم قبل كتابة أي سطر كود.
+                إعداد معمارية النظام وتصميم تجربة المستخدم وهيكل البيانات.
               </p>
             </div>
           </div>
@@ -818,7 +727,7 @@
             <div>
               <h3 class="process-card-title" data-key="step3Title">التطوير والاختبار</h3>
               <p class="process-card-body" data-key="step3Body">
-                ننفّذ الحل بشكل احترافي ونختبره بدقة لضمان الجودة والاستقرار.
+                برمجة نظيفة وفق أفضل المعايير مع اختبارات مكثفة للأداء والاستقرار.
               </p>
             </div>
           </div>
@@ -826,9 +735,9 @@
           <div class="process-card" data-reveal data-reveal-delay="4">
             <div class="process-card-number" aria-hidden="true">04</div>
             <div>
-              <h3 class="process-card-title" data-key="step4Title">الإطلاق والتحسين</h3>
+              <h3 class="process-card-title" data-key="step4Title">الإطلاق</h3>
               <p class="process-card-body" data-key="step4Body">
-                نطلق المنتج ونتابع أداءه ونستمر في تحسينه بعد الإطلاق.
+                نشر النظام على البنية السحابية والمتابعة لضمان استقرار العمليات.
               </p>
             </div>
           </div>
@@ -920,12 +829,12 @@
 
         <!-- Merged Concise CTA Header -->
         <div class="contact-merged-cta" data-reveal style="text-align:center; max-width:720px; margin-inline:auto; margin-bottom:clamp(3rem, 6vw, 4.5rem);">
-          <p class="section-label" style="justify-content:center; margin-bottom:12px;"><span data-key="ctaLabel">ابدأ الآن</span></p>
+          <p class="section-label" style="justify-content:center; margin-bottom:12px;"><span data-key="ctaLabel">تواصل معنا</span></p>
           <h2 id="contact-heading" class="section-title" style="font-size:clamp(2rem, 4.5vw, 3rem); line-height:1.25; margin-bottom:14px;" data-key="ctaMergedTitle">
-            لديك فكرة أو مشروع؟<br><span style="color:#35EDCA; text-shadow:0 0 25px rgba(53,237,202,0.45);">لنحوّله إلى حل رقمي.</span>
+            ما الذي تحتاج إلى بنائه؟
           </h2>
           <p style="color:var(--color-text-secondary); font-size:1.05rem; line-height:1.65; max-width:54ch; margin-inline:auto;" data-key="ctaMergedDesc">
-            جاهزون لبدء مشروعك — اختر القناة الأنسب لك أو راسلنا مباشرة وسنرد عليك سريعًا.
+            شاركنا فكرة مشروعك أو التحدي الذي تواجهه، وسنناقش معك الحل المناسب والخطوات التالية.
           </p>
         </div>
 
@@ -952,7 +861,7 @@
               </svg>
             </div>
             <a href="#contact-form" class="btn-pill-glow">
-              <span data-key="contactSupportBtn">استكشف المزيد</span>
+              <span data-key="contactSupportBtn">ناقش مشروعك</span>
               <span class="arrow"><img src="assets/images/arrow.svg" alt=""></span>
             </a>
           </div>
@@ -963,7 +872,7 @@
               <img src="assets/images/contactIcon2.svg" alt="">
             </div>
             <div class="contact-channel-title-wrap">
-              <div class="contact-channel-title-text" data-key="contactDirectTitle">تواصل مباشرة معنا</div>
+              <div class="contact-channel-title-text" data-key="contactDirectTitle">المحادثة المباشرة (واتساب)</div>
               <!-- Outlined SVG "Contact" Typography Background -->
               <svg class="contact-channel-bg-svg" viewBox="0 0 550 110" aria-hidden="true">
                 <g>
@@ -978,7 +887,7 @@
               </svg>
             </div>
             <a href="https://wa.me/" target="_blank" rel="noopener" class="btn-pill-glow">
-              <span data-key="contactDirectBtn">استكشف المزيد</span>
+              <span data-key="contactDirectBtn">تواصل عبر واتساب</span>
               <span class="arrow"><img src="assets/images/arrow.svg" alt=""></span>
             </a>
           </div>

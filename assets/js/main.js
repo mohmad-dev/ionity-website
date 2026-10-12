@@ -463,8 +463,8 @@
   }
 
   function toggleTheme() {
-    var current = document.documentElement.getAttribute('data-theme') || 'light';
-    var next = current === 'light' ? 'dark' : 'light';
+    var current = document.documentElement.getAttribute('data-theme') || 'dark';
+    var next = current === 'dark' ? 'light' : 'dark';
     localStorage.setItem('ionity-theme', next);
     updateThemeUI(next);
   }
@@ -473,7 +473,30 @@
     btn.addEventListener('click', toggleTheme);
   });
 
-  var initialTheme = localStorage.getItem('ionity-theme') || 'light';
+  var initialTheme = localStorage.getItem('ionity-theme') || 'dark';
   updateThemeUI(initialTheme);
+
+
+  /* ─────────────────────────────────────────────────
+     9. Optional Team Showcase Drawer Toggle
+  ───────────────────────────────────────────────── */
+  (function initTeamToggle() {
+    var btn = document.getElementById('team-toggle-btn');
+    var panel = document.getElementById('team-showcase-panel');
+    if (!btn || !panel) return;
+
+    btn.addEventListener('click', function () {
+      var isOpen = panel.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      panel.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+
+      var lang = document.documentElement.lang || 'ar';
+      var textEl = btn.querySelector('.team-toggle-text');
+      if (textEl && window.IONITY_STRINGS && window.IONITY_STRINGS[lang]) {
+        var s = window.IONITY_STRINGS[lang];
+        textEl.textContent = isOpen ? (s.teamToggleClose || 'إخفاء الفريق التقني') : (s.teamToggleOpen || 'استكشف الفريق التقني (اختياري)');
+      }
+    });
+  })();
 
 })();

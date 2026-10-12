@@ -25,25 +25,17 @@ window.IONITY_STRINGS = {
 
     /* Hero */
     heroEyebrow: 'حلول برمجية متخصصة',
-    heroHeadlineBase: 'نبني حلولًا رقمية تحوّل',
-    heroHeadlineAccent: 'أفكارك إلى واقع.',
-    heroBody: 'نطوّر مواقع ويب، وأنظمة برمجية، ومنتجات SaaS تساعد الشركات على تبسيط عملياتها وبناء تجارب رقمية أكثر كفاءة.',
+    heroHeadlineBase: 'حلول برمجية مصممة',
+    heroHeadlineAccent: 'لاحتياجات أعمالك.',
+    heroBody: 'نطوّر مواقع الويب والأنظمة المخصصة ومنتجات البرمجيات التي تساعد الشركات على تحسين عملياتها وتقديم خدماتها بكفاءة.',
     heroCtaPrimary: 'ناقش مشروعك',
     heroCtaSecondary: 'استكشف خدماتنا',
-    heroFloatTag: 'منتجات تعمل بكفاءة',
-
-    /* Stats (Laser section) — Image 1 numbers */
-    stat1Value: '18',
-    stat1Label: 'سنوات من الخبرة',
-    stat2Value: '650+',
-    stat2Label: 'مشاريع منجزة',
-    stat3Value: '250,000',
-    stat3Label: 'مستخدم وعميل راضٍ',
+    heroFloatTag: 'أنظمة تعمل بكفاءة',
 
     /* Services */
     servicesLabel:  'خدماتنا',
-    servicesTitle:  'ما نقدمه لك',
-    servicesBody:   'من الفكرة إلى المنتج — نبني الحل الرقمي المناسب لاحتياجات عملك.',
+    servicesTitle:  'خدماتنا البرمجية',
+    servicesBody:   'نطوّر حلولًا رقمية تتناسب مع احتياجات مشروعك، من المواقع وتطبيقات الويب إلى الأنظمة المخصصة ومنتجات SaaS.',
 
     service1Title:  'تطوير المواقع وتطبيقات الويب',
     service1Body:   'مواقع ويب احترافية وسريعة ومستجيبة تعكس هويتك وتحقق أهدافك.',
@@ -61,56 +53,67 @@ window.IONITY_STRINGS = {
     service4Body:   'تصميم واجهات مستخدم مدروسة، صيانة مستمرة، ودعم فني متواصل لمنتجك.',
     service4Link:   'اعرف المزيد',
 
+    /* Solutions (Prototypes & Models) */
+    solutionsLabel: 'نماذج وأنظمة برمجية',
+    solutionsTitle: 'نماذج برمجية قابلة للتخصيص',
+    solutionsBody:  'نماذج أولية وأنظمة قابلة للتخصيص والتطوير السريع لتناسب احتياجات مشروعك ومرحلة نمو عملك.',
+    solutionsCta:   'ناقش مشروعك',
+
     /* About */
-    aboutLabel:    'من نحن',
-    aboutTitle:    'فريق متخصص في بناء\nالحلول الرقمية',
-    aboutBody:     'IONITY شركة برمجيات متخصصة في بناء المواقع والتطبيقات والأنظمة البرمجية المخصصة. نعمل مع الشركات والرياديين لتحويل أفكارهم إلى منتجات رقمية حقيقية وعملية.\n\nنؤمن أن التقنية الجيدة يجب أن تكون بسيطة وقابلة للفهم وموثوقة — وهذا ما نسعى إليه في كل مشروع.',
+    aboutLabel:    'عن IONITY',
+    aboutTitle:    'نبني البرمجيات انطلاقًا من احتياجات العمل.',
+    aboutBody:     'IONITY شركة متخصصة في تطوير الحلول البرمجية للشركات وأصحاب المشاريع. نعمل على فهم الاحتياج، وتحديد نطاق الحل، ثم تصميمه وتطويره بما يتناسب مع أهداف المشروع.',
 
-    diff1Title: 'تقنيات حديثة',
-    diff1Desc:  'نستخدم أحدث الأدوات والمنصات لبناء حلول قابلة للتوسع والصيانة.',
+    diff1Title: 'فهم المتطلبات',
+    diff1Desc:  'تحليل دقيق لنموذج العمل وتحديد نطاق الحل والجدوى التقنية.',
 
-    diff2Title: 'تسليم احترافي',
-    diff2Desc:  'نلتزم بالمواعيد والجودة في كل مرحلة من مراحل التطوير.',
+    diff2Title: 'بنية برمجية رصينة',
+    diff2Desc:  'معمارية حديثة قابلة للتوسع والصيانة طويلة الأمد.',
 
-    diff3Title: 'تواصل مستمر',
-    diff3Desc:  'نبقيك على اطلاع دائم بتقدم مشروعك في كل خطوة.',
+    diff3Title: 'تواصل مستمر وشفاف',
+    diff3Desc:  'مواكبة دورية لتقدم العمل عبر قنوات تواصل مباشرة.',
 
-    diff4Title: 'دعم ما بعد الإطلاق',
-    diff4Desc:  'لا ننتهي عند التسليم — نتابع ونحسّن منتجك باستمرار.',
+    diff4Title: 'دعم ومتابعة ما بعد الإطلاق',
+    diff4Desc:  'متابعة الاستقرار وتحسين الأداء وتقديم الدعم الفني.',
 
-    /* Numbers (about visual) — ⚠️ OWNER_VERIFY */
-    aboutNum1Value: '٥+',
-    aboutNum1Label: 'سنوات خبرة',
-    aboutNum2Value: '٥٠+',
-    aboutNum2Label: 'مشروع منجز',
-    aboutNum3Value: '١٠٠٪',
-    aboutNum3Label: 'شغف حقيقي',
-    aboutNum4Value: '٢٤/٧',
-    aboutNum4Label: 'دعم مستمر',
+    /* Engineering Pillars (About Visual) */
+    aboutPillar1Title: 'معمارية حديثة',
+    aboutPillar1Desc:  'أنظمة سحابية مرنة وقابلة للتوسع',
+    aboutPillar2Title: 'أمان واستقرار',
+    aboutPillar2Desc:  'أعلى معايير الحماية وموثوقية الأداء',
+    aboutPillar3Title: 'كود نظيف',
+    aboutPillar3Desc:  'بنية برمجية معيارية قابلة للصيانة',
+    aboutPillar4Title: 'التزام مستمر',
+    aboutPillar4Desc:  'شراكة تقنية ودعم استراتيجي دائم',
+
+    /* Team */
+    teamToggleOpen:  'استكشف الفريق التقني (اختياري)',
+    teamToggleClose: 'إخفاء الفريق التقني',
+    teamLabel:       'فريق العمل',
+    teamTitle:       'خبراء وراء كل سطر برمجي',
+    teamDesc:        'نخبة متكاملة من المهندسين والمصممين المحترفين لبناء حلولك الرقمية بدقة.',
+    memberRole1:     'كبير مهندسي النظم والبنية السحابية',
+    memberRole2:     'مهندس أول واجهات أمامية وتفاعل',
+    memberRole3:     'مصمم أنظمة المنتجات وتجربة المستخدم',
+    memberRole4:     'مطور برمجيات وأنظمة متكاملة',
+    memberRole5:     'مهندس عمليات الأداء والاستقرار',
 
     /* Process */
-    processLabel:   'كيف نعمل',
-    processTitle:   'من الفكرة إلى المنتج',
-    processBody:    'منهجية واضحة ومجربة لضمان نتيجة تلبّي توقعاتك.',
+    processLabel:   'منهجية العمل',
+    processTitle:   'خطوات واضحة من البداية إلى الإطلاق.',
+    processBody:    'منهجية عمل محددة تضمن الوضوح وسرعة الإنجاز وجودة المخرجات.',
 
-    step1Title:  'الاكتشاف وفهم الاحتياج',
-    step1Body:   'نبدأ بفهم عملك وأهدافك ومتطلبات مشروعك بشكل كامل.',
+    step1Title:  'فهم المتطلبات',
+    step1Body:   'تحليل فكرة المشروع وتحديد الأهداف والنطاق التقني بدقة.',
 
     step2Title:  'التخطيط والتصميم',
-    step2Body:   'نضع خارطة طريق واضحة ونصمم تجربة المستخدم قبل كتابة أي سطر كود.',
+    step2Body:   'إعداد معمارية النظام وتصميم تجربة المستخدم وهيكل البيانات.',
 
     step3Title:  'التطوير والاختبار',
-    step3Body:   'ننفّذ الحل بشكل احترافي ونختبره بدقة لضمان الجودة والاستقرار.',
+    step3Body:   'برمجة نظيفة وفق أفضل المعايير مع اختبارات مكثفة للأداء والاستقرار.',
 
-    step4Title:  'الإطلاق والتحسين',
-    step4Body:   'نطلق المنتج ونتابع أداءه ونستمر في تحسينه بعد الإطلاق.',
-
-    /* Solutions (ready-made) */
-    solutionsLabel: 'حلول جاهزة',
-    solutionsTitle: 'أنظمة ومواقع جاهزة للتخصيص',
-    solutionsBody:  'نستعرض هنا نماذج لحلول وأنظمة رقمية قابلة للتخصيص والتطوير لتناسب احتياجات عملك.',
-    solutionsNote:  '⚠️ هذا القسم قيد التحديث — سيتم إضافة المشاريع الفعلية بعد التحقق من المالك.',
-    solutionsCta:   'ناقش احتياجاتك',
+    step4Title:  'الإطلاق',
+    step4Body:   'نشر النظام على البنية السحابية والمتابعة لضمان استقرار العمليات.',
 
     /* Tech */
     techLabel:  'التقنيات',
@@ -122,39 +125,25 @@ window.IONITY_STRINGS = {
     techCat3:   'قواعد البيانات',
     techCat4:   'السحابة والنشر',
 
-    /* Team */
-    teamLabel:   'فريق العمل',
-    teamTitle:   'خبراء وراء كل سطر برمجي',
-    teamDesc:    'نخبة متكاملة من المهندسين والمصممين المحترفين لتحويل رؤيتك إلى منتج استثنائي.',
-    memberRole1: 'كبير مهندسي النظم والبنية السحابية',
-    memberRole2: 'مهندس أول واجهات أمامية وتفاعل',
-    memberRole3: 'مصمم أنظمة المنتجات وتجربة المستخدم',
-    memberRole4: 'مطور برمجيات وأنظمة متكاملة',
-    memberRole5: 'مهندس عمليات الأداء والاستقرار',
-
-    /* CTA */
-    ctaLabel:       'ابدأ الآن',
-    ctaTitle:       'لديك فكرة أو مشروع؟\nلنحوّله إلى حل رقمي.',
-    ctaBody:        'أخبرنا بما تحتاج إليه، وسنساعدك في تحديد الخطوة المناسبة للبدء.',
-    ctaPrimary:     'ابدأ مناقشة مشروعك',
-    ctaMergedTitle: 'لديك فكرة أو مشروع؟\nلنحوّله إلى حل رقمي.',
-    ctaMergedDesc:  'جاهزون لبدء مشروعك — اختر القناة الأنسب لك أو راسلنا مباشرة.',
-    /* Contact Section (Image 2) */
-    contactSupportTitle: 'مركز الدعم الفني',
-    contactDirectTitle:  'تواصل مباشرة معنا',
-    contactSupportBtn:    'استكشف المزيد',
-    contactDirectBtn:     'استكشف المزيد',
+    /* Contact Section / Final CTA */
+    ctaLabel:             'تواصل معنا',
+    ctaMergedTitle:       'ما الذي تحتاج إلى بنائه؟',
+    ctaMergedDesc:        'شاركنا فكرة مشروعك أو التحدي الذي تواجهه، وسنناقش معك الحل المناسب والخطوات التالية.',
+    contactSupportTitle:  'مركز الاستفسارات التقنية',
+    contactDirectTitle:   'المحادثة المباشرة (واتساب)',
+    contactSupportBtn:    'ناقش مشروعك',
+    contactDirectBtn:     'تواصل عبر واتساب',
     contactFormTitle:     'أو أرسل لنا رسالة مباشرة',
     contactFormSubtitle:  'املأ البيانات وسيقوم فريقنا بالرد عليك في غضون ٢٤ ساعة.',
     sendBtn:              'إرسال الرسالة',
 
     /* Footer */
-    footerDesc:    'شركة برمجيات متخصصة في بناء المواقع والتطبيقات والحلول الرقمية.',
-    footerNavTitle:    'التنقل',
+    footerDesc:         'شركة برمجيات متخصصة في بناء المواقع والتطبيقات والحلول الرقمية.',
+    footerNavTitle:     'التنقل',
     footerContactTitle: 'تواصل معنا',
-    footerWhatsApp:    'واتساب',
-    footerEmail:       'البريد الإلكتروني',
-    copyright:         'جميع الحقوق محفوظة © {year} لـ IONITY.'
+    footerWhatsApp:     'واتساب',
+    footerEmail:        'البريد الإلكتروني',
+    copyright:          'جميع الحقوق محفوظة © {year} لـ IONITY.'
   },
 
   /* ─────────────── English ─────────────── */
@@ -167,7 +156,7 @@ window.IONITY_STRINGS = {
     navWork:     'Work',
     navAbout:    'Studio',
     navContact:  'Contact',
-    navCta:      'Start Project',
+    navCta:      'Discuss Project',
     sidebarSub:  'SOFTWARE & SYSTEMS LAB',
     statusAvailable: 'Available for Q1/Q2 Projects',
 
@@ -176,25 +165,17 @@ window.IONITY_STRINGS = {
 
     /* Hero */
     heroEyebrow: 'Specialized Software Solutions',
-    heroHeadlineBase: 'We architect digital systems that',
-    heroHeadlineAccent: 'turn your vision into reality.',
-    heroBody: 'We develop websites, software systems, and SaaS products that help businesses streamline operations and build more efficient digital experiences.',
+    heroHeadlineBase: 'Tailored Software Solutions',
+    heroHeadlineAccent: 'Built for Your Business Needs.',
+    heroBody: 'We develop websites, custom systems, and software products that help businesses optimize operations and deliver services efficiently.',
     heroCtaPrimary: 'Discuss your project',
     heroCtaSecondary: 'Explore our services',
-    heroFloatTag: 'Products that work efficiently',
-
-    /* Stats (Laser section) — Image 1 numbers */
-    stat1Value: '18',
-    stat1Label: 'Years of experience',
-    stat2Value: '650+',
-    stat2Label: 'Projects delivered',
-    stat3Value: '250,000',
-    stat3Label: 'Happy clients',
+    heroFloatTag: 'Systems that work efficiently',
 
     /* Services */
     servicesLabel:  'Services',
-    servicesTitle:  'What we offer',
-    servicesBody:   'From idea to product — we build the right digital solution for your business needs.',
+    servicesTitle:  'Our Software Services',
+    servicesBody:   'We develop digital solutions tailored to your project needs, from websites and web applications to custom systems and SaaS products.',
 
     service1Title:  'Web Development & Web Apps',
     service1Body:   'Professional, fast, and responsive websites that reflect your identity and drive results.',
@@ -212,56 +193,67 @@ window.IONITY_STRINGS = {
     service4Body:   'Thoughtful interface design, ongoing maintenance, and continuous technical support.',
     service4Link:   'Learn more',
 
+    /* Solutions */
+    solutionsLabel: 'Software Prototypes & Systems',
+    solutionsTitle: 'Customizable Software Models',
+    solutionsBody:  'Customizable software prototypes and modular systems ready for rapid adaptation to fit your project requirements and business growth.',
+    solutionsCta:   'Discuss your project',
+
     /* About */
-    aboutLabel:    'About Us',
-    aboutTitle:    'A team specialized in building\ndigital solutions',
-    aboutBody:     'IONITY is a software company specializing in building websites, applications, and custom software systems. We work with businesses and entrepreneurs to turn their ideas into real, practical digital products.\n\nWe believe great technology should be simple, understandable, and reliable — and that\'s what we aim for in every project.',
+    aboutLabel:    'About IONITY',
+    aboutTitle:    'Building Software Grounded in Business Needs.',
+    aboutBody:     'IONITY specializes in software development for businesses and project owners. We understand your operational needs, define the solution scope, and design and build software aligned with your business goals.',
 
-    diff1Title: 'Modern Technology',
-    diff1Desc:  'We use the latest tools and platforms to build scalable, maintainable solutions.',
+    diff1Title: 'Requirements Discovery',
+    diff1Desc:  'Thorough analysis of business models, defining solution scope and technical feasibility.',
 
-    diff2Title: 'Professional Delivery',
-    diff2Desc:  'We commit to deadlines and quality at every stage of development.',
+    diff2Title: 'Robust Architecture',
+    diff2Desc:  'Modern architecture built for scalability, security, and long-term maintainability.',
 
-    diff3Title: 'Continuous Communication',
-    diff3Desc:  'We keep you informed about your project progress at every step.',
+    diff3Title: 'Transparent Communication',
+    diff3Desc:  'Regular milestone updates and direct collaboration throughout development.',
 
-    diff4Title: 'Post-launch Support',
-    diff4Desc:  "We don't stop at delivery — we continue monitoring and improving your product.",
+    diff4Title: 'Post-Launch Support',
+    diff4Desc:  'Continuous monitoring, performance tuning, and technical guidance after go-live.',
 
-    /* Numbers — ⚠️ OWNER_VERIFY */
-    aboutNum1Value: '5+',
-    aboutNum1Label: 'Years experience',
-    aboutNum2Value: '50+',
-    aboutNum2Label: 'Projects delivered',
-    aboutNum3Value: '100%',
-    aboutNum3Label: 'Real passion',
-    aboutNum4Value: '24/7',
-    aboutNum4Label: 'Ongoing support',
+    /* Engineering Pillars (About Visual) */
+    aboutPillar1Title: 'Modern Architecture',
+    aboutPillar1Desc:  'Resilient and scalable cloud systems',
+    aboutPillar2Title: 'Security & Reliability',
+    aboutPillar2Desc:  'Enterprise-grade protection and uptime',
+    aboutPillar3Title: 'Clean Code',
+    aboutPillar3Desc:  'Modular, maintainable codebases',
+    aboutPillar4Title: 'Committed Partnership',
+    aboutPillar4Desc:  'Long-term support and alignment',
+
+    /* Team */
+    teamToggleOpen:  'Explore Engineering Team (Optional)',
+    teamToggleClose: 'Hide Engineering Team',
+    teamLabel:       'Engineering Team',
+    teamTitle:       'The minds behind every line of code',
+    teamDesc:        'A multidisciplinary team of engineers and designers crafting exceptional software.',
+    memberRole1:     'Lead Architect & Systems',
+    memberRole2:     'Senior Frontend Engineer',
+    memberRole3:     'Product & UI/UX Designer',
+    memberRole4:     'Fullstack Systems Developer',
+    memberRole5:     'DevOps & Performance Engineer',
 
     /* Process */
-    processLabel:   'How we work',
-    processTitle:   'From idea to product',
-    processBody:    'A clear and proven methodology to ensure results that meet your expectations.',
+    processLabel:   'Our Process',
+    processTitle:   'Clear Steps from Kickoff to Launch.',
+    processBody:    'A structured methodology ensuring clarity, speed, and high-quality deliverables.',
 
-    step1Title:  'Discovery & Requirements',
-    step1Body:   'We start by fully understanding your business, goals, and project requirements.',
+    step1Title:  'Requirements Discovery',
+    step1Body:   'Analyzing your project vision, goals, and technical scope in detail.',
 
     step2Title:  'Planning & Design',
-    step2Body:   'We set a clear roadmap and design the user experience before writing any code.',
+    step2Body:   'Architecting system structure, data flow, and user experience before writing code.',
 
     step3Title:  'Development & Testing',
-    step3Body:   'We implement the solution professionally and test it rigorously for quality and stability.',
+    step3Body:   'Clean implementation following modern standards with rigorous QA testing.',
 
-    step4Title:  'Launch & Improvement',
-    step4Body:   'We launch the product, monitor its performance, and continue improving it post-launch.',
-
-    /* Solutions */
-    solutionsLabel: 'Ready Solutions',
-    solutionsTitle: 'Systems & Websites Ready to Customize',
-    solutionsBody:  'A curated selection of ready-made solutions that can be customized and developed faster to fit your needs.',
-    solutionsNote:  '⚠️ This section is being updated — actual projects will be added after owner verification.',
-    solutionsCta:   'Discuss your needs',
+    step4Title:  'Deployment & Launch',
+    step4Body:   'Deploying to cloud infrastructure with real-time monitoring and stability support.',
 
     /* Tech */
     techLabel:  'Technology',
@@ -273,38 +265,24 @@ window.IONITY_STRINGS = {
     techCat3:   'Databases',
     techCat4:   'Cloud & Deployment',
 
-    /* Team */
-    teamLabel:   'Engineering Team',
-    teamTitle:   'The minds behind every line of code',
-    teamDesc:    'A multidisciplinary team of engineers and designers crafting exceptional software.',
-    memberRole1: 'Lead Architect & Systems',
-    memberRole2: 'Senior Frontend Engineer',
-    memberRole3: 'Product & UI/UX Designer',
-    memberRole4: 'Fullstack Systems Developer',
-    memberRole5: 'DevOps & Performance Engineer',
-
-    /* CTA */
-    ctaLabel:       'Get started',
-    ctaTitle:       'Have an idea or project?\nLet\'s turn it into a digital solution.',
-    ctaBody:        "Tell us what you need, and we'll help you determine the right next step to get started.",
-    ctaPrimary:     'Start discussing your project',
-    ctaMergedTitle: 'Have an idea or project?\nLet\'s turn it into a digital solution.',
-    ctaMergedDesc:  'Ready to build — choose your preferred channel or message us directly.',
-    /* Contact Section (Image 2) */
-    contactSupportTitle: 'Technical Support Center',
-    contactDirectTitle:  'Contact Us Directly',
-    contactSupportBtn:    'Explore More',
-    contactDirectBtn:     'Explore More',
+    /* Contact Section / Final CTA */
+    ctaLabel:             'Contact Us',
+    ctaMergedTitle:       'What do you need to build?',
+    ctaMergedDesc:        'Share your project idea or the challenge you\'re facing, and we\'ll discuss the right solution and next steps with you.',
+    contactSupportTitle:  'Technical Inquiries',
+    contactDirectTitle:   'Direct Chat (WhatsApp)',
+    contactSupportBtn:    'Discuss your project',
+    contactDirectBtn:     'Chat on WhatsApp',
     contactFormTitle:     'Or send us a direct message',
     contactFormSubtitle:  'Fill out the details and our team will get back to you within 24 hours.',
     sendBtn:              'Send Message',
 
     /* Footer */
-    footerDesc:    'A software company specializing in building websites, applications, and digital solutions.',
-    footerNavTitle:    'Navigation',
+    footerDesc:         'A software company specializing in building websites, applications, and digital solutions.',
+    footerNavTitle:     'Navigation',
     footerContactTitle: 'Contact',
-    footerWhatsApp:    'WhatsApp',
-    footerEmail:       'Email',
-    copyright:         'Copyright © {year} IONITY. All Rights Reserved.'
+    footerWhatsApp:     'WhatsApp',
+    footerEmail:        'Email',
+    copyright:          'Copyright © {year} IONITY. All Rights Reserved.'
   }
 };
