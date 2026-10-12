@@ -113,6 +113,16 @@
     setText('[data-key="aboutNum4Value"]', s.aboutNum4Value);
     setText('[data-key="aboutNum4Label"]', s.aboutNum4Label);
 
+    /* 7b. Team showcase */
+    setText('[data-key="teamLabel"]', s.teamLabel);
+    setText('[data-key="teamTitle"]', s.teamTitle);
+    setText('[data-key="teamDesc"]', s.teamDesc);
+    setText('[data-key="memberRole1"]', s.memberRole1);
+    setText('[data-key="memberRole2"]', s.memberRole2);
+    setText('[data-key="memberRole3"]', s.memberRole3);
+    setText('[data-key="memberRole4"]', s.memberRole4);
+    setText('[data-key="memberRole5"]', s.memberRole5);
+
     /* 8. Process section */
     setText('[data-key="processLabel"]', s.processLabel);
     setText('[data-key="processTitle"]', s.processTitle);
@@ -148,6 +158,8 @@
     setText('[data-key="ctaBody"]', s.ctaBody);
     setText('[data-key="ctaPrimary"]', s.ctaPrimary);
     setText('[data-key="ctaSecondary"]', s.ctaSecondary);
+    setText('[data-key="ctaMergedTitle"]', s.ctaMergedTitle);
+    setText('[data-key="ctaMergedDesc"]', s.ctaMergedDesc);
 
     /* 11b. Contact Section (Image 2) */
     setText('[data-key="contactSupportTitle"]', s.contactSupportTitle);

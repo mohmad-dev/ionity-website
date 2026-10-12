@@ -460,38 +460,38 @@ body.lang-ar .hero-actions {
 
 /* Base persistent glowing track */
 .laser-track {
-  stroke: #35EDCA;
+  stroke: rgba(0, 163, 255, 0.35);
   stroke-width: 2px;
-  opacity: 0.45;
-  filter: drop-shadow(0 0 8px #00F5D4);
+  opacity: 0.5;
+  filter: drop-shadow(0 0 10px rgba(0, 163, 255, 0.6));
 }
 
-/* High-energy pulsing laser surges */
+/* High-energy pulsing laser surges (slow and majestic) */
 .laser-beam {
-  stroke-dasharray: 450 950;
-  animation: drawBeam 6s linear infinite;
+  stroke-dasharray: 600 1400;
+  animation: drawBeamSlow 18s linear infinite;
 }
 
 .laser-beam-1 {
-  stroke: #00F5D4 !important;
-  stroke-width: 5px;
+  stroke: #00E5FF !important;
+  stroke-width: 4.5px;
   animation-delay: 0s;
-  animation-duration: 6s;
-  filter: drop-shadow(0 0 12px #00F5D4) drop-shadow(0 0 28px rgba(0, 245, 212, 0.9));
+  animation-duration: 18s;
+  filter: drop-shadow(0 0 12px #00B4D8) drop-shadow(0 0 30px rgba(0, 163, 255, 0.85));
 }
 
 .laser-beam-2 {
-  stroke: var(--color-accent) !important;
+  stroke: #00A3FF !important;
   stroke-width: 3.5px;
-  animation-delay: -3s;
-  animation-duration: 7.5s;
-  stroke-dasharray: 380 850;
-  filter: drop-shadow(0 0 10px #A8FF00) drop-shadow(0 0 24px rgba(168, 255, 0, 0.85));
+  animation-delay: -9s;
+  animation-duration: 24s;
+  stroke-dasharray: 500 1300;
+  filter: drop-shadow(0 0 10px #0077B6) drop-shadow(0 0 24px rgba(0, 102, 255, 0.75));
 }
 
-@keyframes drawBeam {
-  from { stroke-dashoffset: 2800; }
-  to   { stroke-dashoffset: -2800; }
+@keyframes drawBeamSlow {
+  from { stroke-dashoffset: 4000; }
+  to   { stroke-dashoffset: -4000; }
 }
 
 body.lang-ar .laser-background {
@@ -764,6 +764,133 @@ body.lang-ar .about-inner {
     margin-inline: auto;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════
+   TEAM SHOWCASE (5 Core Members in Studio/About)
+   ═══════════════════════════════════════════════════════════ */
+
+.team-showcase {
+  margin-top: clamp(4rem, 7vw, 6rem);
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.team-header {
+  text-align: center;
+  max-width: 600px;
+  margin-inline: auto;
+  margin-bottom: var(--space-8);
+}
+
+.team-title {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: var(--weight-bold);
+  color: var(--color-text);
+  margin-block: var(--space-2) var(--space-3);
+}
+
+.team-desc {
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+.team-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-4);
+  width: 100%;
+}
+
+.team-card {
+  background: rgba(16, 19, 16, 0.7);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6) var(--space-3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all var(--transition-base);
+  position: relative;
+}
+
+.team-card:hover {
+  border-color: #00E5FF;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 229, 255, 0.15);
+}
+
+.team-avatar-wrap {
+  position: relative;
+  width: 76px;
+  height: 76px;
+  margin-bottom: var(--space-4);
+}
+
+.team-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #00E5FF;
+  display: block;
+}
+
+.team-avatar-glow {
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 229, 255, 0.4) 0%, transparent 70%);
+  z-index: -1;
+  transition: opacity var(--transition-fast);
+}
+
+.team-card:hover .team-avatar-glow {
+  background: radial-gradient(circle, rgba(0, 229, 255, 0.7) 0%, transparent 70%);
+}
+
+.team-name {
+  font-size: 1.0625rem;
+  font-weight: var(--weight-semibold);
+  color: var(--color-text);
+  margin-bottom: 3px;
+}
+
+.team-role {
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-3);
+  line-height: 1.35;
+}
+
+.team-chip {
+  display: inline-block;
+  font-family: 'Inter', monospace;
+  font-size: 0.6875rem;
+  padding: 3px 8px;
+  border-radius: var(--radius-pill);
+  background: rgba(0, 229, 255, 0.08);
+  border: 1px solid rgba(0, 229, 255, 0.25);
+  color: #00E5FF;
+  letter-spacing: 0.03em;
+}
+
+@media (max-width: 1100px) {
+  .team-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .team-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 
 
 /* ═══════════════════════════════════════════════════════════

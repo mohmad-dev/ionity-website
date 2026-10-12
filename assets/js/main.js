@@ -130,19 +130,35 @@
   updateNavScroll();
 
   /* Active section highlighting */
-  var sections = document.querySelectorAll('[data-nav-id]');
-  var sidebarLinks = document.querySelectorAll('.sidebar-nav-item[data-target]');
-  var mobileLinks = document.querySelectorAll('.mobile-nav-link[data-target]');
-
   function updateActiveLink() {
-    var scrollPos = window.scrollY + 120;
-    var active = '';
+    var rawSections = document.querySelectorAll('section[data-nav-id]');
+    var sections = [];
+    var seen = {};
 
-    sections.forEach(function (section) {
-      if (section.offsetTop <= scrollPos) {
-        active = section.getAttribute('data-nav-id');
+    rawSections.forEach(function (s) {
+      var id = s.getAttribute('data-nav-id');
+      if (!seen[id]) {
+        seen[id] = true;
+        sections.push(s);
       }
     });
+
+    var scrollPos = window.scrollY + 180;
+    var active = 'home';
+
+    if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 80)) {
+      active = 'contact';
+    } else {
+      sections.forEach(function (section) {
+        var top = section.getBoundingClientRect().top + window.scrollY;
+        if (scrollPos >= top) {
+          active = section.getAttribute('data-nav-id');
+        }
+      });
+    }
+
+    var sidebarLinks = document.querySelectorAll('.sidebar-nav-item[data-target]');
+    var mobileLinks = document.querySelectorAll('.mobile-nav-link[data-target]');
 
     sidebarLinks.forEach(function (link) {
       link.classList.toggle('active', link.getAttribute('data-target') === active);
@@ -154,18 +170,24 @@
   }
 
   window.addEventListener('scroll', updateActiveLink, { passive: true });
+  window.addEventListener('resize', updateActiveLink, { passive: true });
   updateActiveLink();
 
   /* Smooth scroll for nav links */
   document.addEventListener('click', function (e) {
     var link = e.target.closest('a[href^="#"]');
     if (!link) return;
-    var id = link.getAttribute('href').slice(1);
+    var href = link.getAttribute('href');
+    if (!href || href === '#') return;
+    var id = href.slice(1);
     var target = document.getElementById(id);
     if (!target) return;
     e.preventDefault();
-    var top = target.getBoundingClientRect().top + window.scrollY - 30;
+    var top = target.getBoundingClientRect().top + window.scrollY - 20;
     window.scrollTo({ top: top, behavior: 'smooth' });
+    if (history.pushState) {
+      history.pushState(null, null, '#' + id);
+    }
   });
 
 

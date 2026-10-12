@@ -122,11 +122,23 @@ window.IONITY_STRINGS = {
     techCat3:   'قواعد البيانات',
     techCat4:   'السحابة والنشر',
 
+    /* Team */
+    teamLabel:   'فريق العمل',
+    teamTitle:   'خبراء وراء كل سطر برمجي',
+    teamDesc:    'نخبة متكاملة من المهندسين والمصممين المحترفين لتحويل رؤيتك إلى منتج استثنائي.',
+    memberRole1: 'كبير مهندسي النظم والبنية السحابية',
+    memberRole2: 'مهندس أول واجهات أمامية وتفاعل',
+    memberRole3: 'مصمم أنظمة المنتجات وتجربة المستخدم',
+    memberRole4: 'مطور برمجيات وأنظمة متكاملة',
+    memberRole5: 'مهندس عمليات الأداء والاستقرار',
+
     /* CTA */
-    ctaLabel:   'ابدأ الآن',
-    ctaTitle:   'لديك فكرة أو مشروع؟\nلنحوّله إلى حل رقمي.',
-    ctaBody:    'أخبرنا بما تحتاج إليه، وسنساعدك في تحديد الخطوة المناسبة للبدء.',
-    ctaPrimary: 'ابدأ مناقشة مشروعك',
+    ctaLabel:       'ابدأ الآن',
+    ctaTitle:       'لديك فكرة أو مشروع؟\nلنحوّله إلى حل رقمي.',
+    ctaBody:        'أخبرنا بما تحتاج إليه، وسنساعدك في تحديد الخطوة المناسبة للبدء.',
+    ctaPrimary:     'ابدأ مناقشة مشروعك',
+    ctaMergedTitle: 'لديك فكرة أو مشروع؟\nلنحوّله إلى حل رقمي.',
+    ctaMergedDesc:  'جاهزون لبدء مشروعك — اختر القناة الأنسب لك أو راسلنا مباشرة.',
     /* Contact Section (Image 2) */
     contactSupportTitle: 'مركز الدعم الفني',
     contactDirectTitle:  'تواصل مباشرة معنا',
@@ -261,11 +273,23 @@ window.IONITY_STRINGS = {
     techCat3:   'Databases',
     techCat4:   'Cloud & Deployment',
 
+    /* Team */
+    teamLabel:   'Engineering Team',
+    teamTitle:   'The minds behind every line of code',
+    teamDesc:    'A multidisciplinary team of engineers and designers crafting exceptional software.',
+    memberRole1: 'Lead Architect & Systems',
+    memberRole2: 'Senior Frontend Engineer',
+    memberRole3: 'Product & UI/UX Designer',
+    memberRole4: 'Fullstack Systems Developer',
+    memberRole5: 'DevOps & Performance Engineer',
+
     /* CTA */
-    ctaLabel:   'Get started',
-    ctaTitle:   'Have an idea or project?\nLet\'s turn it into a digital solution.',
-    ctaBody:    "Tell us what you need, and we'll help you determine the right next step to get started.",
-    ctaPrimary: 'Start discussing your project',
+    ctaLabel:       'Get started',
+    ctaTitle:       'Have an idea or project?\nLet\'s turn it into a digital solution.',
+    ctaBody:        "Tell us what you need, and we'll help you determine the right next step to get started.",
+    ctaPrimary:     'Start discussing your project',
+    ctaMergedTitle: 'Have an idea or project?\nLet\'s turn it into a digital solution.',
+    ctaMergedDesc:  'Ready to build — choose your preferred channel or message us directly.',
     /* Contact Section (Image 2) */
     contactSupportTitle: 'Technical Support Center',
     contactDirectTitle:  'Contact Us Directly',
