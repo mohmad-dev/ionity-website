@@ -61,11 +61,47 @@ window.IONITY_STRINGS = {
     service4Body:   'تصميم واجهات مستخدم مدروسة، صيانة مستمرة، ودعم فني متواصل لمنتجك.',
     service4Link:   'اعرف المزيد',
 
-    /* Solutions (Prototypes & Models) */
-    solutionsLabel: 'نماذج وأنظمة برمجية',
-    solutionsTitle: 'نماذج برمجية قابلة للتخصيص',
-    solutionsBody:  'نماذج أولية وأنظمة قابلة للتخصيص والتطوير السريع لتناسب احتياجات مشروعك ومرحلة نمو عملك.',
+    /* Products & Systems (Solutions) */
+    solutionsLabel: 'منتجاتنا وأنظمتنا',
+    solutionsTitle: 'أنظمة متخصصة مصممة لواقع الأعمال',
+    solutionsBody:  'حلول ومنصات برمجية طُوّرت بمعمارية رصينة لتنظيم العمليات، تعزيز الأمان الرقمي، وتسهيل الإدارة اليومية.',
     solutionsCta:   'ناقش مشروعك',
+
+    /* Product 1: Excellence CRM */
+    prod1Category:    'إدارة الأعمال · CRM & ERP',
+    prod1Title:       'Excellence CRM',
+    prod1Subtitle:    'نظام إكسلنس لإدارة الأعمال',
+    prod1Desc:        'منصة لإدارة المبيعات والعملاء والمخزون والمشتريات والحسابات في مكان واحد، مع متابعة الفواتير والمديونيات وحركة المنتجات من خلال لوحة تحكم موحّدة.',
+    prod1Chip1:       'إدارة المبيعات والفواتير',
+    prod1Chip2:       'العملاء والمديونيات',
+    prod1Chip3:       'المخزون والمشتريات',
+    prod1Chip4:       'الحسابات والتقارير',
+    prod1BtnExplore:  'استكشف النظام',
+    prod1BtnDemo:     'اطلب عرضًا تجريبيًا',
+
+    /* Product 2: ACER */
+    prod2Category:    'الأمن السيبراني · AI Security',
+    prod2Title:       'ACER',
+    prod2Subtitle:    'تحليل أمني أعمق، مع تحكم أكبر في بيئتك',
+    prod2Desc:        'مشروع للأمن السيبراني يعتمد على الذكاء الاصطناعي لدعم اختبار الاختراق وتحليل النتائج والتحقق من الثغرات، مع تصميم يستهدف التشغيل المحلي والبيئات التي تتطلب قيودًا صارمة على انتقال البيانات.',
+    prod2Chip1:       'تشغيل محلي عند توافر متطلباته',
+    prod2Chip2:       'تحليل سياق التطبيق ومنطق الأعمال',
+    prod2Chip3:       'التحقق من النتائج بأدلة قابلة للمراجعة',
+    prod2Chip4:       'تقارير فنية وتوصيات للمعالجة',
+    prod2BtnExplore:  'استكشف قدرات ACER',
+    prod2BtnDemo:     'ناقش متطلباتك الأمنية',
+
+    /* Product 3: Cura */
+    prod3Category:    'الحلول الطبية · Healthcare SaaS',
+    prod3Title:       'Cura',
+    prod3Subtitle:    'إدارة أكثر تنظيمًا للعيادات والمراكز الطبية',
+    prod3Desc:        'منصة لإدارة العمليات اليومية للمنشآت الطبية، مع تنظيم بيانات العيادات والمرضى والمواعيد وتدفقات العمل وفق احتياجات المنشأة.',
+    prod3Chip1:       'إدارة العيادات والأطباء',
+    prod3Chip2:       'ملفات المرضى والسجلات الطبية',
+    prod3Chip3:       'تنظيم المواعيد وتدفقات العمل',
+    prod3Chip4:       'صلاحيات منفصلة حسب الدور',
+    prod3BtnExplore:  'استكشف المنصة',
+    prod3BtnDemo:     'ناقش احتياجات منشأتك',
 
     /* About */
     aboutLabel:    'عن IONITY',
@@ -213,11 +249,47 @@ window.IONITY_STRINGS = {
     service4Body:   'Thoughtful interface design, ongoing maintenance, and continuous technical support.',
     service4Link:   'Learn more',
 
-    /* Solutions */
-    solutionsLabel: 'Software Prototypes & Systems',
-    solutionsTitle: 'Customizable Software Models',
-    solutionsBody:  'Customizable software prototypes and modular systems ready for rapid adaptation to fit your project requirements and business growth.',
+    /* Products & Systems (Solutions) */
+    solutionsLabel: 'Products & Systems',
+    solutionsTitle: 'Purpose-Built Systems for Real Business Needs',
+    solutionsBody:  'Specialized software solutions and platforms engineered with robust architecture to organize operations, bolster cybersecurity, and streamline daily management.',
     solutionsCta:   'Discuss your project',
+
+    /* Product 1: Excellence CRM */
+    prod1Category:    'Business Operations · CRM & ERP',
+    prod1Title:       'Excellence CRM',
+    prod1Subtitle:    'Business Management System',
+    prod1Desc:        'A unified platform to manage sales, clients, inventory, purchasing, and finances in one place, tracking invoices, balances, and stock movements through an integrated dashboard.',
+    prod1Chip1:       'Sales & Invoicing',
+    prod1Chip2:       'Clients & Receivables',
+    prod1Chip3:       'Inventory & Purchasing',
+    prod1Chip4:       'Accounts & Reports',
+    prod1BtnExplore:  'Explore System',
+    prod1BtnDemo:     'Request a Demo',
+
+    /* Product 2: ACER */
+    prod2Category:    'Cybersecurity · AI Security',
+    prod2Title:       'ACER',
+    prod2Subtitle:    'Deeper security analysis with greater control',
+    prod2Desc:        'An AI-driven cybersecurity research system supporting penetration testing, results analysis, and vulnerability verification, designed for on-premises deployments and data-restricted environments.',
+    prod2Chip1:       'Local On-Premises Deployment',
+    prod2Chip2:       'Context & Business Logic Analysis',
+    prod2Chip3:       'Auditable Evidence-Based Proof',
+    prod2Chip4:       'Technical Reports & Remediation',
+    prod2BtnExplore:  'Explore ACER Capabilities',
+    prod2BtnDemo:     'Discuss Security Requirements',
+
+    /* Product 3: Cura */
+    prod3Category:    'Healthcare Solutions · Healthcare SaaS',
+    prod3Title:       'Cura',
+    prod3Subtitle:    'Organized management for clinics & medical centers',
+    prod3Desc:        'A healthcare management platform for day-to-day clinical operations, organizing clinic data, patient records, appointments, and workflows according to facility requirements.',
+    prod3Chip1:       'Clinic & Physician Management',
+    prod3Chip2:       'Patient Files & EMR Records',
+    prod3Chip3:       'Appointments & Clinical Workflows',
+    prod3Chip4:       'Role-Based Granular Permissions',
+    prod3BtnExplore:  'Explore Platform',
+    prod3BtnDemo:     'Discuss Facility Needs',
 
     /* About */
     aboutLabel:    'About IONITY',
@@ -308,5 +380,237 @@ window.IONITY_STRINGS = {
     footerWhatsApp:     'WhatsApp',
     footerEmail:        'Email',
     copyright:          'Copyright © {year} IONITY. All Rights Reserved.'
+  }
+};
+
+/* ── Detailed Modal Data for Flagship Products ───────────────── */
+window.IONITY_PRODUCT_DETAILS = {
+  ar: {
+    excellence: {
+      badge: 'إدارة الأعمال · CRM & ERP',
+      title: 'Excellence CRM — نظام إكسلنس لإدارة الأعمال',
+      headline: 'إدارة أوضح لأعمالك اليومية.',
+      image: 'assets/images/products/excellence-crm.png',
+      intro: 'يجمع Excellence CRM العمليات التجارية الأساسية في نظام واحد، لمساعدة فريقك على متابعة المبيعات والعملاء والمخزون والحسابات دون الاعتماد على أدوات منفصلة لكل مهمة.',
+      sections: [
+        {
+          title: 'المبيعات والفواتير',
+          desc: 'أنشئ عروض الأسعار وأوامر البيع والفواتير، وتابع الخصومات والضرائب وحالة السداد. يمكنك تجهيز الفواتير للطباعة ومشاركة تفاصيلها مع العملاء عبر واتساب.'
+        },
+        {
+          title: 'العملاء والحسابات',
+          desc: 'احتفظ بملف لكل عميل، وتابع أرصدته ومديونياته وحدوده الائتمانية، وراجع كشوف الحساب والحركات المالية خلال فترة محددة.'
+        },
+        {
+          title: 'المخزون والمستودعات',
+          desc: 'تابع أرصدة المنتجات وحركات الدخول والخروج والتسويات الجردية، وحدد مستويات المخزون المنخفض للمساعدة في اكتشاف النواقص مبكرًا.'
+        },
+        {
+          title: 'المشتريات والموردون',
+          desc: 'سجّل فواتير المشتريات، وتابع حسابات الموردين والمدفوعات المستحقة، واربط عمليات التوريد بتحديثات المخزون وفق آلية النظام.'
+        },
+        {
+          title: 'الإدارة المالية',
+          desc: 'سجّل المقبوضات والمصروفات والمدفوعات، وتابع الأرصدة والحركات المالية من خلال سجلات موحّدة.'
+        },
+        {
+          title: 'التقارير ومؤشرات الأداء',
+          desc: 'راجع مؤشرات المبيعات والمخزون والمديونيات، واستفد من التقارير المالية المتاحة لفهم أداء النشاط بصورة أوضح.'
+        },
+        {
+          title: 'الصلاحيات ومتابعة العمليات',
+          desc: 'وزّع صلاحيات الوصول بحسب مسؤوليات المستخدمين، واحتفظ بسجل للعمليات التي ينفذها المستخدمون وفق الإمكانات المفعّلة في النظام.'
+        }
+      ],
+      conclusion: 'كل عملياتك الأساسية في مكان واحد، مع رؤية أوضح لحركة أعمالك.',
+      ctaText: 'اطلب عرضًا تجريبيًا',
+      ctaLink: '#contact'
+    },
+    acer: {
+      badge: 'الأمن السيبراني · AI Security',
+      title: 'ACER — Autonomous Cybersecurity & Exploitation Reasoning',
+      headline: 'اختبار أمني يتجاوز الفحص السطحي.',
+      image: 'assets/images/products/acer-cybersecurity.jpg',
+      intro: 'يهدف ACER إلى دعم فرق الأمن السيبراني في تحليل التطبيقات واكتشاف الثغرات المحتملة والتحقق منها بصورة منهجية، مع التركيز على قابلية مراجعة النتائج والتحكم في نطاق الاختبارات.',
+      sections: [
+        {
+          title: 'تحليل منهجي للثغرات',
+          desc: 'يعتمد التصور التشغيلي على مراحل تبدأ بالاستطلاع، ثم صياغة فرضية للثغرة، واختبارها ضمن النطاق المصرّح به، والتحقق من الأدلة قبل تصنيف النتيجة.'
+        },
+        {
+          title: 'فهم منطق الأعمال',
+          desc: 'يستهدف تحليل مسارات التطبيق وسلوك الوظائف، للمساعدة في اكتشاف مشكلات قد لا تظهر من خلال مطابقة الأنماط وحدها، مثل أخطاء الصلاحيات والوصول إلى موارد غير مصرح بها.'
+        },
+        {
+          title: 'التحقق من النتائج',
+          desc: 'يركز التصميم على إرفاق أدلة قابلة للمراجعة وإعادة الإنتاج بالنتائج المؤكدة، لتقليل الوقت الذي يقضيه فريق الأمن في فحص التنبيهات غير الدقيقة.'
+        },
+        {
+          title: 'التشغيل داخل بيئة العميل',
+          desc: 'يمكن تصميم النشر المحلي أو المعزول بحسب البنية التحتية ومتطلبات النظام الفعلية، بما يدعم المؤسسات التي تحتاج إلى التحكم في تدفق بياناتها.'
+        },
+        {
+          title: 'ضوابط الاختبار',
+          desc: 'تحديد النطاق المصرح به والسياسات المسموح بها، مع ضوابط تهدف إلى الحد من العمليات غير الآمنة أثناء الاختبار.'
+        },
+        {
+          title: 'سجلات وتقارير قابلة للمراجعة',
+          desc: 'توثيق العمليات والأدلة ذات الصلة، وإعداد تقارير فنية تساعد على فهم النتائج وتحديد خطوات المعالجة.'
+        }
+      ],
+      conclusion: 'رؤية أوضح للمخاطر، وأدلة أفضل لاتخاذ القرار الأمني.',
+      ctaText: 'ناقش متطلباتك الأمنية',
+      ctaLink: '#contact'
+    },
+    cura: {
+      badge: 'الحلول الطبية · Healthcare SaaS',
+      title: 'Cura — إدارة أكثر تنظيمًا للعيادات والمراكز الطبية',
+      headline: 'أدوات مترابطة لإدارة الرعاية اليومية.',
+      image: 'assets/images/products/cura-health.png',
+      intro: 'Cura منصة برمجية تستهدف مساعدة العيادات والمنشآت الطبية على تنظيم بياناتها وعملياتها اليومية من خلال واجهة موحّدة، مع إمكانية تنظيم العمل وفق هيكل المنشأة واحتياجات مستخدميها.',
+      sections: [
+        {
+          title: 'إدارة المنشآت والأطباء',
+          desc: 'تنظيم بيانات المنشأة والأطباء والمستخدمين، مع دعم بنية تناسب احتياجات العيادة الواحدة أو بيئات العمل متعددة الأطباء بحسب النسخة المتاحة.'
+        },
+        {
+          title: 'ملفات المرضى والسجلات الطبية',
+          desc: 'تنظيم بيانات المرضى ومعلوماتهم الطبية في ملفات مخصصة، وفق الصلاحيات والوظائف المتاحة في النظام.'
+        },
+        {
+          title: 'المواعيد وتنظيم سير العمل',
+          desc: 'دعم تنظيم المواعيد وتدفقات العمل اليومية للعيادة وتنسيق الاستشارات الطبية بكفاءة.'
+        },
+        {
+          title: 'الوصفات والعمليات الطبية',
+          desc: 'إدارة الوظائف المرتبطة بالوصفات والإجراءات الطبية إذا كانت متاحة ومختبرة في النسخة المعروضة.'
+        },
+        {
+          title: 'الصلاحيات وتنظيم الوصول',
+          desc: 'فصل الوصول إلى البيانات والوظائف وفق أدوار المستخدمين، بحسب إعدادات الصلاحيات المطبقة.'
+        },
+        {
+          title: 'بنية قابلة للتوسع',
+          desc: 'تصميم المنصة لدعم تنظيم البيانات بين المنشآت والمستخدمين وفق بنية النظام، مع مراعاة الفصل بين بيانات كل منشأة.'
+        }
+      ],
+      conclusion: 'نظام واحد يساعد على تنظيم العمل اليومي، مع بنية تناسب احتياجات المنشأة.',
+      ctaText: 'ناقش احتياجات منشأتك',
+      ctaLink: '#contact'
+    }
+  },
+  en: {
+    excellence: {
+      badge: 'Business Operations · CRM & ERP',
+      title: 'Excellence CRM — Business Management System',
+      headline: 'Clearer control over your daily operations.',
+      image: 'assets/images/products/excellence-crm.png',
+      intro: 'Excellence CRM unifies core business operations in one platform, helping your team track sales, clients, inventory, and finances without relying on fragmented tools.',
+      sections: [
+        {
+          title: 'Sales & Invoicing',
+          desc: 'Generate quotations, sales orders, and invoices while monitoring discounts, taxes, and payment status. Ready for print and instant WhatsApp dispatch.'
+        },
+        {
+          title: 'Clients & Accounts',
+          desc: 'Maintain individual client profiles, monitor credit limits and balances, and review comprehensive account statements over any timeframe.'
+        },
+        {
+          title: 'Inventory & Warehousing',
+          desc: 'Track product stock, in/out movements, and audit adjustments. Set minimum stock thresholds to identify shortages proactively.'
+        },
+        {
+          title: 'Purchasing & Suppliers',
+          desc: 'Log purchase bills, oversee supplier balances and due payables, and automatically sync procurement with inventory records.'
+        },
+        {
+          title: 'Financial Management',
+          desc: 'Record receipts, operational expenses, and outgoing disbursements through unified ledgers with precise arithmetic reliability.'
+        },
+        {
+          title: 'Reports & Performance Metrics',
+          desc: 'Review sales velocity, stock levels, and receivables metrics to gain meaningful visibility into business health and profitability.'
+        },
+        {
+          title: 'Permissions & Audit Trails',
+          desc: 'Assign granular user roles and maintain activity logs according to enabled permissions and organizational responsibilities.'
+        }
+      ],
+      conclusion: 'All essential operations in one place, providing clearer insight into your business momentum.',
+      ctaText: 'Request a Demo',
+      ctaLink: '#contact'
+    },
+    acer: {
+      badge: 'Cybersecurity · AI Security',
+      title: 'ACER — Autonomous Cybersecurity & Exploitation Reasoning',
+      headline: 'Security assessments that go beyond surface scanning.',
+      image: 'assets/images/products/acer-cybersecurity.jpg',
+      intro: 'ACER is designed to empower security teams in analyzing applications, uncovering vulnerabilities systematically, and validating findings with auditable evidence.',
+      sections: [
+        {
+          title: 'Methodical Vulnerability Analysis',
+          desc: 'Operates through systematic phases: reconnaissance, hypothesis formulation, authorized scoped testing, and rigorous proof validation before classification.'
+        },
+        {
+          title: 'Business Logic Understanding',
+          desc: 'Analyzes application workflows and operational paths to pinpoint nuanced logic flaws and authorization loopholes that signature scanners miss.'
+        },
+        {
+          title: 'Evidence-Backed Verification',
+          desc: 'Attaches reproducible, verifiable proof-of-concept evidence to validated findings, eliminating wasted analyst hours on noisy false alerts.'
+        },
+        {
+          title: 'On-Premises & Controlled Deployment',
+          desc: 'Architected for local or isolated infrastructure deployment, accommodating organizations with stringent data sovereignty and network boundaries.'
+        },
+        {
+          title: 'Testing Guardrails & Safety Policies',
+          desc: 'Enforces strict testing boundaries and security policies designed to prevent destructive operations during active assessments.'
+        },
+        {
+          title: 'Auditable Records & Technical Reports',
+          desc: 'Maintains comprehensive activity logs and delivers actionable technical reports paired with clear remediation guidance.'
+        }
+      ],
+      conclusion: 'Sharper risk visibility and better evidence for informed cybersecurity decisions.',
+      ctaText: 'Discuss Your Security Requirements',
+      ctaLink: '#contact'
+    },
+    cura: {
+      badge: 'Healthcare Solutions · Healthcare SaaS',
+      title: 'Cura — Medical Center & Clinic Management',
+      headline: 'Connected tools for daily healthcare administration.',
+      image: 'assets/images/products/cura-health.png',
+      intro: 'Cura is a software platform designed to help medical clinics and healthcare facilities organize daily operations and records through a unified interface tailored to facility workflows.',
+      sections: [
+        {
+          title: 'Facility & Physician Administration',
+          desc: 'Organize clinics, doctors, and staff with support for single-practice setups or multi-physician environments.'
+        },
+        {
+          title: 'Patient Records & EMR',
+          desc: 'Centralize patient medical histories, clinical records, and documentation securely based on assigned role permissions.'
+        },
+        {
+          title: 'Appointments & Workflow Management',
+          desc: 'Facilitate appointment booking, daily schedules, and streamlined patient journey coordination across the clinic.'
+        },
+        {
+          title: 'Prescriptions & Clinical Operations',
+          desc: 'Manage medical prescription workflows and routine procedural documentation in line with clinical needs.'
+        },
+        {
+          title: 'Role-Based Access Control',
+          desc: 'Segregate administrative, clinical, and reception capabilities according to defined user responsibilities.'
+        },
+        {
+          title: 'Scalable Infrastructure',
+          desc: 'Engineered for seamless organization of data across facilities and users with complete data isolation.'
+        }
+      ],
+      conclusion: 'A unified system supporting daily medical administration with an architecture built to adapt.',
+      ctaText: 'Discuss Your Facility Needs',
+      ctaLink: '#contact'
+    }
   }
 };

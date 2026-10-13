@@ -192,6 +192,14 @@
     qsa('[name="email"]').forEach(function (el)   { el.placeholder = emailPh; });
     qsa('[name="message"]').forEach(function (el) { el.placeholder = messagePh; });
 
+    /* 14b. Generic data-key auto-translator */
+    qsa('[data-key]').forEach(function (el) {
+      var k = el.getAttribute('data-key');
+      if (s[k] !== undefined && typeof s[k] === 'string') {
+        el.textContent = s[k];
+      }
+    });
+
     /* 15. Save preference */
     localStorage.setItem('ionity-lang', lang);
     currentLang = lang;
