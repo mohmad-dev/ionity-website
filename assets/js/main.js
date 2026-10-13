@@ -908,4 +908,142 @@
     });
   })();
 
+
+  /* ─────────────────────────────────────────────────
+     13. Interactive Product Details Modal Controller
+  ───────────────────────────────────────────────── */
+  (function initProductDetailsModal() {
+    var modal = document.getElementById('product-details-modal');
+    if (!modal) return;
+
+    var badgeEl      = document.getElementById('modal-product-badge');
+    var titleEl      = document.getElementById('modal-product-title');
+    var headlineEl   = document.getElementById('modal-product-headline');
+    var imgEl        = document.getElementById('modal-product-img');
+    var mediaWrap    = modal.querySelector('.product-modal-media-wrap');
+    var introEl      = document.getElementById('modal-product-intro');
+    var sectionsEl   = document.getElementById('modal-product-sections');
+    var conclusionEl = document.getElementById('modal-product-conclusion');
+    var ctaEl        = document.getElementById('modal-product-cta');
+
+    var currentProductKey = null;
+    var lastFocusedElement = null;
+
+    function getLang() {
+      return document.documentElement.lang === 'en' ? 'en' : 'ar';
+    }
+
+    function renderProductModal(productKey) {
+      if (!window.IONITY_PRODUCT_DETAILS) return;
+      var lang = getLang();
+      var data = window.IONITY_PRODUCT_DETAILS[lang] && window.IONITY_PRODUCT_DETAILS[lang][productKey];
+      if (!data) return;
+
+      currentProductKey = productKey;
+
+      if (badgeEl) badgeEl.textContent = data.badge || '';
+      if (titleEl) titleEl.textContent = data.title || '';
+      if (headlineEl) headlineEl.textContent = data.headline || '';
+
+      if (imgEl) {
+        imgEl.src = data.image || '';
+        imgEl.alt = data.title || '';
+      }
+
+      if (mediaWrap) {
+        if (productKey === 'cura') {
+          mediaWrap.classList.add('is-contain');
+        } else {
+          mediaWrap.classList.remove('is-contain');
+        }
+      }
+
+      if (introEl) introEl.textContent = data.intro || '';
+
+      if (sectionsEl) {
+        sectionsEl.innerHTML = '';
+        if (Array.isArray(data.sections)) {
+          data.sections.forEach(function (sec) {
+            var col = document.createElement('div');
+            col.className = 'product-pillar-item';
+            var h4 = document.createElement('h4');
+            h4.className = 'product-pillar-title';
+            h4.textContent = sec.title;
+            var p = document.createElement('p');
+            p.className = 'product-pillar-desc';
+            p.textContent = sec.desc;
+            col.appendChild(h4);
+            col.appendChild(p);
+            sectionsEl.appendChild(col);
+          });
+        }
+      }
+
+      if (conclusionEl) conclusionEl.textContent = data.conclusion || '';
+
+      if (ctaEl) {
+        ctaEl.textContent = data.ctaText || (lang === 'ar' ? 'تواصل معنا' : 'Contact Us');
+        ctaEl.setAttribute('href', data.ctaLink || '#contact');
+      }
+    }
+
+    function openModal(productKey) {
+      lastFocusedElement = document.activeElement;
+      renderProductModal(productKey);
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+
+      var closeBtn = modal.querySelector('.product-modal-close');
+      if (closeBtn) closeBtn.focus();
+    }
+
+    function closeModal() {
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+        lastFocusedElement.focus();
+      }
+    }
+
+    /* Open click listeners */
+    document.addEventListener('click', function (e) {
+      var trigger = e.target.closest('[data-open-modal]');
+      if (trigger) {
+        e.preventDefault();
+        var key = trigger.getAttribute('data-open-modal');
+        if (key) openModal(key);
+      }
+    });
+
+    /* Close click listeners */
+    modal.addEventListener('click', function (e) {
+      if (e.target.closest('[data-action="close-product-modal"]')) {
+        e.preventDefault();
+        closeModal();
+      }
+      /* If clicking CTA button inside modal, close modal to allow smooth scroll to #contact */
+      if (e.target.closest('#modal-product-cta')) {
+        closeModal();
+      }
+    });
+
+    /* Close on Escape key */
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+        closeModal();
+      }
+    });
+
+    /* Re-render if language toggles */
+    document.addEventListener('click', function (e) {
+      if (e.target.closest('[data-action="toggle-lang"]') && modal.classList.contains('is-open') && currentProductKey) {
+        setTimeout(function () {
+          renderProductModal(currentProductKey);
+        }, 60);
+      }
+    });
+  })();
+
 })();
