@@ -897,6 +897,10 @@ body.lang-ar .about-inner {
   display: block;
 }
 
+.founder-avatar {
+  object-position: center 20% !important;
+}
+
 .team-avatar-glow {
   position: absolute;
   inset: -4px;
