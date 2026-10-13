@@ -139,7 +139,7 @@ window.IONITY_STRINGS = {
     memberName1:     'عبد الرحمن',
     memberRole1:     'مهندس تطوير الأنظمة والمنصات المتكاملة',
     memberName2:     'محمد',
-    memberRole2:     'كبير مهندسي ومعماريي الأنظمة والذكاء الاصطناعي',
+    memberRole2:     'كبير مهندسي الأنظمة والذكاء الاصطناعي',
     memberName3:     'أحمد',
     memberRole3:     'مسؤول التسويق الرقمي والمبيعات',
     memberName4:     'رباب',
@@ -391,6 +391,7 @@ window.IONITY_PRODUCT_DETAILS = {
       title: 'Excellence CRM — نظام إكسلنس لإدارة الأعمال',
       headline: 'إدارة أوضح لأعمالك اليومية.',
       image: 'assets/images/products/excellence-crm.png',
+      tags: ['إدارة المبيعات والفواتير', 'العملاء والمديونيات', 'المخزون والمشتريات', 'الحسابات والتقارير'],
       intro: 'يجمع Excellence CRM العمليات التجارية الأساسية في نظام واحد، لمساعدة فريقك على متابعة المبيعات والعملاء والمخزون والحسابات دون الاعتماد على أدوات منفصلة لكل مهمة.',
       sections: [
         {
@@ -431,6 +432,7 @@ window.IONITY_PRODUCT_DETAILS = {
       title: 'ACER — Autonomous Cybersecurity & Exploitation Reasoning',
       headline: 'اختبار أمني يتجاوز الفحص السطحي.',
       image: 'assets/images/products/acer-cybersecurity.jpg',
+      tags: ['تشغيل محلي عند توافر متطلباته', 'تحليل سياق التطبيق ومنطق الأعمال', 'التحقق من النتائج بأدلة قابلة للمراجعة', 'تقارير فنية وتوصيات للمعالجة'],
       intro: 'يهدف ACER إلى دعم فرق الأمن السيبراني في تحليل التطبيقات واكتشاف الثغرات المحتملة والتحقق منها بصورة منهجية، مع التركيز على قابلية مراجعة النتائج والتحكم في نطاق الاختبارات.',
       sections: [
         {
@@ -467,6 +469,7 @@ window.IONITY_PRODUCT_DETAILS = {
       title: 'Cura — إدارة أكثر تنظيمًا للعيادات والمراكز الطبية',
       headline: 'أدوات مترابطة لإدارة الرعاية اليومية.',
       image: 'assets/images/products/cura-health.png',
+      tags: ['إدارة العيادات والأطباء', 'ملفات المرضى والسجلات الطبية', 'تنظيم المواعيد وتدفقات العمل', 'صلاحيات منفصلة حسب الدور'],
       intro: 'Cura منصة برمجية تستهدف مساعدة العيادات والمنشآت الطبية على تنظيم بياناتها وعملياتها اليومية من خلال واجهة موحّدة، مع إمكانية تنظيم العمل وفق هيكل المنشأة واحتياجات مستخدميها.',
       sections: [
         {
@@ -505,6 +508,7 @@ window.IONITY_PRODUCT_DETAILS = {
       title: 'Excellence CRM — Business Management System',
       headline: 'Clearer control over your daily operations.',
       image: 'assets/images/products/excellence-crm.png',
+      tags: ['Sales & Invoicing', 'Clients & Receivables', 'Inventory & Purchasing', 'Accounts & Reports'],
       intro: 'Excellence CRM unifies core business operations in one platform, helping your team track sales, clients, inventory, and finances without relying on fragmented tools.',
       sections: [
         {
@@ -545,6 +549,7 @@ window.IONITY_PRODUCT_DETAILS = {
       title: 'ACER — Autonomous Cybersecurity & Exploitation Reasoning',
       headline: 'Security assessments that go beyond surface scanning.',
       image: 'assets/images/products/acer-cybersecurity.jpg',
+      tags: ['Local On-Premises Deployment', 'Context & Business Logic Analysis', 'Auditable Evidence-Based Proof', 'Technical Reports & Remediation'],
       intro: 'ACER is designed to empower security teams in analyzing applications, uncovering vulnerabilities systematically, and validating findings with auditable evidence.',
       sections: [
         {
@@ -581,6 +586,7 @@ window.IONITY_PRODUCT_DETAILS = {
       title: 'Cura — Medical Center & Clinic Management',
       headline: 'Connected tools for daily healthcare administration.',
       image: 'assets/images/products/cura-health.png',
+      tags: ['Clinic & Physician Management', 'Patient Files & EMR Records', 'Appointments & Clinical Workflows', 'Role-Based Granular Permissions'],
       intro: 'Cura is a software platform designed to help medical clinics and healthcare facilities organize daily operations and records through a unified interface tailored to facility workflows.',
       sections: [
         {

@@ -919,6 +919,7 @@
     var badgeEl      = document.getElementById('modal-product-badge');
     var titleEl      = document.getElementById('modal-product-title');
     var headlineEl   = document.getElementById('modal-product-headline');
+    var tagsEl       = document.getElementById('modal-product-tags');
     var imgEl        = document.getElementById('modal-product-img');
     var mediaWrap    = modal.querySelector('.product-modal-media-wrap');
     var introEl      = document.getElementById('modal-product-intro');
@@ -944,6 +945,21 @@
       if (badgeEl) badgeEl.textContent = data.badge || '';
       if (titleEl) titleEl.textContent = data.title || '';
       if (headlineEl) headlineEl.textContent = data.headline || '';
+
+      if (tagsEl) {
+        tagsEl.innerHTML = '';
+        if (Array.isArray(data.tags) && data.tags.length) {
+          data.tags.forEach(function (tagText) {
+            var chip = document.createElement('span');
+            chip.className = 'product-modal-tag-chip';
+            chip.textContent = tagText;
+            tagsEl.appendChild(chip);
+          });
+          tagsEl.style.display = 'flex';
+        } else {
+          tagsEl.style.display = 'none';
+        }
+      }
 
       if (imgEl) {
         imgEl.src = data.image || '';
