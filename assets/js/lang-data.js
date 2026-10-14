@@ -91,15 +91,15 @@ window.IONITY_STRINGS = {
     prod2BtnExplore:  'استكشف قدرات ACER',
     prod2BtnDemo:     'ناقش متطلباتك الأمنية',
 
-    /* Product 3: Cura */
+    /* Product 3: Qura */
     prod3Category:    'الحلول الطبية · Healthcare SaaS',
-    prod3Title:       'Cura',
-    prod3Subtitle:    'إدارة أكثر تنظيمًا للعيادات والمراكز الطبية',
-    prod3Desc:        'منصة لإدارة العمليات اليومية للمنشآت الطبية، مع تنظيم بيانات العيادات والمرضى والمواعيد وتدفقات العمل وفق احتياجات المنشأة.',
-    prod3Chip1:       'إدارة العيادات والأطباء',
-    prod3Chip2:       'ملفات المرضى والسجلات الطبية',
-    prod3Chip3:       'تنظيم المواعيد وتدفقات العمل',
-    prod3Chip4:       'صلاحيات منفصلة حسب الدور',
+    prod3Title:       'Qura',
+    prod3Subtitle:    'منصة إدارة المنشآت والعيادات الطبية الشاملة',
+    prod3Desc:        'منظومة سحابية متكاملة لإدارة المنشآت الطبية بمختلف أحجامها، من العيادات الفردية إلى المراكز الطبية الكبرى، تشمل المواعيد، السجلات الطبية (EMR)، الروشتة الذكية، الفوترة (ZATCA)، وبوابة المريض.',
+    prod3Chip1:       'إدارة المواعيد والانتظار',
+    prod3Chip2:       'السجلات الطبية EMR',
+    prod3Chip3:       'الفوترة والتحصيل ZATCA',
+    prod3Chip4:       'تقارير ذكية وبوابة المريض',
     prod3BtnExplore:  'استكشف المنصة',
     prod3BtnDemo:     'ناقش احتياجات منشأتك',
 
@@ -279,15 +279,15 @@ window.IONITY_STRINGS = {
     prod2BtnExplore:  'Explore ACER Capabilities',
     prod2BtnDemo:     'Discuss Security Requirements',
 
-    /* Product 3: Cura */
+    /* Product 3: Qura */
     prod3Category:    'Healthcare Solutions · Healthcare SaaS',
-    prod3Title:       'Cura',
-    prod3Subtitle:    'Organized management for clinics & medical centers',
-    prod3Desc:        'A healthcare management platform for day-to-day clinical operations, organizing clinic data, patient records, appointments, and workflows according to facility requirements.',
-    prod3Chip1:       'Clinic & Physician Management',
-    prod3Chip2:       'Patient Files & EMR Records',
-    prod3Chip3:       'Appointments & Clinical Workflows',
-    prod3Chip4:       'Role-Based Granular Permissions',
+    prod3Title:       'Qura',
+    prod3Subtitle:    'Comprehensive Medical Center & Clinic Management Platform',
+    prod3Desc:        'A scalable, cloud-native healthcare management platform designed for everything from solo practices to multi-specialty medical centers. Featuring smart scheduling, comprehensive EMR, e-prescriptions, ZATCA-compliant billing, and an integrated patient portal.',
+    prod3Chip1:       'Smart Booking & Scheduling',
+    prod3Chip2:       'Comprehensive EMR',
+    prod3Chip3:       'POS & ZATCA Billing',
+    prod3Chip4:       'Executive Analytics & Portal',
     prod3BtnExplore:  'Explore Platform',
     prod3BtnDemo:     'Discuss Facility Needs',
 
@@ -465,39 +465,55 @@ window.IONITY_PRODUCT_DETAILS = {
       ctaLink: '#contact'
     },
     cura: {
-      badge: 'الحلول الطبية · Healthcare SaaS',
-      title: 'Cura — إدارة أكثر تنظيمًا للعيادات والمراكز الطبية',
-      headline: 'أدوات مترابطة لإدارة الرعاية اليومية.',
-      image: 'assets/images/products/cura-health.png',
-      tags: ['إدارة العيادات والأطباء', 'ملفات المرضى والسجلات الطبية', 'تنظيم المواعيد وتدفقات العمل', 'صلاحيات منفصلة حسب الدور'],
-      intro: 'Cura منصة برمجية تستهدف مساعدة العيادات والمنشآت الطبية على تنظيم بياناتها وعملياتها اليومية من خلال واجهة موحّدة، مع إمكانية تنظيم العمل وفق هيكل المنشأة واحتياجات مستخدميها.',
+      badge: 'الحلول والأنظمة الطبية · Healthcare SaaS',
+      title: 'Qura — إدارة طبية متكاملة',
+      headline: 'من العيادة الفردية إلى المراكز الطبية الكبرى.',
+      image: 'assets/images/products/qura-health.jpg',
+      tags: ['إدارة المواعيد والانتظار', 'السجلات الطبية EMR', 'الروشتة الذكية والأدوية', 'الفوترة ونقاط البيع ZATCA', 'بوابة المريض الذكية', 'التأمين والمطالبات'],
+      intro: 'منظومة سحابية متطورة لإدارة المنشآت الطبية مبنية على بنية Serverless حديثة (Next.js 15 & Neon PostgreSQL & Redis). صُممت لتلبي متطلبات العيادات المستقلة وصولاً إلى المجمعات والمراكز الطبية الكبرى مع عزل تام لبيانات المنشآت واستيعاب آلاف الطلبات المتزامنة.',
       sections: [
         {
-          title: 'إدارة المنشآت والأطباء',
-          desc: 'تنظيم بيانات المنشأة والأطباء والمستخدمين، مع دعم بنية تناسب احتياجات العيادة الواحدة أو بيئات العمل متعددة الأطباء بحسب النسخة المتاحة.'
+          title: 'الطاقة الاستيعابية والأداء السحابي',
+          desc: 'بنية تحتية سحابية هجينة غير متزامنة مبنية على Next.js 15 و Neon Serverless مع PgBouncer و Upstash Redis. تستوعب أكثر من 5,000 إلى 10,000 طلب متزامن في الثانية، وتدير ملايين السجلات مع زمن استجابة فائق (50 - 150ms).'
         },
         {
-          title: 'ملفات المرضى والسجلات الطبية',
-          desc: 'تنظيم بيانات المرضى ومعلوماتهم الطبية في ملفات مخصصة، وفق الصلاحيات والوظائف المتاحة في النظام.'
+          title: '3 مستويات تهيئة تناسب جميع المنشآت',
+          desc: 'يتكيف النظام تلقائياً عبر محرك تهيئة المنشآت ليدعم: 1) العيادة الفردية لتجربة سريعة ومبسطة، 2) العيادات التخصصية المشتركة مع تقسيم الغرف والأطباء، 3) المجمع الطبي المتكامل متعدد الفروع مع إدارة التنويم، الأسِرّة، وغرف العمليات.'
         },
         {
-          title: 'المواعيد وتنظيم سير العمل',
-          desc: 'دعم تنظيم المواعيد وتدفقات العمل اليومية للعيادة وتنسيق الاستشارات الطبية بكفاءة.'
+          title: 'محرك الحجز وجدولة المواعيد الذكي',
+          desc: 'خوارزمية ذكية لمنع التعارض الزمني التلقائي، دعم المواعيد الدورية، فترات التنظيف والاستراحة بين المواعيد، إدارة قائمة الانتظار الذكية وتنبيهات الإلغاء، وإدارة إجازات واستثناءات الأطباء.'
         },
         {
-          title: 'الوصفات والعمليات الطبية',
-          desc: 'إدارة الوظائف المرتبطة بالوصفات والإجراءات الطبية إذا كانت متاحة ومختبرة في النسخة المعروضة.'
+          title: 'السجل الطبي الإلكتروني الشامل (EMR)',
+          desc: 'ملف سريري متكامل يشمل التاريخ المرضي، الحساسية، التاريخ الجراحي، الأمراض المزمنة، مسار الفحص والشكوى الرئيسية، العلامات الحيوية اللحظية، مع تشفير البيانات الطبية الحساسة بنظام AES-256.'
         },
         {
-          title: 'الصلاحيات وتنظيم الوصول',
-          desc: 'فصل الوصول إلى البيانات والوظائف وفق أدوار المستخدمين، بحسب إعدادات الصلاحيات المطبقة.'
+          title: 'الروشتة الطبية الذكية ومحرك الأدوية',
+          desc: 'قاعدة بيانات دوائية تكشف التفاعلات الخطرة، طباعة حرارية سريعة (80mm) ورسمية (A4)، باركود و QR Code لمنع التزوير، ونظام طلب إعادة الصرف أونلاين.'
         },
         {
-          title: 'بنية قابلة للتوسع',
-          desc: 'تصميم المنصة لدعم تنظيم البيانات بين المنشآت والمستخدمين وفق بنية النظام، مع مراعاة الفصل بين بيانات كل منشأة.'
+          title: 'الفوترة الطبية ونقاط البيع (ZATCA)',
+          desc: 'نظام كاشير فوري بضغطة زر، احتساب تلقائي للضريبة والخصومات، حاسبة المردود النقدي، توليد QR متوافق مع الفاتورة الإلكترونية (ZATCA Phase 1)، ومشاركة الفواتير مباشرة عبر WhatsApp.'
+        },
+        {
+          title: 'بوابة المريض الذكية (/portal)',
+          desc: 'بوابة برابط مخصص لكل عيادة ودخول آمن برمز التحقق. تتيح للمريض حجز ومتابعة المواعيد، استعراض الروشتات، نتائج التحاليل، صور وتقارير الأشعة، وتنزيل الفواتير وسندات القبض.'
+        },
+        {
+          title: 'المختبر والأشعة والمستندات الطبية',
+          desc: 'إدارة نتائج التحاليل المخبرية، أرشيف رقمي لصور وتقارير الأشعة، ورفع التقارير الطبية بصيغ PDF والصور بطريقة مشفرة وسريعة.'
+        },
+        {
+          title: 'التأمين الطبي، الصيدلية، والمخزون',
+          desc: 'إدارة وثائق التأمين وشركات التأمين ومتابعة المطالبات، إلى جانب نظام مخزون متكامل لتتبع الأدوية والمستلزمات، دفعات الصيدلية، وتواريخ الصلاحية.'
+        },
+        {
+          title: 'الصلاحيات RBAC، التدقيق، ونبض العيادة',
+          desc: 'صلاحيات متدرجة (مدير نظام، مدير عيادة، طبيب، تمريض، استقبال)، لوحة نبض العيادة اللحظية لمتابعة الإيرادات والانتظار، وسجل تدقيق شامل (Audit Logs) مع حماية خصوصية بيانات المرضى.'
         }
       ],
-      conclusion: 'نظام واحد يساعد على تنظيم العمل اليومي، مع بنية تناسب احتياجات المنشأة.',
+      conclusion: 'منظومة طبية فائقة المرونة والأمان تنظم المنشأة من الاستقبال والتشخيص إلى الفوترة والإدارة العليا.',
       ctaText: 'ناقش احتياجات منشأتك',
       ctaLink: '#contact'
     }
@@ -582,39 +598,55 @@ window.IONITY_PRODUCT_DETAILS = {
       ctaLink: '#contact'
     },
     cura: {
-      badge: 'Healthcare Solutions · Healthcare SaaS',
-      title: 'Cura — Medical Center & Clinic Management',
-      headline: 'Connected tools for daily healthcare administration.',
-      image: 'assets/images/products/cura-health.png',
-      tags: ['Clinic & Physician Management', 'Patient Files & EMR Records', 'Appointments & Clinical Workflows', 'Role-Based Granular Permissions'],
-      intro: 'Cura is a software platform designed to help medical clinics and healthcare facilities organize daily operations and records through a unified interface tailored to facility workflows.',
+      badge: 'Healthcare Systems & SaaS · Medical Cloud',
+      title: 'Qura — Integrated Healthcare Management',
+      headline: 'From Solo Practices to Large Multi-Specialty Medical Centers.',
+      image: 'assets/images/products/qura-health.jpg',
+      tags: ['Smart Booking & Queue', 'Comprehensive EMR', 'Smart e-Prescriptions', 'POS & ZATCA Invoicing', 'Smart Patient Portal', 'Insurance & Claims'],
+      intro: 'A modern, cloud-native medical ERP engineered on an asynchronous serverless architecture (Next.js 15, Neon Serverless PostgreSQL, PgBouncer & Upstash Redis). Built to scale effortlessly from solo clinics to hospital networks with strict multi-tenant data isolation and high throughput.',
       sections: [
         {
-          title: 'Facility & Physician Administration',
-          desc: 'Organize clinics, doctors, and staff with support for single-practice setups or multi-physician environments.'
+          title: 'High Scalability & Sub-150ms Latency',
+          desc: 'Architected with Next.js 15 Edge handlers, Neon Serverless DB, and Redis caching. Seamlessly sustains 5,000 to 10,000 concurrent RPS across millions of records with 50-150ms response times via PPR and Streaming.'
         },
         {
-          title: 'Patient Records & EMR',
-          desc: 'Centralize patient medical histories, clinical records, and documentation securely based on assigned role permissions.'
+          title: '3 Dynamic Facility Operational Modes',
+          desc: 'Dynamically adapts via useFacilityConfig: 1) Solo Practice for lean workflows, 2) Multi-Specialty Clinics with doctor splits and room rosters, and 3) Integrated Medical Centers supporting branches, inpatient beds, and OR suites.'
         },
         {
-          title: 'Appointments & Workflow Management',
-          desc: 'Facilitate appointment booking, daily schedules, and streamlined patient journey coordination across the clinic.'
+          title: 'Smart Scheduling & Conflict Prevention',
+          desc: 'Automated conflict detection algorithms, recurring visits, buffer time allocation between appointments, intelligent waitlists with auto-fill notifications, and clinician leave management.'
         },
         {
-          title: 'Prescriptions & Clinical Operations',
-          desc: 'Manage medical prescription workflows and routine procedural documentation in line with clinical needs.'
+          title: 'Comprehensive EMR & Clinical Records',
+          desc: 'Holistic clinical charting: chronic conditions, chief complaints, real-time vitals monitoring, odontogram and lesion mapping, and AES-256 field-level encryption for sensitive health data.'
         },
         {
-          title: 'Role-Based Access Control',
-          desc: 'Segregate administrative, clinical, and reception capabilities according to defined user responsibilities.'
+          title: 'Smart e-Prescriptions & Formulary',
+          desc: 'Integrated medication database with dangerous interaction alerts, dual thermal (80mm) and standard A4 printing, anti-forgery QR codes, and digital refill requests.'
         },
         {
-          title: 'Scalable Infrastructure',
-          desc: 'Engineered for seamless organization of data across facilities and users with complete data isolation.'
+          title: 'POS & ZATCA-Compliant Billing',
+          desc: 'One-click cashiering, automated 15% VAT and discounts, cash return calculator, ZATCA Phase 1 QR generation, and one-tap WhatsApp receipt dispatch.'
+        },
+        {
+          title: 'Dedicated Patient Portal (/portal/[clinicSlug])',
+          desc: 'Custom clinic-branded portal with secure phone OTP authentication, allowing patients to book visits, review lab and radiology reports, and download invoices.'
+        },
+        {
+          title: 'Lab & Radiology Diagnostics Suite',
+          desc: 'Complete tracking of lab tests (pending, reviewed, abnormal), digital radiology archives, and rapid, secure medical document attachments.'
+        },
+        {
+          title: 'Inpatient Beds, Surgery, & Pharmacy Inventory',
+          desc: 'Bed admissions management, surgical theater scheduling, and pharmacy stock control tracking batches, expiry dates, and purchase orders.'
+        },
+        {
+          title: '3-Tier RBAC & Real-Time Clinic Analytics',
+          desc: 'Granular permissions (Super Admin, Clinic Admin, Doctor, Nurse, Receptionist), live clinical performance monitor, and strict audit logging with Sentry PHI redaction.'
         }
       ],
-      conclusion: 'A unified system supporting daily medical administration with an architecture built to adapt.',
+      conclusion: 'A resilient, state-of-the-art medical platform unifying care delivery, administration, and financial governance.',
       ctaText: 'Discuss Your Facility Needs',
       ctaLink: '#contact'
     }
