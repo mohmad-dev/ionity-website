@@ -75,22 +75,32 @@
   /* ─────────────────────────────────────────────────
      1. Preloader
   ───────────────────────────────────────────────── */
+  var preloaderDismissed = false;
   function hidePreloader() {
+    if (preloaderDismissed) return;
+    preloaderDismissed = true;
     var el = document.querySelector('.preloader');
     if (!el) return;
     el.classList.add('is-hidden');
     setTimeout(function () {
-      if (el.parentNode) el.parentNode.removeChild(el);
-    }, 600);
+      if (el && el.parentNode) el.parentNode.removeChild(el);
+    }, 500);
   }
 
-  if (document.readyState === 'complete') {
-    setTimeout(hidePreloader, 400);
+  // Dismiss early as soon as DOM is interactive/ready
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    setTimeout(hidePreloader, 150);
   } else {
+    document.addEventListener('DOMContentLoaded', function () {
+      setTimeout(hidePreloader, 150);
+    });
     window.addEventListener('load', function () {
-      setTimeout(hidePreloader, 400);
+      setTimeout(hidePreloader, 150);
     });
   }
+
+  // Hard fallback: never trap user on loading screen
+  setTimeout(hidePreloader, 800);
 
 
   /* ─────────────────────────────────────────────────

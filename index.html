@@ -44,13 +44,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- ── Stylesheets ───────────────────────────────── -->
-  <link rel="stylesheet" href="assets/css/tokens.css">
-  <link rel="stylesheet" href="assets/css/base.css">
-  <link rel="stylesheet" href="assets/css/components.css">
-  <link rel="stylesheet" href="assets/css/muffin.css">
-  <link rel="stylesheet" href="assets/css/animations.css">
-  <link rel="stylesheet" href="assets/css/ionity-bilingual.css">
-  <link rel="stylesheet" href="assets/css/theme-light.css">
+  <link rel="stylesheet" href="assets/css/tokens.css?v=2.3">
+  <link rel="stylesheet" href="assets/css/base.css?v=2.3">
+  <link rel="stylesheet" href="assets/css/components.css?v=2.3">
+  <link rel="stylesheet" href="assets/css/muffin.css?v=2.3">
+  <link rel="stylesheet" href="assets/css/animations.css?v=2.3">
+  <link rel="stylesheet" href="assets/css/ionity-bilingual.css?v=2.3">
+  <link rel="stylesheet" href="assets/css/theme-light.css?v=2.3">
 
   <!-- Early Theme Init (prevents flash of light mode, defaults to dark) -->
   <script>
@@ -117,6 +117,25 @@
       </div>
     </div>
   </div>
+  <script>
+    // Fail-safe preloader dismisser
+    (function () {
+      function dismiss() {
+        var p = document.querySelector('.preloader');
+        if (p && !p.classList.contains('is-hidden')) {
+          p.classList.add('is-hidden');
+          setTimeout(function () { if (p && p.parentNode) p.parentNode.removeChild(p); }, 500);
+        }
+      }
+      if (document.readyState === 'complete' || document.readyState === 'interactive') {
+        setTimeout(dismiss, 120);
+      } else {
+        document.addEventListener('DOMContentLoaded', function () { setTimeout(dismiss, 120); });
+        window.addEventListener('load', function () { setTimeout(dismiss, 120); });
+      }
+      setTimeout(dismiss, 800);
+    })();
+  </script>
 
 
   <!-- ══════════════════════════════════════════════════
@@ -1207,10 +1226,10 @@
   <script src="assets/js/audio-controller.js"></script>
 
   <!-- Language controller (must come after lang-data.js) -->
-  <script src="assets/js/lang-core.js?v=2.2"></script>
+  <script src="assets/js/lang-core.js?v=2.3"></script>
 
   <!-- Main app controller -->
-  <script src="assets/js/main.js?v=2.2"></script>
+  <script src="assets/js/main.js?v=2.3"></script>
 
 </body>
 </html>
