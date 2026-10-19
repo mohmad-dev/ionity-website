@@ -335,23 +335,29 @@
 }
 
 [data-theme="light"] .team-card:hover {
-  border-color: #007CE8;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08), 0 0 20px rgba(0, 124, 232, 0.12);
+  border-color: #2E8B00;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08), 0 0 16px rgba(46, 139, 0, 0.12);
 }
 
 [data-theme="light"] .team-avatar {
-  border-color: #007CE8;
+  border-color: #D2DBCF;
 }
 
-[data-theme="light"] .team-avatar-glow {
-  background: radial-gradient(circle, rgba(0, 124, 232, 0.22) 0%, transparent 70%);
+[data-theme="light"] .team-card:hover .team-avatar {
+  border-color: #2E8B00;
 }
 
 [data-theme="light"] .team-chip {
-  background: #E8F4FD;
-  border-color: #C3E3FA;
-  color: #0066CC;
-  font-weight: 600;
+  background: #EFF3EC;
+  border-color: #D2DBCF;
+  color: #246E00;
+  font-weight: 500;
+}
+
+[data-theme="light"] .team-card:hover .team-chip {
+  background: #E5EDE0;
+  border-color: #2E8B00;
+  color: #246E00;
 }
 
 /* ── Contact Section in Light Mode ─────────────────────────── */
