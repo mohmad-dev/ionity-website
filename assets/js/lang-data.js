@@ -37,6 +37,15 @@ window.IONITY_STRINGS = {
     terminalQura: 'qura-health · active v1.8',
     terminalAcer: 'acer-security · active v0.9-beta',
     terminalTelemetry: 'uptime 99.98% · latency 1.4ms · edge deployed',
+    heroCockpitStatus: 'شبكة معمارية حية · Global Edge',
+    heroCockpitSla: 'جاهزية 99.99% SLA',
+    heroBadge1Title: 'عزل المستأجرين (Tenant Isolation)',
+    heroBadge1Sub: 'حماية صارمة للبيانات لكل منشأة',
+    heroBadge2Title: 'أداء فائق <120ms',
+    heroBadge2Sub: '10,000+ طلب متزامن / ثانية',
+    heroCapData: 'نواة البيانات (Data Mesh)',
+    heroCapCompute: 'معالجة Edge',
+    heroCapSecurity: 'أمان Zero-Trust',
 
     /* Laser Stats */
     stat1Value: '+5',
@@ -231,6 +240,15 @@ window.IONITY_STRINGS = {
     terminalQura: 'qura-health · active v1.8',
     terminalAcer: 'acer-security · active v0.9-beta',
     terminalTelemetry: 'uptime 99.98% · latency 1.4ms · edge deployed',
+    heroCockpitStatus: 'Live Architecture Mesh · Global Edge',
+    heroCockpitSla: '99.99% SLA Uptime',
+    heroBadge1Title: 'Multi-Tenant Isolation',
+    heroBadge1Sub: 'Strict Data Boundary Per Facility',
+    heroBadge2Title: 'Ultra-Low <120ms Latency',
+    heroBadge2Sub: '10,000+ Concurrent RPS Capacity',
+    heroCapData: 'Data Mesh (Neon / Redis)',
+    heroCapCompute: 'Edge Compute',
+    heroCapSecurity: 'Zero-Trust Security',
 
     /* Laser Stats */
     stat1Value: '5+',

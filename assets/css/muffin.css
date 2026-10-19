@@ -370,7 +370,12 @@ body.lang-ar .hero-actions {
 }
 
 .team-member-item:hover {
-  transform: translateY(-4px);
+  transform: translateY(-2px);
+}
+
+.team-member-item:active {
+  transform: translateY(0) scale(0.995);
+  transition-duration: 75ms;
 }
 
 .team-member-photo {
@@ -387,7 +392,7 @@ body.lang-ar .hero-actions {
 .team-member-item:hover .team-member-photo {
   border-color: var(--color-accent);
   box-shadow: 0 0 22px rgba(168, 255, 0, 0.6);
-  transform: scale(1.06);
+  transform: scale(1.02);
 }
 
 .team-member-name {
@@ -680,7 +685,7 @@ body.lang-ar .section-body {
    ═══════════════════════════════════════════════════════════ */
 
 .about-section {
-  background: var(--color-surface);
+  background: var(--color-bg);
 }
 
 .about-inner {
@@ -877,6 +882,12 @@ body.lang-ar .about-inner {
 .team-card:hover {
   border-color: rgba(168, 255, 0, 0.35);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5), 0 0 16px rgba(168, 255, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.team-card:active {
+  transform: translateY(0) scale(0.995);
+  transition-duration: 75ms;
 }
 
 .team-avatar-wrap {
@@ -1066,7 +1077,7 @@ body.lang-ar .process-grid::before {
    ═══════════════════════════════════════════════════════════ */
 
 .solutions-section {
-  background: var(--color-surface);
+  background: var(--color-bg);
 }
 
 .solutions-grid {
@@ -1077,7 +1088,7 @@ body.lang-ar .process-grid::before {
 }
 
 .solution-card {
-  background: var(--color-bg);
+  background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -1182,8 +1193,13 @@ body.lang-ar .solutions-note {
 
 .product-card:hover {
   border-color: rgba(168, 255, 0, 0.45);
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+}
+
+.product-card:active {
+  transform: translateY(0) scale(0.995);
+  transition-duration: 75ms;
 }
 
 .product-card-media {
@@ -1204,7 +1220,7 @@ body.lang-ar .solutions-note {
 }
 
 .product-card:hover .product-card-img {
-  transform: scale(1.04);
+  transform: none;
 }
 
 .product-card-media-cura {
@@ -1716,7 +1732,7 @@ body.lang-ar .product-modal-intro {
    ═══════════════════════════════════════════════════════════ */
 
 .cta-section {
-  background: var(--color-surface);
+  background: var(--color-bg);
 }
 
 .cta-inner {
@@ -1838,8 +1854,13 @@ body.lang-ar .cta-headline {
 
 .contact-channel-card:hover {
   border-color: #35EDCA;
-  transform: translateY(-4px);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4), 0 0 20px rgba(53, 237, 202, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4), 0 0 16px rgba(53, 237, 202, 0.12);
+}
+
+.contact-channel-card:active {
+  transform: translateY(0) scale(0.995);
+  transition-duration: 75ms;
 }
 
 .contact-channel-icon {
@@ -1859,7 +1880,7 @@ body.lang-ar .cta-headline {
 }
 
 .contact-channel-card:hover .contact-channel-icon {
-  transform: scale(1.1) translateY(-2px);
+  transform: translateY(-2px);
 }
 
 /* Title container holding the Arabic title AND the background SVG text */

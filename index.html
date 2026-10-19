@@ -318,48 +318,64 @@
 
           </div><!-- /hero-content -->
 
-          <!-- Visual column: Linear-inspired Engineering Live Terminal -->
-          <div class="hero-visual" data-reveal data-reveal-delay="2" aria-label="لوحة حالة الأنظمة والعمليات البرمجية">
-            <div class="hero-terminal-card">
-              <div class="terminal-chrome">
-                <div class="terminal-dots" aria-hidden="true">
-                  <span class="t-dot t-dot-red"></span>
-                  <span class="t-dot t-dot-yellow"></span>
-                  <span class="t-dot t-dot-green"></span>
+          <!-- Visual column: Enterprise Architecture Cockpit & 3D Systems Canvas -->
+          <div class="hero-visual" data-reveal data-reveal-delay="2" aria-label="منظومة المعمارية السحابية والأنظمة الرقمية">
+            <div class="hero-cockpit-card">
+              <!-- Top Cockpit Bar -->
+              <div class="cockpit-header">
+                <div class="cockpit-status-indicator">
+                  <span class="pulse-beacon" aria-hidden="true"></span>
+                  <span class="cockpit-status-text" data-key="heroCockpitStatus">شبكة معمارية حية · Global Edge</span>
                 </div>
-                <div class="terminal-title">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                  <span data-key="terminalHeader">ionity / us-east / production</span>
+                <div class="cockpit-sla-pill">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                  <span data-key="heroCockpitSla">جاهزية 99.99% SLA</span>
                 </div>
-                <span class="terminal-badge">LIVE</span>
               </div>
-              <div class="terminal-body">
-                <div class="terminal-row terminal-cmd">
-                  <span class="term-prompt">$</span>
-                  <span class="term-command">ionity status --health-check</span>
+
+              <!-- 3D Architecture Canvas Stage -->
+              <div class="cockpit-stage">
+                <div class="cockpit-visual-frame">
+                  <img src="assets/images/hero/platform-architecture.jpg" alt="IONITY Cloud Platform Architecture" class="cockpit-arch-img" width="800" height="800" loading="eager">
+                  <div class="cockpit-ambient-glow" aria-hidden="true"></div>
                 </div>
-                <div class="terminal-divider" aria-hidden="true"></div>
-                <div class="terminal-services-list">
-                  <div class="term-service-item">
-                    <span class="term-status-dot is-online"></span>
-                    <span class="term-service-name" data-key="terminalCrm">excellence-crm · active v2.4</span>
-                    <span class="term-service-pill">OPERATIONAL</span>
+
+                <!-- Floating Telemetry Badge 1: Multi-Tenant -->
+                <div class="cockpit-badge badge-top-edge">
+                  <div class="badge-icon-wrap" aria-hidden="true">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
                   </div>
-                  <div class="term-service-item">
-                    <span class="term-status-dot is-online"></span>
-                    <span class="term-service-name" data-key="terminalQura">qura-health · active v1.8</span>
-                    <span class="term-service-pill">OPERATIONAL</span>
-                  </div>
-                  <div class="term-service-item">
-                    <span class="term-status-dot is-online"></span>
-                    <span class="term-service-name" data-key="terminalAcer">acer-security · active v0.9-beta</span>
-                    <span class="term-service-pill">PROTECTED</span>
+                  <div class="badge-meta">
+                    <div class="badge-title" data-key="heroBadge1Title">عزل المستأجرين (Tenant Isolation)</div>
+                    <div class="badge-subtitle" data-key="heroBadge1Sub">حماية صارمة للبيانات لكل منشأة</div>
                   </div>
                 </div>
-                <div class="terminal-divider" aria-hidden="true"></div>
-                <div class="terminal-telemetry-row">
-                  <span class="telemetry-spark-icon" aria-hidden="true">⚡</span>
-                  <span class="telemetry-text" data-key="terminalTelemetry">uptime 99.98% · latency 1.4ms · edge deployed</span>
+
+                <!-- Floating Telemetry Badge 2: Scalability & Latency -->
+                <div class="cockpit-badge badge-bottom-edge">
+                  <div class="badge-icon-wrap is-accent" aria-hidden="true">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                  </div>
+                  <div class="badge-meta">
+                    <div class="badge-title" data-key="heroBadge2Title">أداء فائق &lt;120ms</div>
+                    <div class="badge-subtitle" data-key="heroBadge2Sub">10,000+ طلب متزامن / ثانية</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Cockpit Capability Strip -->
+              <div class="cockpit-capabilities">
+                <div class="cockpit-cap-item">
+                  <span class="cap-dot"></span>
+                  <span data-key="heroCapData">نواة البيانات (Data Mesh)</span>
+                </div>
+                <div class="cockpit-cap-item">
+                  <span class="cap-dot"></span>
+                  <span data-key="heroCapCompute">معالجة Edge</span>
+                </div>
+                <div class="cockpit-cap-item">
+                  <span class="cap-dot"></span>
+                  <span data-key="heroCapSecurity">أمان Zero-Trust</span>
                 </div>
               </div>
             </div>
@@ -994,7 +1010,7 @@
         </div><!-- /contact-channels-grid -->
 
         <!-- Direct Written Message Form Container -->
-        <div style="max-width:680px; margin-inline:auto; background:rgba(16,19,16,0.65); border:1px solid var(--color-border); border-radius:var(--radius-xl); padding:var(--space-8); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px);" data-reveal>
+        <div style="max-width:680px; margin-inline:auto; background:rgba(17,21,17,0.75); border:1px solid var(--color-border); border-radius:var(--radius-xl); padding:var(--space-8); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px);" data-reveal>
 
           <div style="text-align:center; margin-bottom:var(--space-6);">
             <h3 style="font-size:1.35rem; font-weight:700; color:#FFFFFF; margin-bottom:8px;" data-key="contactFormTitle">

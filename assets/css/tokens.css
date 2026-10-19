@@ -11,11 +11,11 @@
   --color-accent-dim:      rgba(168, 255, 0, 0.12);  /* Tinted background */
   --color-accent-glow:     rgba(168, 255, 0, 0.20);  /* Subtle glow */
 
-  /* ── Background Surfaces ─────────────────────────────────── */
-  --color-bg:              #080A08;   /* Primary Background */
-  --color-surface:         #101310;   /* Elevated Surface */
-  --color-surface-2:       #151915;   /* Secondary Surface */
-  --color-surface-3:       #1C211B;   /* Tertiary Surface (cards) */
+  /* ── Background Surfaces (Unified Continuous Canvas) ───────── */
+  --color-bg:              #080A08;   /* Continuous Base Canvas across all sections */
+  --color-surface:         #111511;   /* Primary Elevated Surface (cards, panels) */
+  --color-surface-2:       #161B16;   /* Secondary Surface (bars, headers) */
+  --color-surface-3:       #1D231D;   /* Tertiary Surface (modals, active items) */
 
   /* ── Text ────────────────────────────────────────────────── */
   --color-text:            #FFFFFF;
@@ -24,8 +24,9 @@
   --color-text-dark:       #11140F;   /* Dark text on light bg */
 
   /* ── Borders ─────────────────────────────────────────────── */
-  --color-border:          #272D26;
-  --color-border-strong:   #3A4337;
+  --color-border:          #242A23;
+  --color-border-subtle:   rgba(255, 255, 255, 0.05);
+  --color-border-strong:   #343C33;
 
   /* ── Light Mode (for selective light sections) ────────────── */
   --color-light-bg:        #F7F8F5;

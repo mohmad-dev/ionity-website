@@ -188,7 +188,7 @@
 /* ── Section Specifics ─────────────────────────────────────── */
 [data-theme="light"] .solutions-section,
 [data-theme="light"] .about-section {
-  background: #EFF2EC;
+  background: var(--color-bg);
 }
 
 [data-theme="light"] .about-visual-card {
@@ -212,7 +212,7 @@
 
 /* ── Laser Beam & Stats Section in Light Mode ──────────────── */
 [data-theme="light"] .laser-stats-section {
-  background: #EBF1EA;
+  background: var(--color-bg);
   border-color: var(--color-border);
 }
 
@@ -515,7 +515,7 @@
 
 /* ── Footer in Light Mode ──────────────────────────────────── */
 [data-theme="light"] .site-footer {
-  background: #EEF2EB;
+  background: var(--color-bg);
 }
 
 [data-theme="light"] .footer-social-link {
@@ -578,3 +578,36 @@
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
 
+
+/* ── Hero Enterprise Cockpit (Light Mode) ─────────────────── */
+[data-theme="light"] .hero-cockpit-card {
+  background: #FFFFFF;
+  border-color: #DFE4DA;
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.08), 0 0 16px rgba(46, 139, 0, 0.06);
+}
+
+[data-theme="light"] .cockpit-header,
+[data-theme="light"] .cockpit-capabilities {
+  background: #F4F6F2;
+  border-color: #DFE4DA;
+}
+
+[data-theme="light"] .cockpit-visual-frame {
+  background: #0E120E;
+}
+
+[data-theme="light"] .cockpit-badge {
+  background: rgba(255, 255, 255, 0.96);
+  border-color: #DFE4DA;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .badge-title {
+  color: #11140F;
+}
+
+[data-theme="light"] .cockpit-sla-pill {
+  color: #246E00;
+  background: rgba(46, 139, 0, 0.08);
+  border-color: rgba(46, 139, 0, 0.2);
+}

@@ -729,6 +729,11 @@ html[dir="ltr"] .sidebar-nav-item:hover {
   box-shadow: var(--shadow-float);
 }
 
+.card:active {
+  transform: translateY(0) scale(0.995);
+  transition-duration: 75ms;
+}
+
 /* ═══════════════════════════════════════════════════════════
    SERVICES CONTINUOUS LASER SPINE & INTERACTION
    ═══════════════════════════════════════════════════════════ */
@@ -891,10 +896,15 @@ html[dir="ltr"] .sidebar-nav-item:hover {
 
 /* Soft, eye-friendly hover state */
 .service-card:hover {
-  border-color: rgba(0, 210, 255, 0.5) !important;
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.42), 0 0 20px rgba(0, 210, 255, 0.12) !important;
-  transform: translateY(-3px) !important;
+  border-color: rgba(0, 210, 255, 0.45) !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.38), 0 0 16px rgba(0, 210, 255, 0.1) !important;
+  transform: translateY(-2px) !important;
   background: rgba(16, 22, 19, 0.9);
+}
+
+.service-card:active {
+  transform: translateY(0) scale(0.995) !important;
+  transition-duration: 75ms;
 }
 
 /* Frameless custom icon directly on card surface (no box behind icon) */
@@ -922,7 +932,7 @@ html[dir="ltr"] .sidebar-nav-item:hover {
 
 .service-card:hover .card-icon,
 .service-card.is-beam-passing .card-icon {
-  transform: scale(1.08);
+  transform: translateY(-1px);
   color: #00E5FF;
 }
 
@@ -1518,7 +1528,7 @@ body.lang-ar .terminal-body {
 
 @keyframes corePulse {
   0% { transform: scale(0.95); opacity: 0.85; }
-  100% { transform: scale(1.08); opacity: 1; }
+  100% { transform: translateY(-1px); opacity: 1; }
 }
 
 @keyframes floatSlow {
@@ -1721,8 +1731,13 @@ body.lang-ar .cookie-toast {
 
 .solution-card:hover {
   border-color: rgba(168, 255, 0, 0.4) !important;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45), 0 0 24px rgba(168, 255, 0, 0.09);
-  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4), 0 0 16px rgba(168, 255, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.solution-card:active {
+  transform: translateY(0) scale(0.995);
+  transition-duration: 75ms;
 }
 
 .solution-ui-preview {
@@ -1887,3 +1902,297 @@ body.lang-ar .cookie-toast {
 
 
 
+
+
+/* ═══════════════════════════════════════════════════════════
+   ENTERPRISE SYSTEMS COCKPIT & 3D ARCHITECTURAL CANVAS
+   Linear/Stripe-Grade Engineering Showcase
+   ═══════════════════════════════════════════════════════════ */
+
+.hero-cockpit-card {
+  width: 100%;
+  max-width: 520px;
+  background: rgba(14, 18, 14, 0.78);
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7), 0 0 40px rgba(168, 255, 0, 0.05);
+  overflow: visible;
+  margin-inline: auto;
+  position: relative;
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.hero-cockpit-card:hover {
+  border-color: rgba(168, 255, 0, 0.28);
+  box-shadow: 0 36px 85px rgba(0, 0, 0, 0.8), 0 0 50px rgba(168, 255, 0, 0.1);
+}
+
+/* Header bar */
+.cockpit-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  background: rgba(8, 11, 8, 0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.cockpit-status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pulse-beacon {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  box-shadow: 0 0 10px rgba(168, 255, 0, 0.8);
+  position: relative;
+}
+
+.pulse-beacon::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 1px solid var(--color-accent);
+  animation: pulseBeacon 2.2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+@keyframes pulseBeacon {
+  0% { transform: scale(0.8); opacity: 1; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+.cockpit-status-text {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.02em;
+}
+
+.cockpit-sla-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  background: rgba(168, 255, 0, 0.08);
+  border: 1px solid rgba(168, 255, 0, 0.22);
+  border-radius: var(--radius-pill);
+  padding: 3px 10px;
+}
+
+/* Stage & Visual frame */
+.cockpit-stage {
+  position: relative;
+  padding: 14px;
+}
+
+.cockpit-visual-frame {
+  position: relative;
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: #060806;
+}
+
+.cockpit-arch-img {
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  filter: contrast(1.05) saturate(1.02);
+}
+
+.hero-cockpit-card:hover .cockpit-arch-img {
+  transform: scale(1.02);
+}
+
+.cockpit-ambient-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 60%, rgba(168, 255, 0, 0.08), transparent 75%);
+  pointer-events: none;
+}
+
+/* Floating Telemetry Badges */
+.cockpit-badge {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 14px;
+  background: rgba(12, 16, 12, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.55), 0 0 16px rgba(168, 255, 0, 0.06);
+  pointer-events: auto;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.cockpit-badge:hover {
+  border-color: rgba(168, 255, 0, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Position top badge */
+body.lang-ar .badge-top-edge {
+  top: 26px;
+  right: -16px;
+  animation: floatSoftRTL 5s ease-in-out infinite;
+}
+body:not(.lang-ar) .badge-top-edge {
+  top: 26px;
+  left: -16px;
+  animation: floatSoftLTR 5s ease-in-out infinite;
+}
+
+/* Position bottom badge */
+body.lang-ar .badge-bottom-edge {
+  bottom: 26px;
+  left: -16px;
+  animation: floatSoftRTL 5.5s ease-in-out 1s infinite;
+}
+body:not(.lang-ar) .badge-bottom-edge {
+  bottom: 26px;
+  right: -16px;
+  animation: floatSoftLTR 5.5s ease-in-out 1s infinite;
+}
+
+@keyframes floatSoftRTL {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes floatSoftLTR {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.badge-icon-wrap {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.badge-icon-wrap.is-accent {
+  color: #35EDCA;
+  background: rgba(53, 237, 202, 0.08);
+  border-color: rgba(53, 237, 202, 0.2);
+}
+
+.badge-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.badge-title {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.badge-subtitle {
+  font-size: 0.6875rem;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+/* Capability bottom strip */
+.cockpit-capabilities {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  background: rgba(8, 11, 8, 0.6);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  gap: 8px;
+}
+
+.cockpit-cap-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.71875rem;
+  color: var(--color-text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.cockpit-cap-item:hover {
+  color: var(--color-accent);
+}
+
+.cap-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(168, 255, 0, 0.6);
+  flex-shrink: 0;
+}
+
+/* Responsive adjustment for badges on smaller screens */
+@media (max-width: 768px) {
+  body.lang-ar .badge-top-edge,
+  body:not(.lang-ar) .badge-top-edge {
+    position: static;
+    margin-bottom: 8px;
+    animation: none;
+  }
+  body.lang-ar .badge-bottom-edge,
+  body:not(.lang-ar) .badge-bottom-edge {
+    position: static;
+    margin-top: 8px;
+    animation: none;
+  }
+  .cockpit-stage {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  .cockpit-arch-img {
+    height: 220px;
+  }
+  .cockpit-capabilities {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+}
+
+/* Arabic Typography refinements for Hero Cockpit */
+body.lang-ar .cockpit-status-text,
+body.lang-ar .cockpit-sla-pill,
+body.lang-ar .badge-title,
+body.lang-ar .badge-subtitle,
+body.lang-ar .cockpit-cap-item {
+  font-family: var(--font-primary) !important;
+  letter-spacing: 0 !important;
+}
