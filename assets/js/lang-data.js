@@ -24,13 +24,19 @@ window.IONITY_STRINGS = {
     toggleBtn: 'EN',
 
     /* Hero */
+    heroStatusPill: 'متاح لمشاريع Q1 / Q2 2026',
     heroEyebrow: 'حلول برمجية متخصصة',
-    heroHeadlineBase: 'حلول برمجية مصممة',
-    heroHeadlineAccent: 'لاحتياجات أعمالك.',
-    heroBody: 'نطوّر مواقع الويب والأنظمة المخصصة ومنتجات البرمجيات التي تساعد الشركات على تحسين عملياتها وتقديم خدماتها بكفاءة.',
+    heroHeadlineBase: 'أنظمة رقمية متقدمة',
+    heroHeadlineAccent: 'مصممة لقيادة أعمالك.',
+    heroBody: 'نطوّر منصات الويب والأنظمة المخصصة وحلول SaaS التي تمنح أعمالك الكفاءة والسرعة والاستقرار الدائم.',
     heroCtaPrimary: 'ناقش مشروعك',
     heroCtaSecondary: 'استكشف خدماتنا',
     heroFloatTag: 'أنظمة تعمل بكفاءة',
+    terminalHeader: 'ionity / us-east / production',
+    terminalCrm: 'excellence-crm · active v2.4',
+    terminalQura: 'qura-health · active v1.8',
+    terminalAcer: 'acer-security · active v0.9-beta',
+    terminalTelemetry: 'uptime 99.98% · latency 1.4ms · edge deployed',
 
     /* Laser Stats */
     stat1Value: '+5',
@@ -212,13 +218,19 @@ window.IONITY_STRINGS = {
     toggleBtn: 'عربي',
 
     /* Hero */
+    heroStatusPill: 'Available for Q1 / Q2 2026 Projects',
     heroEyebrow: 'Specialized Software Solutions',
-    heroHeadlineBase: 'Tailored Software Solutions',
-    heroHeadlineAccent: 'Built for Your Business Needs.',
-    heroBody: 'We develop websites, custom systems, and software products that help businesses optimize operations and deliver services efficiently.',
+    heroHeadlineBase: 'Advanced Digital Systems',
+    heroHeadlineAccent: 'Engineered for Business Scale.',
+    heroBody: 'We engineer web platforms, bespoke enterprise systems, and scalable SaaS solutions that power operational velocity and stability.',
     heroCtaPrimary: 'Discuss your project',
     heroCtaSecondary: 'Explore our services',
     heroFloatTag: 'Systems that work efficiently',
+    terminalHeader: 'ionity / us-east / production',
+    terminalCrm: 'excellence-crm · active v2.4',
+    terminalQura: 'qura-health · active v1.8',
+    terminalAcer: 'acer-security · active v0.9-beta',
+    terminalTelemetry: 'uptime 99.98% · latency 1.4ms · edge deployed',
 
     /* Laser Stats */
     stat1Value: '5+',
