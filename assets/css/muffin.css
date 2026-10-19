@@ -80,16 +80,17 @@ body.lang-ar .hero-inner {
 }
 
 .hero-headline {
-  font-size: clamp(2.25rem, 4.5vw, 3.75rem);
-  font-weight: var(--weight-bold);
-  line-height: 1.08;
-  letter-spacing: -0.025em;
+  font-size: clamp(2.5rem, 5vw, 4.25rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
   color: var(--color-text);
 }
 
 body.lang-ar .hero-headline {
-  letter-spacing: 0;
-  line-height: 1.32;
+  letter-spacing: -0.01em;
+  line-height: 1.28;
+  font-weight: 800;
 }
 
 .hero-headline .accent-line {
@@ -98,13 +99,13 @@ body.lang-ar .hero-headline {
 
 .hero-body {
   font-size: 1.0625rem;
-  line-height: 1.75;
+  line-height: 1.7;
   color: var(--color-text-secondary);
-  max-width: 46ch;
+  max-width: 50ch;
 }
 
 body.lang-ar .hero-body {
-  line-height: 1.85;
+  line-height: 1.8;
 }
 
 .hero-actions {

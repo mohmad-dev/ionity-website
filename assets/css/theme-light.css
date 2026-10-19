@@ -418,41 +418,87 @@
   box-shadow: 0 0 0 3px rgba(46, 139, 0, 0.12);
 }
 
-/* ── Hero Orbital Visual in Light Mode ─────────────────────── */
-[data-theme="light"] .hud-card {
-  background: rgba(255, 255, 255, 0.94);
-  border-color: var(--color-border);
-  color: var(--color-text-secondary);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+/* ── Hero Status Pill & Terminal Card in Light Mode ─────────── */
+[data-theme="light"] .hero-status-pill {
+  background: #EFF3EC;
+  border-color: #D2DBCF;
+  color: #246E00;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
 }
 
-[data-theme="light"] .ionic-field-ring {
-  border-color: rgba(46, 139, 0, 0.22);
-}
-
-[data-theme="light"] .ionic-ring-2 {
-  border-color: rgba(0, 168, 150, 0.26);
-}
-
-[data-theme="light"] .ionic-plasma-core {
-  background: radial-gradient(circle, #3BB300 0%, rgba(59, 179, 0, 0.25) 50%, rgba(247, 248, 245, 0) 75%);
-  box-shadow: 0 0 35px rgba(59, 179, 0, 0.3);
-}
-
-[data-theme="light"] .plasma-inner-symbol {
-  color: #11140F;
-}
-
-[data-theme="light"] .orbital-node.node-pos {
-  background: rgba(46, 139, 0, 0.1);
+[data-theme="light"] .hero-status-pill:hover {
+  background: #E5EDE0;
   border-color: #2E8B00;
+}
+
+[data-theme="light"] .status-indicator-dot {
+  background: #2E8B00;
+  box-shadow: 0 0 6px #2E8B00;
+}
+
+[data-theme="light"] .hero-terminal-card {
+  background: #FFFFFF;
+  border-color: #DFE4DA;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+[data-theme="light"] .hero-terminal-card:hover {
+  border-color: #2E8B00;
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.08), 0 0 16px rgba(46, 139, 0, 0.12);
+}
+
+[data-theme="light"] .terminal-chrome {
+  background: #F4F6F2;
+  border-bottom-color: #E2E7DE;
+}
+
+[data-theme="light"] .terminal-title {
+  color: #464E41;
+}
+
+[data-theme="light"] .terminal-badge {
+  color: #246E00;
+  background: #E8F2E4;
+  border-color: #C6DFC0;
+}
+
+[data-theme="light"] .term-prompt {
   color: #2E8B00;
 }
 
-[data-theme="light"] .orbital-node.node-neg {
-  background: rgba(0, 168, 150, 0.1);
-  border-color: #00A896;
-  color: #00A896;
+[data-theme="light"] .term-command {
+  color: #11140F;
+}
+
+[data-theme="light"] .terminal-divider {
+  background: #E8ECE4;
+}
+
+[data-theme="light"] .term-service-item {
+  background: #F7F9F5;
+  border-color: #E8EDE4;
+}
+
+[data-theme="light"] .term-service-item:hover {
+  background: #EFF4EB;
+  border-color: #CCD6C6;
+}
+
+[data-theme="light"] .term-service-name {
+  color: #232A20;
+}
+
+[data-theme="light"] .term-service-pill {
+  color: #464E41;
+  background: #E8ECE4;
+}
+
+[data-theme="light"] .terminal-telemetry-row {
+  color: #6F786B;
+}
+
+[data-theme="light"] .telemetry-spark-icon {
+  color: #2E8B00;
 }
 
 /* ── Floating Pattern Particles in Light Mode ──────────────── */

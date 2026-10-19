@@ -1283,141 +1283,210 @@ body.lang-ar .form-select {
 
 
 /* ═══════════════════════════════════════════════════════════
-   HERO IONIC CORE (Futuristic Brand Visual)
+   HERO STATUS PILL & LINEAR TERMINAL CARD
    ═══════════════════════════════════════════════════════════ */
 
-.hero-ionic-visual {
-  position: relative;
-  width: 100%;
-  max-width: 440px;
-  aspect-ratio: 1;
-  display: flex;
+.hero-status-pill {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
+  gap: var(--space-2);
+  padding: 6px 14px;
+  background: rgba(168, 255, 0, 0.06);
+  border: 1px solid rgba(168, 255, 0, 0.22);
+  border-radius: var(--radius-pill);
+  font-size: 0.8125rem;
+  font-weight: var(--weight-medium);
+  color: var(--color-accent);
+  width: fit-content;
+  box-shadow: 0 0 12px rgba(168, 255, 0, 0.08);
+  transition: border-color var(--transition-base), background-color var(--transition-base);
+}
+
+.hero-status-pill:hover {
+  border-color: rgba(168, 255, 0, 0.4);
+  background: rgba(168, 255, 0, 0.1);
+}
+
+.status-indicator-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  box-shadow: 0 0 8px var(--color-accent);
+  animation: pulseDot 2.4s ease-in-out infinite;
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.85); }
+}
+
+/* Linear-style System Terminal Card */
+.hero-terminal-card {
+  width: 100%;
+  max-width: 480px;
+  background: rgba(13, 16, 13, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(168, 255, 0, 0.08);
+  overflow: hidden;
   margin-inline: auto;
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
 }
 
-.ionic-orbital-system {
-  position: relative;
-  width: 100%;
-  height: 100%;
+.hero-terminal-card:hover {
+  border-color: rgba(168, 255, 0, 0.25);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7), 0 0 24px rgba(168, 255, 0, 0.12);
+}
+
+.terminal-chrome {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: rgba(22, 28, 22, 0.7);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.ionic-field-ring {
-  position: absolute;
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.ionic-ring-1 {
-  width: 90%;
-  height: 90%;
-  border: 1px dashed rgba(168, 255, 0, 0.22);
-  animation: rotateClockwise 32s linear infinite;
-}
-
-.ionic-ring-2 {
-  width: 70%;
-  height: 70%;
-  border: 1px solid rgba(53, 237, 202, 0.28);
-  animation: rotateCounter 22s linear infinite;
-}
-
-.ionic-ring-3 {
-  width: 50%;
-  height: 50%;
-  border: 1.5px dashed rgba(168, 255, 0, 0.45);
-  animation: rotateClockwise 14s linear infinite;
-}
-
-.orbital-node {
-  position: absolute;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
+.terminal-dots {
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-family: 'Inter', monospace;
-  font-size: 11px;
+  gap: 6px;
+}
+
+.t-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+.t-dot-red { background: #FF5F56; }
+.t-dot-yellow { background: #FFBD2E; }
+.t-dot-green { background: #27C93F; }
+
+.terminal-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  direction: ltr;
+}
+
+.terminal-badge {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
   font-weight: 700;
-  box-shadow: 0 0 8px rgba(168, 255, 0, 0.35);
-}
-
-.node-pos {
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
   background: rgba(168, 255, 0, 0.12);
-  border: 1px solid rgba(168, 255, 0, 0.8);
-  color: #A8FF00;
-  top: -11px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.node-neg {
-  background: rgba(53, 237, 202, 0.12);
-  border: 1px solid rgba(53, 237, 202, 0.8);
-  color: #35EDCA;
-  bottom: -11px;
-  left: 50%;
-  transform: translateX(-50%);
-  box-shadow: 0 0 8px rgba(53, 237, 202, 0.35);
-}
-
-.ionic-plasma-core {
-  position: relative;
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  background: radial-gradient(circle, #A8FF00 0%, rgba(168, 255, 0, 0.32) 45%, rgba(10, 13, 10, 0) 75%);
-  box-shadow: 0 0 32px rgba(168, 255, 0, 0.38), 0 0 65px rgba(168, 255, 0, 0.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: corePulse 4s ease-in-out infinite alternate;
-}
-
-.plasma-inner-symbol {
-  font-family: 'Inter', sans-serif;
-  font-weight: 900;
-  font-size: 18px;
-  color: #080A08;
-  letter-spacing: -0.04em;
-}
-
-.hud-card {
-  position: absolute;
-  background: rgba(16, 19, 16, 0.88);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--color-border-strong);
+  border: 1px solid rgba(168, 255, 0, 0.25);
   border-radius: var(--radius-sm);
-  padding: 8px 14px;
-  font-family: 'Inter', monospace;
-  font-size: 0.6875rem;
-  letter-spacing: 0.05em;
-  color: var(--color-text-secondary);
-  box-shadow: var(--shadow-float);
+  padding: 2px 6px;
+}
+
+.terminal-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  direction: ltr;
+  text-align: left;
+}
+
+body.lang-ar .terminal-body {
+  direction: ltr; /* CLI / code output stays clean LTR */
+  text-align: left;
+}
+
+.terminal-row {
   display: flex;
   align-items: center;
   gap: 8px;
-  white-space: nowrap;
-  pointer-events: none;
-  z-index: 2;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
 }
 
-.hud-card-top {
-  top: 4%;
-  left: 0;
-  animation: floatSlow 6s ease-in-out infinite;
+.term-prompt {
+  color: var(--color-accent);
+  font-weight: 700;
 }
 
-.hud-card-bottom {
-  bottom: 6%;
-  right: 0;
-  animation: floatSlow 6s ease-in-out 3s infinite;
+.term-command {
+  color: var(--color-text);
+}
+
+.terminal-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.06);
+  margin-block: 2px;
+}
+
+.terminal-services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.term-service-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 10px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.term-service-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(168, 255, 0, 0.2);
+}
+
+.term-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.term-status-dot.is-online {
+  background: #27C93F;
+  box-shadow: 0 0 6px rgba(39, 201, 63, 0.6);
+}
+
+.term-service-name {
+  color: var(--color-text-secondary);
+  flex: 1;
+}
+
+.term-service-pill {
+  font-size: 0.625rem;
+  color: var(--color-text-muted);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.terminal-telemetry-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--color-text-muted);
+  padding-top: 4px;
+}
+
+.telemetry-spark-icon {
+  color: var(--color-accent);
 }
 
 .hud-indicator-dot {

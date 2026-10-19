@@ -271,17 +271,18 @@
           <!-- Content column -->
           <div class="hero-content">
 
-            <p class="hero-eyebrow" data-reveal>
-              <span data-key="heroEyebrow">حلول برمجية متخصصة</span>
-            </p>
+            <div class="hero-status-pill" data-reveal>
+              <span class="status-indicator-dot" aria-hidden="true"></span>
+              <span class="status-pill-text" data-key="heroStatusPill">متاح لمشاريع Q1 / Q2 2026</span>
+            </div>
 
             <h1 class="hero-headline" data-reveal data-reveal-delay="1">
-              <span data-key="heroHeadlineBase">حلول برمجية مصممة</span><br>
-              <span class="accent-line" data-key="heroHeadlineAccent">لاحتياجات أعمالك.</span>
+              <span data-key="heroHeadlineBase">أنظمة رقمية متقدمة</span><br>
+              <span class="accent-line" data-key="heroHeadlineAccent">مصممة لقيادة أعمالك.</span>
             </h1>
 
             <p class="hero-body" data-reveal data-reveal-delay="2" data-key="heroBody">
-              نطوّر مواقع الويب والأنظمة المخصصة ومنتجات البرمجيات التي تساعد الشركات على تحسين عملياتها وتقديم خدماتها بكفاءة.
+              نطوّر منصات الويب والأنظمة المخصصة وحلول SaaS التي تمنح أعمالك الكفاءة والسرعة والاستقرار الدائم.
             </p>
 
             <div class="hero-actions" data-reveal data-reveal-delay="3">
@@ -298,40 +299,50 @@
 
           </div><!-- /hero-content -->
 
-          <!-- Visual column: Futuristic Ionic Core -->
-          <div class="hero-visual" data-reveal="scale" data-reveal-delay="2" aria-hidden="true">
-            <div class="hero-ionic-visual">
-
-              <!-- Top Telemetry HUD Card -->
-              <div class="hud-card hud-card-top">
-                <span class="hud-indicator-dot"></span>
-                <span>SYSTEM STATUS // 100% OPERATIONAL</span>
+          <!-- Visual column: Linear-inspired Engineering Live Terminal -->
+          <div class="hero-visual" data-reveal data-reveal-delay="2" aria-label="لوحة حالة الأنظمة والعمليات البرمجية">
+            <div class="hero-terminal-card">
+              <div class="terminal-chrome">
+                <div class="terminal-dots" aria-hidden="true">
+                  <span class="t-dot t-dot-red"></span>
+                  <span class="t-dot t-dot-yellow"></span>
+                  <span class="t-dot t-dot-green"></span>
+                </div>
+                <div class="terminal-title">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                  <span data-key="terminalHeader">ionity / us-east / production</span>
+                </div>
+                <span class="terminal-badge">LIVE</span>
               </div>
-
-              <!-- Concentric animated atomic rings -->
-              <div class="ionic-orbital-system">
-                <div class="ionic-field-ring ionic-ring-1">
-                  <div class="orbital-node node-pos">+</div>
+              <div class="terminal-body">
+                <div class="terminal-row terminal-cmd">
+                  <span class="term-prompt">$</span>
+                  <span class="term-command">ionity status --health-check</span>
                 </div>
-                <div class="ionic-field-ring ionic-ring-2">
-                  <div class="orbital-node node-neg">-</div>
+                <div class="terminal-divider" aria-hidden="true"></div>
+                <div class="terminal-services-list">
+                  <div class="term-service-item">
+                    <span class="term-status-dot is-online"></span>
+                    <span class="term-service-name" data-key="terminalCrm">excellence-crm · active v2.4</span>
+                    <span class="term-service-pill">OPERATIONAL</span>
+                  </div>
+                  <div class="term-service-item">
+                    <span class="term-status-dot is-online"></span>
+                    <span class="term-service-name" data-key="terminalQura">qura-health · active v1.8</span>
+                    <span class="term-service-pill">OPERATIONAL</span>
+                  </div>
+                  <div class="term-service-item">
+                    <span class="term-status-dot is-online"></span>
+                    <span class="term-service-name" data-key="terminalAcer">acer-security · active v0.9-beta</span>
+                    <span class="term-service-pill">PROTECTED</span>
+                  </div>
                 </div>
-                <div class="ionic-field-ring ionic-ring-3">
-                  <div class="orbital-node node-pos">+</div>
-                </div>
-
-                <!-- Center glowing plasma core with brand mark -->
-                <div class="ionic-plasma-core">
-                  <span class="plasma-inner-symbol">ION</span>
+                <div class="terminal-divider" aria-hidden="true"></div>
+                <div class="terminal-telemetry-row">
+                  <span class="telemetry-spark-icon" aria-hidden="true">⚡</span>
+                  <span class="telemetry-text" data-key="terminalTelemetry">uptime 99.98% · latency 1.4ms · edge deployed</span>
                 </div>
               </div>
-
-              <!-- Bottom Telemetry HUD Card -->
-              <div class="hud-card hud-card-bottom">
-                <span class="hud-indicator-dot"></span>
-                <span>LATENCY // 3.2ms HIGH PERFORMANCE</span>
-              </div>
-
             </div>
           </div><!-- /hero-visual -->
         </div><!-- /hero-inner -->
