@@ -198,6 +198,9 @@ window.IONITY_STRINGS = {
     contactDirectBtn:     'تواصل عبر واتساب',
     contactFormTitle:     'أو أرسل لنا رسالة مباشرة',
     contactFormSubtitle:  'املأ البيانات وسيقوم فريقنا بالرد عليك في غضون ٢٤ ساعة.',
+    contactNameLabel:     'الاسم الكامل',
+    contactEmailLabel:    'البريد الإلكتروني',
+    contactMessageLabel:  'الرسالة',
     sendBtn:              'إرسال الرسالة',
 
     /* Footer */
@@ -401,6 +404,9 @@ window.IONITY_STRINGS = {
     contactDirectBtn:     'Chat on WhatsApp',
     contactFormTitle:     'Or send us a direct message',
     contactFormSubtitle:  'Fill out the details and our team will get back to you within 24 hours.',
+    contactNameLabel:     'Full Name',
+    contactEmailLabel:    'Email Address',
+    contactMessageLabel:  'Message',
     sendBtn:              'Send Message',
 
     /* Footer */

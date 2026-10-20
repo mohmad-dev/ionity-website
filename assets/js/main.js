@@ -1073,3 +1073,26 @@
   })();
 
 })();
+
+
+  /* ── Interactive Spotlight Mouse Tracker (Linear / Aceternity Style) ── */
+  function initSpotlightTracker() {
+    var isTouch = window.matchMedia('(hover: none) or (pointer: coarse)').matches;
+    if (isTouch) return;
+    var cards = document.querySelectorAll('.spotlight-card, .service-card, .product-card, .hero-cockpit-card');
+    if (!cards.length) return;
+    cards.forEach(function(card) {
+      card.addEventListener('mousemove', function(e) {
+        var rect = card.getBoundingClientRect();
+        var x = e.clientX - rect.left;
+        var y = e.clientY - rect.top;
+        card.style.setProperty('--mouse-x', x + 'px');
+        card.style.setProperty('--mouse-y', y + 'px');
+      }, { passive: true });
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSpotlightTracker);
+  } else {
+    initSpotlightTracker();
+  }
