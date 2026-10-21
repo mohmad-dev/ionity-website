@@ -25,10 +25,10 @@ window.IONITY_STRINGS = {
 
     /* Hero */
     heroStatusPill: 'متاح لمشاريع Q1 / Q2 2026',
-    heroEyebrow: 'حلول برمجية متخصصة',
-    heroHeadlineBase: 'أنظمة رقمية متقدمة',
-    heroHeadlineAccent: 'مصممة لقيادة أعمالك.',
-    heroBody: 'نطوّر منصات الويب والأنظمة المخصصة وحلول SaaS التي تمنح أعمالك الكفاءة والسرعة والاستقرار الدائم.',
+    heroEyebrow: 'مختبر الأنظمة والحلول',
+    heroHeadlineBase: 'أنظمة برمجية دقيقة',
+    heroHeadlineAccent: 'مبنية للاستقرار والنمو.',
+    heroBody: 'نبني منصات الويب والأنظمة المخصصة وحلول SaaS بمعمارية موزعة وأداء موثوق — من الكود إلى الإنتاج.',
     heroCtaPrimary: 'ناقش مشروعك',
     heroCtaSecondary: 'استكشف خدماتنا',
     heroFloatTag: 'أنظمة تعمل بكفاءة',
@@ -57,29 +57,33 @@ window.IONITY_STRINGS = {
 
     /* Services */
     servicesLabel:  'خدماتنا',
-    servicesTitle:  'خدماتنا البرمجية',
-    servicesBody:   'نطوّر حلولًا رقمية تتناسب مع احتياجات مشروعك، من المواقع وتطبيقات الويب إلى الأنظمة المخصصة ومنتجات SaaS.',
+    servicesTitle:  'خدماتنا الهندسية',
+    servicesBody:   'من تطبيقات الويب إلى الأنظمة المخصصة، نختار التقنية المناسبة لكل مشروع ونبنيها وفق معمارية قابلة للتوسع.',
 
     service1Title:  'تطوير المواقع وتطبيقات الويب',
-    service1Body:   'مواقع ويب احترافية وسريعة ومستجيبة تعكس هويتك وتحقق أهدافك.',
+    service1Body:   'بناء تطبيقات ويب عالية الأداء على Next.js مع معالجة Edge ونشر CDN عالمي.',
     service1Link:   'اعرف المزيد',
+    service1Meta: 'Next.js · Edge Deploy · SSR',
 
     service2Title:  'الأنظمة البرمجية المخصصة',
-    service2Body:   'أنظمة مبنية خصيصًا لسير عمل شركتك لتبسيط العمليات وزيادة الكفاءة.',
+    service2Body:   'معمارية برمجية مخصصة لسير عمل منشأتك — مبنية للتوسع والصيانة طويلة الأمد.',
     service2Link:   'اعرف المزيد',
+    service2Meta: 'معمارية مخصصة · API-First',
 
     service3Title:  'منتجات SaaS والحلول الرقمية',
-    service3Body:   'منتجات برمجية قابلة للتوسع ومبنية بتقنيات حديثة لتنمية أعمالك.',
+    service3Body:   'منتجات SaaS متعددة المستأجرين (Multi-Tenant) مصممة لقواعد بيانات موزعة وتكاملات API.',
     service3Link:   'اعرف المزيد',
+    service3Meta: 'Multi-Tenant · Serverless · SaaS',
 
     service4Title:  'تصميم UI/UX والدعم التقني',
-    service4Body:   'تصميم واجهات مستخدم مدروسة، صيانة مستمرة، ودعم فني متواصل لمنتجك.',
+    service4Body:   'تصميم واجهات قائم على أنظمة تصميم (Design Systems) وصيانة دورية بمعايير هندسية.',
     service4Link:   'اعرف المزيد',
+    service4Meta: 'أنظمة UI · TypeScript · Figma',
 
     /* Products & Systems (Solutions) */
     solutionsLabel: 'منتجاتنا وأنظمتنا',
-    solutionsTitle: 'أنظمة متخصصة مصممة لواقع الأعمال',
-    solutionsBody:  'حلول ومنصات برمجية طُوّرت بمعمارية رصينة لتنظيم العمليات، تعزيز الأمان الرقمي، وتسهيل الإدارة اليومية.',
+    solutionsTitle: 'منتجات جاهزة للإنتاج — مبنية لتُستخدم',
+    solutionsBody:  'ثلاثة أنظمة متكاملة تم تطويرها وتشغيلها فعلياً — كل منظومة مبنية بمعمارية قابلة للتوسع وصيانة طويلة الأمد.',
     solutionsCta:   'ناقش مشروعك',
 
     /* Product 1: Excellence CRM */
@@ -120,8 +124,8 @@ window.IONITY_STRINGS = {
 
     /* About */
     aboutLabel:    'عن IONITY',
-    aboutTitle:    'نبني البرمجيات انطلاقًا من احتياجات العمل.',
-    aboutBody:     'IONITY شركة متخصصة في تطوير الحلول البرمجية للشركات وأصحاب المشاريع. نعمل على فهم الاحتياج، وتحديد نطاق الحل، ثم تصميمه وتطويره بما يتناسب مع أهداف المشروع.',
+    aboutTitle:    'نبني الأنظمة بدقة هندسية — ليس فقط بالكود.',
+    aboutBody:     'IONITY مختبر برمجيات يُركّز على المعمارية والأداء والاستقرار. نعمل مع الشركات لتحديد المشكلة الحقيقية وبناء الحل الصحيح — لا الحل الأسرع.',
 
     diff1Title: 'فهم المتطلبات',
     diff1Desc:  'تحليل دقيق لنموذج العمل وتحديد نطاق الحل والجدوى التقنية.',
@@ -149,8 +153,8 @@ window.IONITY_STRINGS = {
     teamToggleOpen:  'استكشف الفريق التقني (اختياري)',
     teamToggleClose: 'إخفاء الفريق التقني',
     teamLabel:       'فريق العمل',
-    teamTitle:       'خبراء وراء كل سطر برمجي',
-    teamDesc:        'نخبة متكاملة من المهندسين والمصممين المحترفين لبناء حلولك الرقمية بدقة.',
+    teamTitle:       'فريق التطوير والأنظمة',
+    teamDesc:        'فريق متخصص من المهندسين والمصممين، كل عضو مسؤول عن نطاق هندسي محدد.',
     memberName1:     'عبد الرحمن',
     memberRole1:     'مهندس تطوير الأنظمة والمنصات المتكاملة',
     memberName2:     'محمد',
@@ -231,10 +235,10 @@ window.IONITY_STRINGS = {
 
     /* Hero */
     heroStatusPill: 'Available for Q1 / Q2 2026 Projects',
-    heroEyebrow: 'Specialized Software Solutions',
-    heroHeadlineBase: 'Advanced Digital Systems',
-    heroHeadlineAccent: 'Engineered for Business Scale.',
-    heroBody: 'We engineer web platforms, bespoke enterprise systems, and scalable SaaS solutions that power operational velocity and stability.',
+    heroEyebrow: 'Software & Systems Lab',
+    heroHeadlineBase: 'Precision Software Systems',
+    heroHeadlineAccent: 'Built for Stability and Growth.',
+    heroBody: 'We build web platforms, custom systems, and SaaS products with distributed architecture and verifiable performance — from code to production.',
     heroCtaPrimary: 'Discuss your project',
     heroCtaSecondary: 'Explore our services',
     heroFloatTag: 'Systems that work efficiently',
@@ -263,29 +267,33 @@ window.IONITY_STRINGS = {
 
     /* Services */
     servicesLabel:  'Services',
-    servicesTitle:  'Our Software Services',
-    servicesBody:   'We develop digital solutions tailored to your project needs, from websites and web applications to custom systems and SaaS products.',
+    servicesTitle:  'Engineering Services',
+    servicesBody:   'From web applications to custom enterprise systems, we select the right technology stack for each project and build it for long-term scale.',
 
     service1Title:  'Web Development & Web Apps',
-    service1Body:   'Professional, fast, and responsive websites that reflect your identity and drive results.',
+    service1Body:   'High-performance web apps on Next.js with Edge processing, streaming SSR, and global CDN delivery.',
     service1Link:   'Learn more',
+    service1Meta: 'Next.js · Edge Deploy · SSR',
 
     service2Title:  'Custom Software Systems',
-    service2Body:   'Systems built around your business workflows to simplify operations and increase efficiency.',
+    service2Body:   'Purpose-built software architecture mapped to your operational workflows — designed for scale and long-term maintainability.',
     service2Link:   'Learn more',
+    service2Meta: 'Custom Architecture · API-First',
 
     service3Title:  'SaaS Products & Digital Solutions',
-    service3Body:   'Scalable software products built with modern technology to grow your business.',
+    service3Body:   'Multi-tenant SaaS products engineered for distributed databases, async workflows, and automated API integrations.',
     service3Link:   'Learn more',
+    service3Meta: 'Multi-Tenant · Serverless · SaaS',
 
     service4Title:  'UI/UX Design & Technical Support',
-    service4Body:   'Thoughtful interface design, ongoing maintenance, and continuous technical support.',
+    service4Body:   'Interface systems built on structured design principles, TypeScript-typed components, and ongoing technical stewardship.',
     service4Link:   'Learn more',
+    service4Meta: 'UI Systems · TypeScript · Figma',
 
     /* Products & Systems (Solutions) */
     solutionsLabel: 'Products & Systems',
-    solutionsTitle: 'Purpose-Built Systems for Real Business Needs',
-    solutionsBody:  'Specialized software solutions and platforms engineered with robust architecture to organize operations, bolster cybersecurity, and streamline daily management.',
+    solutionsTitle: 'Production-Ready Products — Built to Be Used',
+    solutionsBody:  'Three integrated systems actively deployed and maintained in production — each engineered with scalable architecture and long-term maintainability in mind.',
     solutionsCta:   'Discuss your project',
 
     /* Product 1: Excellence CRM */
@@ -326,8 +334,8 @@ window.IONITY_STRINGS = {
 
     /* About */
     aboutLabel:    'About IONITY',
-    aboutTitle:    'Building Software Grounded in Business Needs.',
-    aboutBody:     'IONITY specializes in software development for businesses and project owners. We understand your operational needs, define the solution scope, and design and build software aligned with your business goals.',
+    aboutTitle:    'Engineering Systems with Precision — Not Just Code.',
+    aboutBody:     'IONITY is a software lab focused on architecture, performance, and reliability. We work with companies to identify the real problem and build the right solution — not the fastest one.',
 
     diff1Title: 'Requirements Discovery',
     diff1Desc:  'Thorough analysis of business models, defining solution scope and technical feasibility.',

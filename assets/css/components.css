@@ -1915,12 +1915,15 @@ body.lang-ar .cookie-toast {
 .hero-cockpit-card {
   width: 100%;
   max-width: 520px;
-  background: rgba(14, 18, 14, 0.78);
+  background: rgba(10, 14, 10, 0.9) !important;
   backdrop-filter: blur(24px) saturate(160%);
   -webkit-backdrop-filter: blur(24px) saturate(160%);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
   border-radius: 20px;
-  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7), 0 0 40px rgba(168, 255, 0, 0.05);
+  box-shadow: 
+    0 0 0 1px rgba(255, 255, 255, 0.04),
+    0 24px 64px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06) !important;
   overflow: visible;
   margin-inline: auto;
   position: relative;
@@ -1928,8 +1931,11 @@ body.lang-ar .cookie-toast {
 }
 
 .hero-cockpit-card:hover {
-  border-color: rgba(168, 255, 0, 0.28);
-  box-shadow: 0 36px 85px rgba(0, 0, 0, 0.8), 0 0 50px rgba(168, 255, 0, 0.1);
+  border-color: rgba(168, 255, 0, 0.22) !important;
+  box-shadow: 
+    0 0 0 1px rgba(168, 255, 0, 0.08),
+    0 32px 80px rgba(0, 0, 0, 0.75),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
 }
 
 /* Header bar */
@@ -1938,8 +1944,8 @@ body.lang-ar .cookie-toast {
   align-items: center;
   justify-content: space-between;
   padding: 12px 18px;
-  background: rgba(8, 11, 8, 0.6);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.02) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
@@ -1982,17 +1988,16 @@ body.lang-ar .cookie-toast {
 }
 
 .cockpit-sla-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  font-family: var(--font-mono);
-  font-size: 0.6875rem;
-  font-weight: 600;
-  color: var(--color-accent);
-  background: rgba(168, 255, 0, 0.08);
-  border: 1px solid rgba(168, 255, 0, 0.22);
-  border-radius: var(--radius-pill);
-  padding: 3px 10px;
+  font-size: 0.625rem !important;
+  color: rgba(255, 255, 255, 0.6) !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 4px !important;
+  padding: 2px 7px !important;
+  letter-spacing: 0.05em !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
 }
 
 /* Stage & Visual frame */
@@ -2039,13 +2044,13 @@ body.lang-ar .cookie-toast {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 9px 14px;
-  background: rgba(12, 16, 12, 0.88);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 12px;
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.55), 0 0 16px rgba(168, 255, 0, 0.06);
+  padding: 8px 13px;
+  background: rgba(8, 10, 8, 0.9) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 10px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5) !important;
   pointer-events: auto;
   transition: transform 0.25s ease, border-color 0.25s ease;
 }
